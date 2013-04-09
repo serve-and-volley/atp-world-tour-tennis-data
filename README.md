@@ -4,6 +4,8 @@ This repository contains Python scripts that scrape tennis data from the <a href
 
 For example, the script: <br />
 <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/player_match_data.py" target="_blank">player_match_data.py</a>
+<br />
+[Disclaimer: the code is the opposite of elegant, but it works; I will clean it up at some point.]
 
 collects all of the tournament and match stats for a single player. An example is the following CSV file: <br />
 <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/Roger-Federer.csv" target="_blank">Roger-Federer.csv</a>
