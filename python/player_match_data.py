@@ -1,9 +1,8 @@
 # Your input
-player = "Roger-Federer"
-turned_pro = 1998
-final_year = 2012
+player = "John-Mcenroe"
+first_year = 1975
+last_year = 1993
 
-# Imports
 import urllib
 from lxml import etree
 import StringIO
@@ -113,20 +112,41 @@ def match_stats(match_url, html):
   parser = etree.HTMLParser()
   tree   = etree.parse(StringIO.StringIO(html), parser)
   xpath1 = "//tr[3]/td/a/text()"
-  tournament = tree.xpath(xpath1)[0]
+  try:
+    tournament = tree.xpath(xpath1)[0]
+  except Exception:
+    tournament = "" 
   xpath2 = "//tr[5]/td/text()"
-  tournament_round = tree.xpath(xpath2)[0]
+  try:
+    tournament_round = tree.xpath(xpath2)[0]
+  except Exception:
+    tournament_round = ""
   xpath3 = "//tr[7]/td/text()"
-  time = tree.xpath(xpath3)[0]
+  try:
+    time = tree.xpath(xpath3)[0]
+  except Exception:
+    time = ""
   time = time.encode('ascii', 'ignore')
   time = time.replace("minutes", "")
   xpath4 = "//tr[9]/td/a/text()"
-  winner = tree.xpath(xpath4)[0]
+  try:
+    winner = tree.xpath(xpath4)[0]
+  except Exception:
+    winner = ""
   xpath5 = "//tr[11]/td/a/text()"
-  player1_name = tree.xpath(xpath5)[0]
-  player2_name = tree.xpath(xpath5)[1]
+  try:
+    player1_name = tree.xpath(xpath5)[0]
+  except Exception:
+    player1_name = ""
+  try:
+    player2_name = tree.xpath(xpath5)[1]
+  except Exception:
+    player2_name = ""
   xpath7 = "//p/text()"
-  player1_nationality = tree.xpath(xpath7)[0]
+  try:
+    player1_nationality = tree.xpath(xpath7)[0]
+  except Exception:
+    player1_nationality = ""
   try:
     player2_nationality = tree.xpath(xpath7)[1]
   except Exception:
@@ -150,7 +170,10 @@ def match_stats(match_url, html):
   player1_1st_serves = match_stats_array[19]
   player1_1st_serves = cleanup(player1_1st_serves)
   player1_1st_serves_in = player1_1st_serves[0]
-  player1_1st_serves_total = player1_1st_serves[1]
+  try:
+    player1_1st_serves_total = player1_1st_serves[1]
+  except Exception:
+    player1_1st_serves_total = ""
   player2_1st_serves = match_stats_array[20]
   player2_1st_serves = cleanup(player2_1st_serves)
   player2_1st_serves_in = player2_1st_serves[0]
@@ -159,7 +182,10 @@ def match_stats(match_url, html):
   player1_1st_serves_won = match_stats_array[22]
   player1_1st_serves_won = cleanup(player1_1st_serves_won)
   player1_1st_serve_points_won = player1_1st_serves_won[0]
-  player1_1st_serve_points_total = player1_1st_serves_won[1]
+  try:
+    player1_1st_serve_points_total = player1_1st_serves_won[1]
+  except Exception:
+    player1_1st_serve_points_total = ""
   player2_1st_serves_won = match_stats_array[23]
   player2_1st_serves_won = cleanup(player2_1st_serves_won)
   player2_1st_serve_points_won = player2_1st_serves_won[0]
@@ -168,20 +194,35 @@ def match_stats(match_url, html):
   player1_2nd_serves_won = match_stats_array[25]
   player1_2nd_serves_won = cleanup(player1_2nd_serves_won)
   player1_2nd_serve_points_won = player1_2nd_serves_won[0]
-  player1_2nd_serve_points_total = player1_2nd_serves_won[1]
+  try:
+    player1_2nd_serve_points_total = player1_2nd_serves_won[1]
+  except Exception:
+    player1_2nd_serve_points_total = ""
   player2_2nd_serves_won = match_stats_array[26]
   player2_2nd_serves_won = cleanup(player2_2nd_serves_won)
-  player2_2nd_serve_points_won = player2_2nd_serves_won[0]
-  player2_2nd_serve_points_total = player2_2nd_serves_won[1]
+  try:
+    player2_2nd_serve_points_won = player2_2nd_serves_won[0]
+  except Exception:
+    player2_2nd_serve_points_won = ""
+  try:
+    player2_2nd_serve_points_total = player2_2nd_serves_won[1]
+  except Exception:
+    player2_2nd_serve_points_total = ""
   # Break points saved
   player1_break_points = match_stats_array[28]
   player1_break_points = cleanup(player1_break_points)
   player1_break_points_won = player1_break_points[0]
   player1_break_points_total = player1_break_points[1]
   player2_break_points = match_stats_array[29]
-  player2_break_points = cleanup(player2_break_points)
+  try:
+    player2_break_points = cleanup(player2_break_points)
+  except Exception:
+    player2_break_points = ""
   player2_break_points_won = player2_break_points[0]
-  player2_break_points_total = player2_break_points[1]
+  try:
+    player2_break_points_total = player2_break_points[1]
+  except Exception:
+    player2_break_points_total = ""  
   # Service games played
   player1_service_games_played = match_stats_array[31]
   player2_service_games_played = match_stats_array[32]
@@ -193,7 +234,10 @@ def match_stats(match_url, html):
   player2_1st_serve_return_points = match_stats_array[35]
   player2_1st_serve_return_points = cleanup(player2_1st_serve_return_points)
   player2_1st_serve_return_points_won = player2_1st_serve_return_points[0]
-  player2_1st_serve_return_points_total = player2_1st_serve_return_points[1]
+  try:
+    player2_1st_serve_return_points_total = player2_1st_serve_return_points[1]
+  except Exception:
+    player2_1st_serve_return_points_total = ""
   # 2nd serve return points won
   player1_2nd_serve_return_points = match_stats_array[37]
   player1_2nd_serve_return_points = cleanup(player1_2nd_serve_return_points)
@@ -219,39 +263,71 @@ def match_stats(match_url, html):
   player1_total_service_points = match_stats_array[46]
   player1_total_service_points = cleanup(player1_total_service_points)
   player1_total_service_points_won = player1_total_service_points[0]
-  player1_total_service_points_total = player1_total_service_points[1]
-  player2_total_service_points = match_stats_array[47]
+  try:
+    player1_total_service_points_total = player1_total_service_points[1]
+  except Exception:
+    player1_total_service_points_total = ""
+  try:
+    player2_total_service_points = match_stats_array[47]
+  except Exception:
+    player2_total_service_points = ""
   player2_total_service_points = cleanup(player2_total_service_points)
   player2_total_service_points_won = player2_total_service_points[0]
-  player2_total_service_points_total = player2_total_service_points[1]
+  try:
+    player2_total_service_points_total = player2_total_service_points[1]
+  except Exception:
+    player2_total_service_points_total = ""
   # Total return points won
-  player1_total_return_points = match_stats_array[49]
+  try:
+    player1_total_return_points = match_stats_array[49]
+  except Exception:
+    player1_total_return_points = ""  
   player1_total_return_points = cleanup(player1_total_return_points)
   player1_total_return_points_won = player1_total_return_points[0]
-  player1_total_return_points_total = player1_total_return_points[1]
-  player2_total_return_points = match_stats_array[50]
+  try:
+    player1_total_return_points_total = player1_total_return_points[1]
+  except Exception:
+    player1_total_return_points_total = ""
+  try:
+    player2_total_return_points = match_stats_array[50]
+  except Exception:
+    player2_total_return_points = ""
   player2_total_return_points = cleanup(player2_total_return_points)
   player2_total_return_points_won = player2_total_return_points[0]
-  player2_total_return_points_total = player2_total_return_points[1]
+  try:
+    player2_total_return_points_total = player2_total_return_points[1]
+  except Exception:
+    player2_total_return_points_total = ""
   # Total points won
-  player1_total_points = match_stats_array[52]
+  try:
+    player1_total_points = match_stats_array[52]
+  except Exception:
+    player1_total_points = ""  
   player1_total_points = cleanup(player1_total_points)
   player1_total_points_won = player1_total_points[0]
-  player1_total_points_total = player1_total_points[1]
-  player2_total_points = match_stats_array[53]
+  try:
+    player1_total_points_total = player1_total_points[1]
+  except Exception:
+    player1_total_points_total = ""
+  try:
+    player2_total_points = match_stats_array[53]
+  except Exception:
+    player2_total_points = ""
   player2_total_points = cleanup(player2_total_points)
   player2_total_points_won = player2_total_points[0]
-  player2_total_points_total = player2_total_points[1]
+  try:
+    player2_total_points_total = player2_total_points[1]
+  except Exception:
+    player2_total_points_total = ""
   # Player arrays
   player1_array = [tournament, tournament_round, time, winner, player1_name, player1_nationality, player1_aces, player1_double_faults, player1_1st_serves_in, player1_1st_serves_total, player1_1st_serve_points_won, player1_1st_serve_points_total, player1_2nd_serve_points_won, player1_2nd_serve_points_total, player1_break_points_won, player1_break_points_total, player1_service_games_played, player1_1st_serve_return_points_won, player1_1st_serve_return_points_total, player1_2nd_serve_return_points_won, player1_2nd_serve_return_points_total, player1_break_points_converted_won, player1_break_points_converted_total, player1_return_games_played, player1_total_service_points_won, player1_total_service_points_total, player1_total_return_points_won, player1_total_return_points_total, player1_total_points_won, player1_total_points_total, player2_name, player2_nationality, player2_aces, player2_double_faults, player2_1st_serves_in, player2_1st_serves_total, player2_1st_serve_points_won, player2_1st_serve_points_total, player2_2nd_serve_points_won, player2_2nd_serve_points_total, player2_break_points_won, player2_break_points_total, player2_service_games_played, player2_1st_serve_return_points_won, player2_1st_serve_return_points_total, player2_2nd_serve_return_points_won, player2_2nd_serve_return_points_total, player2_break_points_converted_won, player2_break_points_converted_total, player2_return_games_played, player2_total_service_points_won, player2_total_service_points_total, player2_total_return_points_won, player2_total_return_points_total, player2_total_points_won, player2_total_points_total]  
   return player1_array
 
-
 # List of years
 years_list = []
-difference = final_year - turned_pro + 1
+difference = last_year - first_year + 1
 for x in xrange(0, difference):
-  temp = x + turned_pro
+  temp = x + first_year
   years_list.append(temp)
   
 # Final array: Getting all the data
@@ -260,7 +336,10 @@ for row in years_list:
   year = row  
   # Initial reading in the URL
   year_string = str(year)
-  url = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y=" + year_string + "&m=s&e=0#"
+  # NOTE: The URL has to be changed for every player that is retired!
+  url = "http://www.atpworldtour.com/Tennis/Players/Mc/J/John-Mcenroe.aspx?t=pa&y=" + year_string + "&m=s&e=0#"
+  # This is the URL for current players
+  #url = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y=" + year_string + "&m=s&e=0#"
   result = urllib.urlopen(url)
   html = result.read()
   parser = etree.HTMLParser()
@@ -283,9 +362,9 @@ for row in years_list:
     row_array = match_stats(match_url, html)
     match_stats_array.append(row_array)
   # Final array
-  final_year_array = [array2[ix] + match_stats_array[ix] for ix in range(len(array2))]
-  final_array.append(final_year_array)
-
+  last_year_array = [array2[ix] + match_stats_array[ix] for ix in range(len(array2))]
+  final_array.append(last_year_array)
+  
 # Output array
 output_array = final_array[0]
 for i in xrange(1, len(final_array)):
@@ -295,6 +374,15 @@ for i in xrange(1, len(final_array)):
 headers = [["year", "tournament", "start date", "type", "surface", "draw", "atp points", "atp ranking", "tournament prize money", "round", "opponent", "ranking", "score", "stats link", "tournament", "tournament round", "time", "winner", "player1 name", "player1 nationality", "player1 aces", "player1 double faults", "player1 1st serves in", "player1 1st serves total", "player1 1st serve points won", "player1 1st serve points total", "player1 2nd serve points won", "player1 2nd serve points total", "player1 break points won", "player1 break points total", "player1 service games played", "player1 1st serve return points won", "player1 1st serve return points total", "player1 2nd serve return points won", "player1 2nd serve return points total", "player1 break points converted won", "player1 break points converted total", "player1 return games played", "player1 total service points won", "player1 total service points total", "player1 total return points won", "player1 total return points total", "player1 total points won", "player1 total points total", "player2 name", "player2 nationality", "player2 aces", "player2 double faults", "player2 1st serves in", "player2 1st serves total", "player2 1st serve points won", "player2 1st serve points total", "player2 2nd serve points won", "player2 2nd serve points total", "player2 break points won", "player2 break points total", "player2 service games played", "player2 1st serve return points won", "player2 1st serve return points total", "player2 2nd serve return points won", "player2 2nd serve return points total", "player2 break points converted won", "player2 break points converted total", "player2 return games played", "player2 total service points won", "player2 total service points total", "player2 total return points won", "player2 total return points total", "player2 total points won", "player2 total points total"]]
 
 output_array = headers + output_array
+
+# Get rid of additional unicode crap
+for row in output_array:
+  for j in xrange (0, len(row)):
+    try: 
+      if row[j].find(u'%\xa0(/)') != -1:
+        row[j] = ""
+    except Exception:
+      row[j] = row[j]
 
 # CSV output
 import csv
