@@ -70,8 +70,6 @@ def get_matches(index, html, tree):
     match_array_row = [tournament_round[j], opponents[j], opponent_ranking[j], score[j], stats_link[j]]
     match_array.append(match_array_row)
   return match_array
-# Final array header
-final_array = [["year", "tournament", "start date", "type", "surface", "draw", "atp points", "atp ranking", "tournament prize money", "round", "opponent", "ranking", "score", "stats link", "tournament", "tournament_round", "time", "winner", "player1 name", "player1 nationality", "player 1 aces", "player1 double faults", "player1 1st serves in", "player1 1st serves total", "player1 1st serve points won", "player1 1st serve points total", "player1 2nd serve points won", "player1 2nd serve points total", "player1 break points won", "player1 break points total", "player1 service games played", "player1 1st serve return points won", "player1 1st serve return points total", "player1 2nd serve return points won", "player1 2nd serve return points total", "player1 break points converted won", "player1 break points converted total", "player1 return games played", "player1 total service points won", "player1 total service points total", "player1 total return points won", "player1 total return points total", "player1 total points won", "player1 total points total"]]
 
 # Info1 [tournament, date, type, surface, draw]
 def get_info1(html, tree):
