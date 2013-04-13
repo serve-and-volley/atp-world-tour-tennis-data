@@ -319,8 +319,25 @@ def match_stats(match_url, html):
     player2_total_points_total = player2_total_points[1]
   except Exception:
     player2_total_points_total = ""
-  # Player arrays
+  # Player1 array
   player1_array = [tournament, tournament_round, time, winner, player1_name, player1_nationality, player1_aces, player1_double_faults, player1_1st_serves_in, player1_1st_serves_total, player1_1st_serve_points_won, player1_1st_serve_points_total, player1_2nd_serve_points_won, player1_2nd_serve_points_total, player1_break_points_won, player1_break_points_total, player1_service_games_played, player1_1st_serve_return_points_won, player1_1st_serve_return_points_total, player1_2nd_serve_return_points_won, player1_2nd_serve_return_points_total, player1_break_points_converted_won, player1_break_points_converted_total, player1_return_games_played, player1_total_service_points_won, player1_total_service_points_total, player1_total_return_points_won, player1_total_return_points_total, player1_total_points_won, player1_total_points_total, player2_name, player2_nationality, player2_aces, player2_double_faults, player2_1st_serves_in, player2_1st_serves_total, player2_1st_serve_points_won, player2_1st_serve_points_total, player2_2nd_serve_points_won, player2_2nd_serve_points_total, player2_break_points_won, player2_break_points_total, player2_service_games_played, player2_1st_serve_return_points_won, player2_1st_serve_return_points_total, player2_2nd_serve_return_points_won, player2_2nd_serve_return_points_total, player2_break_points_converted_won, player2_break_points_converted_total, player2_return_games_played, player2_total_service_points_won, player2_total_service_points_total, player2_total_return_points_won, player2_total_return_points_total, player2_total_points_won, player2_total_points_total]  
+  # Getting rid of the unicode: u'%\xa0(/)'
+  # because this screws up the CSV writer
+  unicode_presence = "no"
+  for row in player1_array:
+    if row.find(u'%\xa0(/)') != -1:
+      unicode_presence = "yes"
+  if unicode_presence == "yes":
+    for i in xrange(0, len(player1_array)):
+      player1_array[i] = ""
+  # Getting rid of redundant zeroes
+  if player1_array[2] == "0":
+    for i in xrange(6, 30):
+      player1_array[i] = ""
+  if player1_array[2] == "0":
+    for i in xrange(32, 56):
+      player1_array[i] = ""            
+  # Outputting the Player1 array
   return player1_array
 
 # List of years
@@ -361,6 +378,8 @@ for row in years_list:
     match_url = array2[i][13]
     row_array = match_stats(match_url, html)
     match_stats_array.append(row_array)
+    # TESTING
+    #print row_array
   # Final array
   last_year_array = [array2[ix] + match_stats_array[ix] for ix in range(len(array2))]
   final_array.append(last_year_array)
@@ -374,15 +393,6 @@ for i in xrange(1, len(final_array)):
 headers = [["year", "tournament", "start date", "type", "surface", "draw", "atp points", "atp ranking", "tournament prize money", "round", "opponent", "ranking", "score", "stats link", "tournament", "tournament round", "time", "winner", "player1 name", "player1 nationality", "player1 aces", "player1 double faults", "player1 1st serves in", "player1 1st serves total", "player1 1st serve points won", "player1 1st serve points total", "player1 2nd serve points won", "player1 2nd serve points total", "player1 break points won", "player1 break points total", "player1 service games played", "player1 1st serve return points won", "player1 1st serve return points total", "player1 2nd serve return points won", "player1 2nd serve return points total", "player1 break points converted won", "player1 break points converted total", "player1 return games played", "player1 total service points won", "player1 total service points total", "player1 total return points won", "player1 total return points total", "player1 total points won", "player1 total points total", "player2 name", "player2 nationality", "player2 aces", "player2 double faults", "player2 1st serves in", "player2 1st serves total", "player2 1st serve points won", "player2 1st serve points total", "player2 2nd serve points won", "player2 2nd serve points total", "player2 break points won", "player2 break points total", "player2 service games played", "player2 1st serve return points won", "player2 1st serve return points total", "player2 2nd serve return points won", "player2 2nd serve return points total", "player2 break points converted won", "player2 break points converted total", "player2 return games played", "player2 total service points won", "player2 total service points total", "player2 total return points won", "player2 total return points total", "player2 total points won", "player2 total points total"]]
 
 output_array = headers + output_array
-
-# Get rid of additional unicode crap
-for row in output_array:
-  for j in xrange (0, len(row)):
-    try: 
-      if row[j].find(u'%\xa0(/)') != -1:
-        row[j] = ""
-    except Exception:
-      row[j] = row[j]
 
 # CSV output
 import csv
