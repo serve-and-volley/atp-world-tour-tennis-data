@@ -11,21 +11,21 @@ The following Python script:
 
 collects all of the tournament and match stats for a single player, and exports the following example CSV file:
 
-* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/John-Mcenroe.csv" target="_blank">John-Mcenroe.csv</a>
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/retired_players/Jimmy-Connors.csv" target="_blank">Jimmy-Connors.csv</a> (545 KB)
 
-This file contains all data from the years 1976 through 1992 for John McEnroe. The Python script takes input arguments from the command line, so for this example it would be:
+This file contains all data from the active years of 1970 through 1996 for Jimmy Connors, who had the longest career out of anyone in the Open Era (post-1968). The Python script takes input arguments from the command line, so for this example it would be:
 
 ```
-$ python player_match_data.py John-Mcenroe 1976 1992 retired
+$ python player_match_data.py Jimmy-Connors 1970 1996 retired
 ```
 
 The following was the runtime for this example:
 
 ```
-$ time python player_match_data.py
-real    7m20.479s
-user    0m36.934s
-sys     0m3.391s
+$ time python player_match_data.py Jimmy-Connors 1970 1996 retired
+real    12m43.512s
+user    0m48.475s
+sys     0m3.845s
 ```
 
 [Disclaimer: The code is the opposite of elegant, but it works; I will be cleaning it up at some point in the hopes of improving the runtime.]
