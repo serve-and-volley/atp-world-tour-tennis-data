@@ -17,27 +17,19 @@ status = sys.argv[4]
 # Generating the URL prefix
 if status == "retired":
     temp = player.split("-")
-    # First 2 digits of last name
-    last2 = temp[1][:2]
-    # First digit of first name
-    first1 = temp[0][:1]
+    # For player names of two words
+    if len(temp) == 2:
+        # First 2 digits of last name
+        last2 = temp[1][:2]
+        # First digit of first name
+        first1 = temp[0][:1]
+    # To handle player names of three words
+    elif len(temp) == 3:
+        last2 = temp[2][:2]
+        first1 = temp[0][:1]
     url_prefix = "http://www.atpworldtour.com/Tennis/Players/" + last2 + "/" + first1 + "/" + player + ".aspx?t=pa&y="
 else:
     url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
-
-"""
-# For player names longer than two words like: Rod-G-Laver (this is how the ATP website refers to Rod Laver)
-# You must comment out the above lines, and use the following:
-player = "Rod-G-Laver"
-last2 = "La"
-first1 = "R"
-first_year = 1962
-last_year = 1979
-status = "retired"
-url_prefix = "http://www.atpworldtour.com/Tennis/Players/" + last2 + "/" + first1 + "/" + player + ".aspx?t=pa&y="
-# URL prefix for active players
-# url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
-"""
 
 # Libraries for HTML scraping
 import urllib
