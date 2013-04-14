@@ -25,6 +25,20 @@ if status == "retired":
 else:
     url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
 
+"""
+# For player names longer than two words like: Rod Laver
+# You must comment out the above lines, and use the following:
+player = "Rod-G-Laver"
+last2 = "La"
+first1 = "R"
+first_year = 1962
+last_year = 1979
+status = "retired"
+url_prefix = "http://www.atpworldtour.com/Tennis/Players/" + last2 + "/" + first1 + "/" + player + ".aspx?t=pa&y="
+# URL prefix for active players
+# url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
+"""
+
 # Libraries for HTML scraping
 import urllib
 from lxml import etree
