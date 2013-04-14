@@ -13,7 +13,13 @@ collects all of the tournament and match stats for a single player, and exports 
 
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/John-Mcenroe.csv" target="_blank">John-Mcenroe.csv</a>
 
-This file contains all data from the years 1976 through 1992 for John McEnroe. The following was the runtime for this example:
+This file contains all data from the years 1976 through 1992 for John McEnroe. The Python script takes input arguments from the command line, so for this example it would be:
+
+```
+$ python player_match_data.py John-Mcenroe 1976 1992 retired
+```
+
+The following was the runtime for this example:
 
 ```
 $ time python player_match_data.py
