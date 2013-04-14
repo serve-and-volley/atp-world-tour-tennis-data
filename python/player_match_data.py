@@ -1,9 +1,18 @@
-# Enter the player info
-# Player name must be separated by dashes
-player = "Bjorn-Borg"
-first_year = 1971
-last_year = 1993
-status = "retired"
+# Library for storing command line inputs
+# Note: Player name must be separated by dashes
+# Example of command line input for:
+#   player: Bjorn-Borg
+#   first year: 1971
+#   last year: 1993
+#   status: retired
+#   command line: python player_match_data.py Bjorn-Borg 1971 1993 retired
+import sys
+
+# Storing the command line inputs
+player = sys.argv[1]
+first_year = int(sys.argv[2])
+last_year = int(sys.argv[3])
+status = sys.argv[4]
 
 # Generating the URL prefix
 if status == "retired":
@@ -16,13 +25,7 @@ if status == "retired":
 else:
     url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
 
-# This is for current players
-#url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
-
-# This is for retired players
-#url_prefix = "http://www.atpworldtour.com/Tennis/Players/Co/J/Jimmy-Connors.aspx" + "?t=pa&y="
-
-# Libraries
+# Libraries for HTML scraping
 import urllib
 from lxml import etree
 import StringIO
