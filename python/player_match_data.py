@@ -26,7 +26,7 @@ else:
     url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
 
 """
-# For player names longer than two words like: Rod Laver
+# For player names longer than two words like: Rod-G-Laver (this is how the ATP website refers to Rod Laver)
 # You must comment out the above lines, and use the following:
 player = "Rod-G-Laver"
 last2 = "La"
