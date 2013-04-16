@@ -31,6 +31,17 @@ if status == "retired":
 else:
     url_prefix = "http://www.atpworldtour.com/Tennis/Players/Top-Players/" + player + ".aspx?t=pa&y="
 
+"""
+# Comment out all of the lines ABOVE for custom player name input
+# Enter your custom input below
+player = "Richard-Pancho-A-Gonzales"
+last2 = "Go"
+first1 = "R"
+url_prefix = "http://www.atpworldtour.com/Tennis/Players/" + last2 + "/" + first1 + "/" + player + ".aspx?t=pa&y="
+first_year = 1968
+last_year = 1980
+"""
+
 # Libraries for HTML scraping
 import urllib
 from lxml import etree
@@ -431,11 +442,14 @@ for row in years_list:
         match_url = array2[i][13]
         row_array = match_stats(match_url)
         match_stats_array.append(row_array)
-    # Line below is for TESTING
+    # Line below is for debugging for console input
     # print row_array
     # Final array
     last_year_array = [array2[ix] + match_stats_array[ix] for ix in range(len(array2))]
     final_array.append(last_year_array)
+    # Lines below is for debugging for console output
+    # for row in final_array:
+    #    print row
   
 # Output array
 output_array = final_array[0]
