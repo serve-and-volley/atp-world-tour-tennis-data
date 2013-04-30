@@ -1,0 +1,533 @@
+year,Tournament,Singles Winner,Runner-up,Score,Doubles Winner,Runner-up,Score
+1970,Johannesburg,Rod Laver,Frew McMillan,"4–6, 6–2, 6–1, 6–2",,,
+1970,Los Angeles,Rod Laver,John Newcombe,"4–6, 6–4, 7–6"," Tom Okker
+ Marty Riessen"," Robert Lutz
+ Stan Smith","7–6, 6–2"
+1970,Monte Carlo,Željko Franulović,Manuel Orantes,"6–4, 6–3, 6–3"," Marty Riessen
+ Roger Taylor"," Pierre Barthès
+ Nikola Pilić","6–3, 6–4, 6–2"
+1970,Rome,Ilie Năstase,Jan Kodeš,"6–3, 1–6, 6–3, 8–6"," Ilie Năstase
+ Ion Ţiriac"," William Bowrey
+ Owen Davidson","0–6, 10–8, 6–3, 6–8, 6–1"
+1970,London,Rod Laver,Cliff Richey,"6–3, 6–4, 7–5"," Ken Rosewall
+ Stan Smith"," Ilie Năstase
+ Ion Ţiriac","6–4, 6–3, 6–2"
+1970,Boston,Tony Roche,Rod Laver,"3–6, 6–4, 1–6, 6–2, 6–2"," Roy Emerson
+ Rod Laver"," Ismail El Shafei
+ Torben Ulrich","6–1, 7–6"
+1970,Stockholm,Stan Smith,Arthur Ashe,"5–7, 6–4, 6–4"," Arthur Ashe
+ Stan Smith"," Bob Carmichael
+ Owen Davidson","6–0, 5–7, 7–5"
+1970,Philadelphia WCT,Rod Laver,Tony Roche,"6–3, 8–6, 6–2"," Ilie Năstase
+ Ion Ţiriac"," Arthur Ashe
+ Dennis Ralston","6–4, 6–3"
+1970,Sydney,Rod Laver,Ken Rosewall,"3–6, 6–2, 3–6, 6–2, 6–3"," Ken Rosewall
+ Fred Stolle"," Bill Bowrey
+ Roger Taylor","6–3, 7–5"
+1971,Johannesburg,Ken Rosewall,Fred Stolle,"6–4, 6–0, 6–4",,,
+1971,Los Angeles,Pancho Gonzales,Jimmy Connors,"3–6, 6–3, 6–3"," John Alexander
+ Phil Dent"," Frank Froehling
+ Clark Graebner","7–6, 6–4"
+1971,Monte Carlo,Ilie Năstase,Tom Okker,"3–6, 8–6, 6–1, 6–1"," Ilie Năstase
+ Ion Ţiriac"," Tom Okker
+ Roger Taylor","1–6, 6–3, 6–3, 8–6"
+1971,Rome,Rod Laver,Jan Kodeš,"7–5, 6–3, 6–3"," John Newcombe
+ Tony Roche"," Andrés Gimeno
+ Roger Taylor","6–4, 6–4"
+1971,London,Ilie Năstase,Rod Laver,"3–6, 6–3, 3–6, 6–4, 6–4"," Bob Hewitt
+ Frew McMillan"," Bill Bowrey
+ Owen Davidson","7–5, 9–7, 6–2"
+1971,Boston WCT,Ken Rosewall,Cliff Drysdale,"6–4, 6–3, 6–0"," Roy Emerson
+ Rod Laver"," Tom Okker
+ Marty Riessen","6–4, 6–4"
+1971,Stockholm,Arthur Ashe,Jan Kodeš,"6–1, 3–6, 6–2, 1–6, 6–4"," Stan Smith
+ Tom Gorman"," Arthur Ashe
+ Bob Lutz","6–4, 6–3"
+1971,Philadelphia WCT,John Newcombe,Rod Laver,"7–6(7–5), 7–6(7–1), 6–4",,,(ts) stopped at QF stage
+1971,Sydney,Phil Dent,John Alexander,"6–3, 6–4, 6–4"," Phil Dent
+ John Alexander"," Mal Anderson
+ Alex Metreveli","6–7, 2–6, 6–3, 7–6, 7–6"
+1972,Johannesburg,Cliff Richey,Manuel Orantes,"6–4, 7–5, 3–6, 6–4",,,
+1972,Los Angeles WCT,Stan Smith,Roscoe Tanner,"6–4, 6–4"," Jimmy Connors
+ Pancho Gonzales",,
+1972,Monte Carlo,Ilie Năstase,František Pála,"6–1, 6–0, 6–3"," Patrice Beust
+ Daniel Contet"," Jiří Hřebec
+ František Pala","3–6, 6–1, 12–10, 6–2"
+1972,Rome,Manuel Orantes,Jan Kodeš,"4–6, 6–1, 7–5, 6–2"," Ilie Năstase
+ Ion Ţiriac"," Lew Hoad
+ Frew McMillan","3–6, 3–6, 6–4, 6–3, 5–3, (ret)"
+1972,Montreal,Ilie Năstase,Andrew Pattison,"6–4, 6–3"," Ilie Năstase
+ Ion Ţiriac"," Jan Kodeš
+ Jan Kukal","7-6, 6-3"
+1972,Boston WCT,Bob Lutz,Tom Okker,"6–4, 2–6, 6–4, 6–4",,,
+1972,Stockholm,Stan Smith,Tom Okker,"6–4, 6–3"," Tom Okker
+ Marty Riessen"," Roy Emerson
+ Colin Dibley","6–3, 6–2"
+1972,Philadelphia WCT,Rod Laver,Ken Rosewall,"4–6, 6–2, 6–2, 6-2"," Arthur Ashe
+ Robert Lutz"," John Newcombe
+ Tony Roche","6–3, 6–7, 6–3"
+1972,Las Vegas,John Newcombe,Cliff Drysdale,"6–3, 6–4"," Roy Emerson
+ Rod Laver"," John Newcombe
+ Tony Roche",def
+1973,Johannesburg,Jimmy Connors,Arthur Ashe,"6–4, 7–6, 6–3"," Arthur Ashe
+ Tom Okker"," Lew Hoad
+ Bob Maud","6–2, 4–6, 6–2, 6–4"
+1973,Los Angeles,Jimmy Connors,Tom Okker,"7–5, 7–6"," Jan Kodeš
+ Vladimír Zedník"," Jimmy Connors
+ Ilie Năstase","6–2, 6–4"
+1973,Monte Carlo,Ilie Năstase,Björn Borg,"6–4, 6–1, 6–2"," Juan Gisbert, Sr.
+ Ilie Năstase"," Georges Goven
+ Patrick Proisy","6–2, 6–2, 6–2"
+1973,Rome,Ilie Năstase,Manuel Orantes,"6–1, 6–1, 6–1"," John Newcombe
+ Tom Okker"," Ross Case
+ Geoff Masters","6–2, 6–3, 6–4"
+1973,Toronto,Tom Okker,Manuel Orantes,"6–3, 6–2, 6-1"," Rod Laver
+ Ken Rosewall"," Owen Davidson
+ John Newcombe","7–5, 7–6"
+1973,Boston,Jimmy Connors,Arthur Ashe,"6–3, 4–6, 6–4, 3–6, 6–2"," Stan Smith
+ Erik Van Dillen"," Ismail El Shafei
+ Marty Riessen",
+1973,Stockholm,Tom Gorman,Björn Borg,"6–3, 4–6, 7–6"," Jimmy Connors
+ Ilie Năstase"," Bob Hewitt
+ Frew McMillan","7–6, 7–5"
+1973,Philadelphia WCT,Stan Smith,Robert Lutz,"7–6(7–2), 7–6(7–5), 4–6, 6–4","Brian Gottfried
+ Dick Stockton"," Roy Emerson
+ Rod Laver","4–6, 6–3, 6–4"
+1973,Las Vegas,Brian Gottfried,Arthur Ashe,"6–1, 6–3"," Brian Gottfried
+ Dick Stockton"," Ken Rosewall
+ Fred Stolle","6–7, 6–4, 6–4"
+1974,Johannesburg,Jimmy Connors,Arthur Ashe,"7–6, 6–3, 6–1"," Bob Hewitt
+ Frew McMillan"," Tom Okker
+ Marty Riessen","7–6, 6–4, 6–3"
+1974,Indianapolis,Jimmy Connors,Björn Borg,"5–7, 6–3, 6–4"," Robert Lutz
+ Stan Smith"," Hans-Jürgen Pohmann
+ Marty Riessen","3–6, 6–4, 6–3"
+1974,Monte Carlo WCT,Andrew Pattison,Ilie Năstase,"5–7, 6–3, 6–4"," John Alexander
+ Phil Dent"," Manuel Orantes
+ Tony Roche","7–6, 4–6, 7–6, 6–3"
+1974,Rome,Björn Borg,Ilie Năstase,"6–3, 6–4, 6–2"," Brian Gottfried
+ Raúl Ramírez"," Juan Gisbert
+ Ilie Năstase","6–3, 6–2, 6–3"
+1974,Toronto,Guillermo Vilas,Manuel Orantes,"6–4, 6-2, 6-3"," Manuel Orantes
+ Guillermo Vilas"," Jürgen Fassbender
+ Hans-Jürgen Pohmann","6–1, 2–6, 6–2"
+1974,Boston,Björn Borg,Tom Okker,"7–6, 6–1, 6–1"," Robert Lutz
+ Stan Smith"," Hans-Jürgen Pohmann
+ Marty Riessen","3–6, 6–4, 6–3"
+1974,Stockholm,Arthur Ashe,Tom Okker,"6–2, 6–2"," Tom Okker
+ Marty Riessen"," Bob Hewitt
+ Frew McMillan","2–6, 6–3, 6–4"
+1974,Philadelphia WCT,Rod Laver,Arthur Ashe,"6–1, 6–4, 3–6, 6–4"," Pat Cramer
+ Mike Estep"," Jean-Baptiste Chanfreau
+ Georges Goven","7–6, 6–7, 6–3"
+1974,Las Vegas,Rod Laver,Marty Riessen,"6–2, 6–2"," Roy Emerson
+ Rod Laver"," Frew McMillan
+ John Newcombe","6–7, 6–4, 6–4"
+1975,Washington,Guillermo Vilas,Harold Solomon,"6–1, 6–3"," Robert Lutz
+ Stan Smith"," Brian Gottfried
+ Raúl Ramírez","7–5, 2–6, 6–1"
+1975,Indianapolis,Manuel Orantes,Arthur Ashe,"6–2, 6–2"," Juan Gisbert
+ Manuel Orantes"," Wojciech Fibak
+ Hans-Jürgen Pohmann","7–5, 6–0"
+1975,Monte Carlo WCT,Manuel Orantes,Bob Hewitt,"6–2, 6–4"," Bob Hewitt
+ Frew McMillan"," Arthur Ashe
+ Tom Okker","6–3, 6–2"
+1975,Rome,Raúl Ramírez,Manuel Orantes,"7–6, 7–5, 7–5"," Brian Gottfried
+ Raúl Ramírez"," Jimmy Connors
+ Ilie Năstase","6–4, 7–6, 2–6, 6–1"
+1975,Toronto,Manuel Orantes,Ilie Năstase,"7–6, 6–0, 6–1"," Cliff Drysdale
+ Raymond Moore"," Jan Kodeš
+ Ilie Năstase","6–4, 5-7, 7-6"
+1975,Boston,Björn Borg,Guillermo Vilas,"6–3, 6–4, 6–2"," Brian Gottfried
+ Raúl Ramirez"," John Andrews
+ Mike Estep","4–6, 6–3, 7–6"
+1975,Stockholm,Adriano Panatta,Jimmy Connors,"6–4, 6–3"," Bob Hewitt
+ Frew McMillan"," Charlie Pasarell
+ Roscoe Tanner","3–6, 6–3, 6–4"
+1975,Philadelphia WCT,Marty Riessen,Vitas Gerulaitis,"7–6 (7–1), 5–7, 6–2, 6–7 (0–7), 6–3"," Brian Gottfried
+ Raúl Ramirez"," Dick Stockton
+ Erik Van Dillen","5–7, 7–6, 6–4"
+1975,Las Vegas,Roscoe Tanner,Ross Case,"5–7, 7–5, 7–6"," John Alexander
+ Phil Dent"," Bob Carmichael
+ Cliff Drysdale","6–1, 6–4"
+1976,Washington,Jimmy Connors,Raúl Ramírez,"6–2, 6–4"," Brian Gottfried
+ Raúl Ramírez"," Arthur Ashe
+ Jimmy Connors","6–3, 6–3"
+1976,Indianapolis,Jimmy Connors,Wojtek Fibak,"6–2, 6–4"," Brian Gottfried
+ Raúl Ramírez"," Fred McNair
+ Sherwood Stewart","6–2, 6–2"
+1976,Monte Carlo WCT,Guillermo Vilas,Wojciech Fibak,"6–1, 6–1, 6–4"," Wojciech Fibak
+ Karl Meiler"," Björn Borg
+ Guillermo Vilas","7–6, 6–1"
+1976,Rome,Adriano Panatta,Guillermo Vilas,"2–6, 7–6, 6–2, 7–6"," Brian Gottfried
+ Raúl Ramírez"," Geoff Masters
+ John Newcombe","7–6, 5–7, 6–3, 3–6, 6–3"
+1976,London,Jimmy Connors,Roscoe Tanner,"3–6, 7–6, 6–4"," Roscoe Tanner
+ Stan Smith"," Wojtek Fibak
+ Brian Gottfried","7–6, 6–3"
+1976,Boston,Björn Borg,Harold Solomon,"6–7, 6–4, 6–1, 6–2"," Ray Ruffels
+ Allan Stone"," Mike Cahill
+ John Whitlinger","3–6, 6–3, 7–6"
+1976,Stockholm,Mark Cox,Manuel Orantes,"4–6, 7–5, 7–6"," Bob Hewitt
+'Frew McMillan"," Tom Okker
+ Marty Riessen","6–4, 4–6, 6–4"
+1976,Philadelphia WCT,Jimmy Connors,Björn Borg,"7–6 (7–5), 6–4, 6–0"," Rod Laver
+ 'Dennis Ralston"," Bob Hewitt
+ Frew McMillan","6–3, 5–7, 7–6 (7–5)"
+1976,Las Vegas,Jimmy Connors,Ken Rosewall,"6–1, 6–3"," Arthur Ashe
+ Charlie Pasarell"," Robert Lutz
+ Stan Smith","6–4, 6–2"
+1977,Washington,Guillermo Vilas,Brian Gottfried,"6–4, 7–5"," John Alexander
+ Phil Dent"," Fred McNair
+ Sherwood Stewart","7–5, 7–5"
+1977,Indianapolis,Manuel Orantes,Jimmy Connors,"6–1, 6–3"," Patricio Cornejo
+ Jaime Fillol"," Dick Crealy
+ Cliff Letcher","6–7, 6–4, 6–3"
+1977,Monte Carlo WCT,Björn Borg,Corrado Barazzutti,"6–3, 7–5, 6–0"," François Jauffret
+ Jan Kodeš"," Wojciech Fibak
+ Tom Okker","2–6, 6–3, 6–2"
+1977,Rome,Vitas Gerulaitis,Antonio Zugarelli,"6–2, 7–6, 3–6, 7–6"," Brian Gottfried
+ Raúl Ramírez"," Fred McNair
+ Sherwood Stewart","6–7, 7–6, 7–5"
+1977,London,Björn Borg,John Lloyd,"6–4, 6–4, 6–3"," Frew McMillan
+ Sandy Mayer"," Brian Gottfried
+ Raúl Ramírez","6–3, 7–6"
+1977,Boston,Manuel Orantes,Eddie Dibbs,"7–6, 7–5, 6–4"," Bob Lutz
+ Stan Smith"," Brian Gottfried
+ Bob Hewitt","6–3, 6–4"
+1977,Stockholm,Sandy Mayer,Raymond Moore,"6–2, 6–4"," Tom Okker
+ Wojciech Fibak"," Brian Gottfried
+ Raúl Ramírez","6–3, 6–3"
+1977,Philadelphia WCT,Dick Stockton,Jimmy Connors,"3–6, 6–4, 3–6, 6–1, 6–2"," Bob Hewitt
+ Frew McMillan"," Wojciech Fibak
+ Tom Okker","7–5, 6–3"
+1977,Las Vegas,Jimmy Connors,Raúl Ramírez,"6–4, 5–7, 6–2"," Robert Lutz
+ Stan Smith"," Bob Hewitt
+ Raúl Ramírez","6–3, 3–6, 6–4"
+1978,Hamburg,Guillermo Vilas,Wojtek Fibak,"6–2, 6–4, 6–2"," Wojtek Fibak
+ Tom Okker"," Antonio Muñoz
+ Victor Pecci","6–2, 6–4"
+1978,Tokyo,Björn Borg,Brian Teacher,"6–3, 6–4"," Ross Case
+ Geoff Masters"," Pat Dupre
+ Tom Gorman","6–3, 6–4"
+1978,Monte Carlo,Raúl Ramírez,Tomáš Šmíd,"6–3, 6–3, 6–4"," Peter Fleming
+ Tomáš Šmíd"," Jaime Fillol
+ Ilie Năstase","6–4, 7–5"
+1978,Rome,Björn Borg,Adriano Panatta,"1–6, 6–3, 6–1, 4–6, 6–3"," Victor Pecci
+ Belus Prajoux"," Jan Kodeš
+ Tomáš Šmíd","6–7, 7–6, 6–1"
+1978,Montreal,Eddie Dibbs,José Luis Clerc,"6–7, 6–4, 6–1"," Wojciech Fibak
+ Tom Okker"," Colin Dowdeswell
+ Heinz Günthardt","6–3, 7–6"
+1978,London,John McEnroe,Tim Gullikson,"6–7, 6–4, 7–6, 6–2"," Peter Fleming
+ John McEnroe"," Bob Hewitt
+ Frew McMillan","7–6, 4–6, 6–4"
+1978,Stockholm,John McEnroe,Tim Gullikson,"6–2, 6–2"," Tom Okker
+ Wojciech Fibak"," Stan Smith
+ Bob Lutz","6–3, 6–2"
+1978,Philadelphia,Jimmy Connors,Roscoe Tanner,"6–2, 6–4, 6–3"," Bob Hewitt
+ Frew McMillan"," Vitas Gerulaitis
+ Sandy Mayer","6–3, 6–4"
+1978,Las Vegas,Harold Solomon,Corrado Barazzutti,"6–1, 3–0, (ret)"," Alvaro Fillol
+ Jaime Fillol"," Bob Hewitt
+ Raúl Ramírez","6–3, 7–6"
+1979,Hamburg,José Higueras,Harold Solomon,"3–6, 6–1, 6–4, 6–1"," Jan Kodeš
+ Tomáš Šmíd"," Mark Edmondson
+ John Marks","6–3, 6–1, 7–6"
+1979,Tokyo,Björn Borg,Jimmy Connors,"6–2, 6–2"," Marty Riessen
+ Sherwood Stewart"," Mike Cahill
+ Terry Moor","6–4, 7–6"
+1979,Monte Carlo,Björn Borg,Vitas Gerulaitis,"6–2, 6–1, 6–3"," Ilie Năstase
+ Raúl Ramírez"," Victor Pecci
+ Balázs Taróczy","6–3, 6–4"
+1979,Rome,Vitas Gerulaitis,Guillermo Vilas,"6–7, 7–6, 6–7, 6–4, 6–2"," Peter Fleming
+ Tomáš Šmíd"," José Luis Clerc
+ Ilie Năstase","4–6, 6–1, 7–5"
+1979,Toronto,Björn Borg,John McEnroe,"6–3, 6–3"," Peter Fleming
+ John McEnroe"," Heinz Günthardt
+ Bob Hewitt","6–7, 7–6, 6–1"
+1979,London,John McEnroe,Harold Solomon,"6–3, 6–4, 7–5"," John McEnroe
+ Peter Fleming"," Tomáš Šmíd
+ Stan Smith","6–3, 6–2"
+1979,Stockholm,John McEnroe,Gene Mayer,"6–7, 6–3, 6–3"," John McEnroe
+ Peter Fleming"," Tom Okker
+ Wojciech Fibak","6–4, 6–4"
+1979,Philadelphia,Jimmy Connors,Arthur Ashe,"6–3, 6–4, 6–1"," Wojciech Fibak
+ Tom Okker"," Peter Fleming
+ John McEnroe","6–4, 6–3"
+1979,Las Vegas,Björn Borg,Jimmy Connors,"6–3, 6–2"," Marty Riessen
+ Sherwood Stewart"," Adriano Panatta
+ Raúl Ramírez","4–6, 6–4, 7–6"
+1980,Tokyo,Jimmy Connors,Tim Gullikson,"6–1, 6–2"," Victor Amaya
+ Hank Pfister"," Marty Riessen
+ Sherwood Stewart","6–3, 3–6, 7–6"
+1980,Monte Carlo,Björn Borg,Guillermo Vilas,"6–1, 6–0, 6–2"," Paolo Bertolucci
+ Adriano Panatta"," Vitas Gerulaitis
+ John McEnroe","6–2, 5–7, 6–4"
+1980,Rome,Guillermo Vilas,Yannick Noah,"6–0, 6–4, 6–4"," Mark Edmondson
+ Kim Warwick"," Balázs Taróczy
+ Eliot Teltscher","7–6, 7–6"
+1980,Toronto,Ivan Lendl,Björn Borg,"4–6, 5–4, r"," Bruce Manson
+ Brian Teacher"," Heinz Günthardt
+ Sandy Mayer","6–3, 3–6, 6–4"
+1980,Hamburg,Harold Solomon,Guillermo Vilas,"6–7, 6–2, 6–4, 2–6, 6–3"," Hans Gildemeister
+ Andrés Gómez"," Reinhart Probst
+ Max Wunschig","6–3, 6–4"
+1980,London,John McEnroe,Gene Mayer,"6–4, 6–4, 6–3"," John McEnroe
+ Peter Fleming"," Bill Scanlon
+ Eliot Teltscher","7–5, 6–3"
+1980,Stockholm,Björn Borg,John McEnroe,"6–3, 6–4"," Heinz Gunthardt
+ Paul McNamee"," Stan Smith
+ Bob Lutz (tennis)","6–7, 6–3, 6–2"
+1980,Philadelphia,Jimmy Connors,John McEnroe,"6–3, 2–6, 6–3, 3–6, 6–4"," Peter Fleming
+ John McEnroe"," Brian Gottfried
+ Raúl Ramirez","7–6, 4–6, 6–3"
+1980,Las Vegas,Björn Borg,Harold Solomon,"6–3, 6–1"," Robert Lutz
+ Stan Smith"," Wojtek Fibak
+ Gene Mayer","6–2, 7–5"
+1981,Tokyo,Vincent Van Patten,Mark Edmondson,"6–2, 3–6, 6–3"," Victor Amaya
+ Hank Pfister"," Heinz Gunthardt
+ Balázs Taróczy","6–4, 6–2"
+1981,Monte Carlo,"
+no champion
+"," Jimmy Connors
+ Guillermo Vilas",5–5 (unfinished - rain)," Heinz Günthardt
+ Markus Günthardt"," Pavel Složil
+ Tomáš Šmíd","6–3, 6–3"
+1981,Rome,José-Luis Clerc,Víctor Pecci,"6–3, 6–4, 6–0"," Hans Gildemeister
+ Andrés Gómez"," Bruce Manson
+ Tomáš Šmíd","7–5, 6–2"
+1981,Montreal,Ivan Lendl,Eliot Teltscher,"6–3, 6–2"," Raúl Ramírez
+ Ferdi Taygan"," Peter Fleming
+ John McEnroe","2–6, 7–6, 6–4"
+1981,Cincinnati,John McEnroe,Chris Lewis,"6–3, 6–4"," John McEnroe
+ Ferdi Taygan"," Bob Lutz
+ Stan Smith","7–6, 6–3"
+1981,Hamburg,Peter McNamara,Jimmy Connors,"7–6, 6–1, 4–6, 6–4"," Hans Gildemeister
+ Andrés Gómez"," Peter McNamara
+ Paul McNamee","6–4, 3–6, 6–4"
+1981,London,Jimmy Connors,John McEnroe,"3–6, 2–6, 6–3, 6–4, 6–2"," Ferdi Taygan
+ Sherwood Stewart"," John McEnroe
+ Peter Fleming","7–5, 6–7, 6–4"
+1981,Philadelphia,Roscoe Tanner,Wojciech Fibak,"6–2, 7–6, 7–5"," Marty Riessen
+ Sherwood Stewart"," Brian Gottfried
+ Raúl Ramirez","6–4, 6–4"
+1981,Las Vegas,Ivan Lendl,Harold Solomon,"6–4, 6–2"," Peter Fleming
+ John McEnroe"," Tracy Delatte
+ Trey Waltke","6–3, 7–6"
+1982,Tokyo,John McEnroe,Peter McNamara,"7–6, 7–5"," Tim Gullikson
+ Tom Gullikson"," John McEnroe
+ Peter Rennert","6–4, 3–6, 7–6"
+1982,Monte Carlo,Guillermo Vilas,Ivan Lendl,"6–1, 7–6, 6–3"," Peter McNamara
+ Paul McNamee"," Mark Edmondson
+ Sherwood Stewart","6–7, 7–6, 6–3"
+1982,Rome,Andrés Gómez,Eliot Teltscher,"6–2, 6–3, 6–2"," Heinz Günthardt
+ Balázs Taróczy"," Wojtek Fibak
+ John Fitzgerald","6–4, 4–6, 6–3"
+1982,Toronto,Vitas Gerulaitis,Ivan Lendl,"4–6, 6–1, 6–3","Steve Denton
+ Mark Edmondson"," Peter Fleming
+ John McEnroe","6–7, 7–5, 6–2"
+1982,Cincinnati,Ivan Lendl,Steve Denton,"6–2, 7–6"," Peter Fleming
+ John McEnroe"," Steve Denton
+ Mark Edmondson","6–2, 6–3"
+1982,Hamburg,José Higueras,Peter McNamara,"4–6, 6–7, 7–6, 6–3, 7–6","Pavel Složil
+ Tomáš Šmíd"," Anders Järryd
+ Hans Simonsson","6–4, 6–3"
+1982,London,John McEnroe,Brian Gottfried,"6–3, 6–2, 6–4,"," John McEnroe
+ Peter Fleming"," Heinz Gunthardt
+ Tomáš Šmíd","7–6, 6–4"
+1982,Philadelphia,John McEnroe,Jimmy Connors,"6–3, 6–3, 6–1"," Peter Fleming
+ John McEnroe"," Sherwood Stewart
+ Ferdi Taygan","7–6, 6–4"
+1982,Forest Hills WCT,Ivan Lendl,Eddie Dibbs,"6–1, 6–1"," Tracy Delatte
+ Johan Kriek"," Dick Stockton
+ Erik Van Dillen","6–4, 3–6, 6–3"
+1983,Tokyo,Ivan Lendl,Scott Davis,"3–6, 6–3, 6–4"," Mark Edmondson
+ Sherwood Stewart"," Steve Denton
+ John Fitzgerald","6–1, 6–4"
+1983,Monte Carlo,Mats Wilander,Mel Purcell,"6–1, 6–2, 6–3"," Balázs Taróczy
+ Heinz Gunthardt"," Henri Leconte
+ Yannick Noah","6–2, 6–4"
+1983,Rome,Jimmy Arias,José Higueras,"6–2, 6–7, 6–1, 6–4"," Francisco González
+ Víctor Pecci"," Jan Gunnarsson
+ Mike Leach","6–2, 6–7, 6–4"
+1983,Montreal,Ivan Lendl,Anders Järryd,"6–2, 6–2"," Sandy Mayer
+ Ferdi Taygan"," Tim Gullikson
+ Tom Gullikson","6–3, 6–4"
+1983,Cincinnati,Mats Wilander,John McEnroe,"6–4, 6–4"," Victor Amaya
+ Tim Gullikson"," Carlos Kirmayr
+ Cassio Motta","6–4, 6–3"
+1983,Hamburg,Yannick Noah,José Higueras,"3–6, 7–5, 6–2, 6–0"," Heinz Günthardt
+ Balázs Taróczy"," Mark Edmondson
+ Brian Gottfried","6–1, 6–0"
+1983,London,John McEnroe,Jimmy Connors,"7–5, 6–2, 6–1"," John McEnroe
+ Peter Fleming"," Steve Denton
+ Sherwood Stewart","6–3, 6–4"
+1983,Philadelphia,John McEnroe,Ivan Lendl,"4–6, 7–6, 6–4, 6–3"," Kevin Curren
+ Steve Denton"," Peter Fleming
+ John McEnroe","4–6, 7–6, 7–6"
+1983,Forest Hills WCT,John McEnroe,Vitas Gerulaitis,"6–3, 7–5"," Tracy Delatte
+ Johan Kriek"," Kevin Curren
+ Steve Denton","6–7, 7–5, 6–3"
+1984,Tokyo,Jimmy Connors,Ivan Lendl,"6–4, 3–6, 6–0"," Tony Giammalva
+ Sammy Giammalva"," Mark Edmondson
+ Sherwood Stewart","7–6, 6–4"
+1984,Monte Carlo,Henrik Sundstrom,Mats Wilander,"6–3, 7–5, 6–2"," Mark Edmondson
+ Sherwood Stewart"," Jan Gunnarsson
+ Mats Wilander","6–2, 6–1"
+1984,Rome,Andrés Gómez,Aaron Krickstein,"2–6, 6–1, 6–2, 6–2"," Ken Flach
+ Robert Seguso"," John Alexander
+ Mike Leach","3–6, 6–3, 6–4"
+1984,Toronto,John McEnroe,Vitas Gerulaitis,"6–0, 6–3"," Peter Fleming
+ John McEnroe"," John Fitzgerald
+ Kim Warwick","6–4, 6–2"
+1984,Cincinnati,Mats Wilander,Anders Järryd,"7–6, 6–3"," Francisco González
+ Matt Mitchell"," Sandy Mayer
+ Balázs Taróczy","4–6, 6–3, 7–6"
+1984,Hamburg,Juan Aguilera,Henrik Sundström,"6–4, 2–6, 2–6, 6–4, 6–4"," Stefan Edberg
+ Anders Järryd"," Heinz Günthardt
+ Balázs Taróczy","6–4, 6–3"
+1984,Stockholm,John McEnroe,Mats Wilander,"6–2, 3–6, 6–2"," Henri Leconte
+ Tomáš Šmíd"," Vijay Amritraj
+ Ilie Năstase","7–5, 7–5"
+1984,Philadelphia,John McEnroe,Ivan Lendl,"6–3, 3–6, 6–3, 7–6"," Peter Fleming
+ John McEnroe"," Henri Leconte
+ Yannick Noah","6–2, 6–3"
+1984,Forest Hills WCT,John McEnroe,Ivan Lendl,"6–4, 6–2"," David Dowlen
+ Nduka Odizor"," Ernie Fernandez
+ David Pate","7–6, 7–5"
+1985,Stockholm,John McEnroe,Anders Järryd,"6–1, 6–2"," Guy Forget
+ Andrés Gómez"," Mike De Palmer
+ Gary Donnelly","6–3, 6–4"
+1985,Tokyo,Ivan Lendl,Mats Wilander,"6–0, 6–4"," Ken Flach
+ Robert Seguso"," Scott Davis
+ David Pate","4–6, 6–3, 7–6"
+1985,Monte Carlo,Ivan Lendl,Mats Wilander,"6–1, 6–3, 4–6, 6–4"," Pavel Složil
+ Tomáš Šmíd"," Shlomo Glickstein
+ Shahar Perkiss","6–2, 6–3"
+1985,Rome,Yannick Noah,Miloslav Mečíř,"6–4, 3–6, 6–2, 7–6"," Anders Järryd
+ Mats Wilander"," Ken Flach
+ Robert Seguso","4–6, 6–3, 6–2"
+1985,Montreal,John McEnroe,Ivan Lendl,"7–5, 6–3"," Ken Flach
+ Robert Seguso"," Stefan Edberg
+ Anders Järryd","7–5, 7–6"
+1985,Cincinnati,Boris Becker,Mats Wilander,"6–4, 6–2"," Stefan Edberg
+ Anders Järryd"," Joakim Nystrom
+ Mats Wilander","4–6, 6–2, 6–3"
+1985,Hamburg,Miloslav Mečíř,Henrik Sundström,"6–4, 6–1, 6–4"," Hans Gildemeister
+ Andrés Gómez"," Heinz Günthardt
+ Balázs Taróczy","6–4, 6–3"
+1985,Philadelphia,John McEnroe,Miloslav Mečíř,"6–3, 7–6, 6–1"," Joakim Nyström
+ Mats Wilander"," Wojciech Fibak
+ Sandy Mayer","7–6, 7–6"
+1985,Forest Hills WCT,Ivan Lendl,John McEnroe,"6–3, 6–3"," Ken Flach
+ Robert Seguso"," Givaldo Barbosa
+ Ivan Kley","7–5, 6–2"
+1986,Miami,Ivan Lendl,Mats Wilander,"3–6, 6–1, 7–6, 6–4"," Brad Gilbert
+ Vince Van Patten"," Stefan Edberg
+ Anders Järryd",wo
+1986,Tokyo,Boris Becker,Stefan Edberg,"7–6, 6–1"," Gary Donnelly
+ Mike De Palmer"," Andrés Gómez
+ Ivan Lendl","6–3, 7–5"
+1986,Monte Carlo,Joakim Nystrom,Yannick Noah,"6–3, 6–2"," Guy Forget
+ Yannick Noah"," Joakim Nystrom
+ Mats Wilander","6–4, 3–6, 6–4"
+1986,Rome,Ivan Lendl,Emilio Sánchez,"7–5, 4–6, 6–1, 6–1"," Guy Forget
+ Yannick Noah"," Mark Edmondson
+ Sherwood Stewart","7–6, 6–2"
+1986,Toronto,Boris Becker,Stefan Edberg,"6–4, 3–6, 6–3"," Chip Hooper
+ Mike Leach"," Boris Becker
+ Slobodan Živojinović","6–7, 6–3, 6–3"
+1986,Cincinnati,Mats Wilander,Jimmy Connors,"6–4, 6–1"," Mark Kratzmann
+ Kim Warwick"," Christo Steyn
+ Danie Visser","6–3, 6–4."
+1986,Hamburg,Henri Leconte,Miloslav Mečíř,"6–2, 5–7, 6–4, 6–2"," Emilio Sánchez
+ Sergio Casal"," Boris Becker
+ Eric Jelen","6–1, 7–5"
+1986,Philadelphia,Ivan Lendl,Tim Mayotte,wo," Scott Davis
+ David Pate"," Stefan Edberg
+ Anders Järryd","6–4, 6–7, 6–3"
+1986,Stockholm,Stefan Edberg,Mats Wilander,"6–2, 6–1, 6–1"," Sherwood Stewart
+ Kim Warwick"," Pat Cash
+ Slobodan Živojinović","4–6, 6–1, 7–5"
+1987,Miami,Miloslav Mečíř,Ivan Lendl,"7–5, 6–2, 7–5"," Paul Annacone
+ Christo van Rensburg"," Ken Flach
+ Robert Seguso","6–2, 6–4, 6–4"
+1987,Tokyo,Stefan Edberg,Ivan Lendl,"6–7, 6–4, 6–4"," Broderick Dyke
+ Tom Nijssen"," Sammy Giammalva
+ Jim Grabb","6–3, 6–2"
+1987,Monte Carlo,Mats Wilander,Jimmy Arias,"4–6, 7–5, 6–1, 6–3"," Hans Gildemeister
+ Andrés Gómez"," Mansour Bahrami
+ Michael Mortensen","6–2, 6–4"
+1987,Rome,Mats Wilander,Martín Jaite,"6–3, 6–4, 6–4"," Guy Forget
+ Yannick Noah"," Miloslav Mečíř
+ Tomáš Šmíd","6–2, 6–7, 6–3"
+1987,Montreal,Ivan Lendl,Stefan Edberg,"6–4, 7–6"," Pat Cash
+ Stefan Edberg"," Peter Doohan
+ Laurie Warder","6–7, 6–3, 6–4"
+1987,Cincinnati,Stefan Edberg,Boris Becker,"6–4, 6–1"," Ken Flach
+ Robert Seguso"," John Fitzgerald
+ Steve Denton","7–5, 6–3"
+1987,Hamburg,Ivan Lendl,Miloslav Mečíř,"6–1, 6–3, 6–3"," Miloslav Mečíř
+ Tomáš Šmíd"," Claudio Mezzadri
+ Jim Pugh","6–1, 6–2"
+1987,Indian Wells,Boris Becker,Stefan Edberg,"6–4, 6–4, 7–5"," Guy Forget
+ Yannick Noah"," Boris Becker
+ Eric Jelen","5–7, 7–6, 7–5"
+1987,Stockholm,Stefan Edberg,Jonas Svensson,"7–5, 6–2, 4–6, 6–4"," Stefan Edberg
+ Anders Järryd"," Jim Grabb
+ Jim Pugh","6–2, 3–6, 6–1"
+1988,Miami,Mats Wilander,Jimmy Connors,"6–4, 4–6, 6–4, 6–4"," John Fitzgerald
+ Anders Järryd"," Ken Flach
+ Robert Seguso","7–6, 6–1, 7–5"
+1988,Tokyo,Boris Becker,John Fitzgerald,"7–6, 6–4"," Andrés Gómez
+ Slobodan Živojinović"," Boris Becker
+ Eric Jelen","7–5, 5–7, 6–3"
+1988,Monte Carlo,Ivan Lendl,Martín Jaite,"5–7, 6–4, 7–5, 6–3"," Sergio Casal
+ Emilio Sánchez"," Henri Leconte
+ Ivan Lendl","6–7, 6–4, 7–6"
+1988,Rome,Ivan Lendl,Guillermo Pérez-Roldán,"2–6, 6–4, 6–2, 4–6, 6–4"," Jorge Lozano
+ Todd Witsken"," Anders Järryd
+ Tomáš Šmíd","6–3, 6–3"
+1988,Toronto,Ivan Lendl,Kevin Curren,"7–6, 6–2"," Ken Flach
+ Robert Seguso"," Andrew Castle
+ Tim Wilkison","7–6 (7–3), 6–3"
+1988,Cincinnati,Mats Wilander,Stefan Edberg,"3–6, 7–6, 7–6"," Rick Leach
+ Jim Pugh"," Jim Grabb
+ Patrick McEnroe","6–2, 6–4"
+1988,Hamburg,Kent Carlsson,Henri Leconte,"6–2, 6–1, 6–4"," Darren Cahill
+ Laurie Warder"," Rick Leach
+ Jim Pugh","6–0, 5–7, 6–4"
+1988,Indian Wells,Boris Becker,Emilio Sánchez,"7–5, 6–4, 2–6, 6–4"," Boris Becker
+ Guy Forget"," Jorge Lozano
+ Todd Witsken","6–3, 6–3"
+1988,Stockholm,Boris Becker,Peter Lundgren,"6–4, 6–1, 6–1"," Kevin Curren
+ Jim Grabb"," Paul Annacone
+ John Fitzgerald","7–5, 7–5"
+1989,Miami,Ivan Lendl,Thomas Muster,w/o," Jakob Hlasek
+ Anders Järryd"," Jim Grabb
+ Patrick McEnroe","6–3, r"
+1989,Montreal,Ivan Lendl,John McEnroe,"6–1, 6–3"," Kelly Evernden
+ Todd Witsken"," Charles Beckman
+ Shelby Cannon","6–3, 6–3"
+1989,Monte Carlo,Alberto Mancini,Boris Becker,"7–5, 2–6, 7–5, 7–6"," Tomáš Šmíd
+ Mark Woodforde"," Paolo Canè
+ Diego Nargiso","1–6, 6–4, 6–2"
+1989,Rome,Alberto Mancini,Andre Agassi,"6–3, 4–6, 2–6, 7–6, 6–1"," Jim Courier
+ Pete Sampras"," Danilo Marcelino
+ Mauro Menezes","6–4, 6–3"
+1989,Stockholm,Ivan Lendl,Magnus Gustafsson,"7–5, 6–0, 6–3"," Jorge Lozano
+ Todd Witsken"," Rick Leach
+ Jim Pugh","6–3, 5–7, 6–3"
+1989,Cincinnati,Brad Gilbert,Stefan Edberg,"6–4, 2–6, 7–6"," Ken Flach
+ Robert Seguso"," Pieter Aldrich
+ Danie Visser","6–4, 6–4"
+1989,Hamburg,Ivan Lendl,Horst Skoff,"6–4, 6–1, 6–3"," Emilio Sánchez
+ Javier Sánchez"," Boris Becker
+ Eric Jelen","6–4, 6–7, 7–6"
+1989,Indian Wells,Miloslav Mečíř,Yannick Noah,"3–6, 2–6, 6–1, 6–2, 6–3"," Boris Becker
+ Jakob Hlasek"," Kevin Curren
+ David Pate","3–6, 6–3, 6–4"
+1989,Paris,Boris Becker,Stefan Edberg,"6–4, 6–3, 6–3"," John Fitzgerald
+ Anders Järryd"," Jakob Hlasek
+ Eric Winogradsky","7–6, 6–4"
