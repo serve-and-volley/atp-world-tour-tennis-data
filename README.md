@@ -120,6 +120,9 @@ The Python script takes input arguments from the command line, so for this examp
 ```
 $ time python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"
 ```
+Note that you must locate the player activity year URL:
+
+![image](https://cloud.githubusercontent.com/assets/532545/21462536/19086f4c-c912-11e6-93eb-589ea1ac877d.png)
 
 In addition to the CSV output, the console output is the following, for debugging purposes, since the ATP website is not coded properly, and there are often scraping errors, upon which I would have to revise the XPaths and/or the code accordingly. This console output allows me to figure out exactly which match the scraper broke down.
 
@@ -202,5 +205,5 @@ Brisbane | Round of 16 | John Millman
 
 real	15m59.516s
 user	0m19.618s
-sys	0m1.259s
+sys   0m1.259s
 ```
