@@ -9,7 +9,7 @@ The following Python script:
 
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/atp_match_data_player.py" target="_blank">atp_match_data_player.py</a>
 
-collects all of the tournament and match stats for a single player in a given year, and exports the following example CSV file:
+collects all of the tournament and match data for a single player in a given year, and exports the following example CSV file:
 
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/roger-federer_2015.csv" target="_blank">roger-federer_2015.csv</a> (33 KB)
 
