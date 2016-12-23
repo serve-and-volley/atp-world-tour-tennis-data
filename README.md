@@ -113,7 +113,7 @@ sys     0m1.259s
 ```
 
 ## CSV headers
-The following are the 99 column headers. Note that I didn't include the "tournament prize money" and "player prize money" data because of problems with outputting unicode to CSV format in my version of Python 2.7.5. I think the more recent versions of Python has rectified this problem, however updating my version of Python is non-trivial, and I don't have the time to do it right now. In any case, the unicode problem is due to the pound sterling `£` and euro `€`characters.
+The following are the 99 column headers. Note that I didn't include the "tournament prize money" and "player prize money" data because of problems with outputting unicode to CSV format in my version of Python 2.7.5. I think the more recent versions of Python have rectified this problem, however updating my version of Python is non-trivial, and I don't have the time to do it right now. In any case, the unicode problem is due to the pound sterling `£` and euro `€`characters.
 ```
 tourney_year
 tourney_name
