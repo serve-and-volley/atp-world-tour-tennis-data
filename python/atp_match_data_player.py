@@ -100,6 +100,8 @@ for i in xrange(0, tourney_count):
 
     tourney_href_xpath = "//div[contains(@class, 'activity-tournament-table')][" + str(i+1) + "]/table[1]/tbody/tr/td[2]/a/@href"
     tourney_href_parsed = xml_parse(year_url, tourney_href_xpath)
+
+    # Condition for Davis Cup tournaments, which lack info that the other tournaments have
     if len(tourney_href_parsed) == 0:
         tourney_name_slug = ""
         tourney_id = ""
@@ -107,6 +109,7 @@ for i in xrange(0, tourney_count):
         tourney_name_parsed = xml_parse(year_url, tourney_name_xpath)
         tourney_name_cleaned = regex_strip_array(tourney_name_parsed)
         tourney_name = tourney_name_cleaned[0]
+    # Condition for non-Davis Cup tournaments
     else:
         tourney_href = tourney_href_parsed[0]
         tourney_href_split = tourney_href.split("/")
@@ -272,6 +275,9 @@ for i in xrange(0, tourney_count):
 
             # Match stats
             if len(match_stats_url_parsed[0]) == 0:
+                match_time = ""
+                match_duration = ""
+
                 player_aces = ""
                 player_double_faults = ""
                 player_first_serves_in = ""
