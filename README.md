@@ -4,7 +4,7 @@ This repository contains Python scripts that scrape tennis data from the <a href
 <br />
 (Note: If the site does a redesign, then these scripts will no longer work.)
 
-## Example
+## How to execute the script
 The following Python script: 
 
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/atp_match_data_player.py" target="_blank">atp_match_data_player.py</a>
