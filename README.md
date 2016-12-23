@@ -2,7 +2,7 @@
 
 This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of Dec 2016. 
 <br />
-(Note: If the site does a redesign, then these scripts will no longer work.)
+(Note: If the site layout is redesigned, then these scripts will no longer work.)
 
 ## How to execute the script
 The following Python script: 
