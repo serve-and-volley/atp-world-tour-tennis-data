@@ -28,7 +28,7 @@ The script scrapes all the match data on this page, as well as iterates through 
 
 ![image](https://cloud.githubusercontent.com/assets/532545/21462584/a93b1d80-c912-11e6-9528-75fa64791182.png)
 
-In addition to the CSV output, the console output is the following, for debugging purposes, since the ATP website is not coded properly, and there are often scraping errors, upon which I would have to revise the XPaths and/or the code accordingly. This console output allows me to figure out exactly which match the scraper broke down.
+In addition to the CSV output, the console output is the following, for debugging purposes, since the ATP website is error-prone, and there are lots of inconsistencies in the ATP website HTML. These errors and inconsistencies lead to scraping errors, upon which I would have to revise the XPaths and/or the code accordingly. This console output allows me to figure out exactly which where in the site (i.e. which match) the scraper breaks down.
 
 ```shell
 $ time python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"
@@ -113,7 +113,7 @@ sys     0m1.259s
 ```
 
 ## CSV headers
-The columns headers in the CSV file are the following:
+The following are the 99 column headers. Note that I didn't include the "tournament prize money" and "player prize money" data because of problems with outputting unicode to CSV format in my version of Python 2.7.5. I think the more recent versions of Python has rectified this problem, however updating my version of Python is non-trivial, and I don't have the time to do it right now. In any case, the unicode problem is due to the pound sterling `£` and euro `€`characters.
 ```
 tourney_year
 tourney_name
