@@ -120,13 +120,18 @@ The Python script takes input arguments from the command line, so for this examp
 ```
 $ time python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"
 ```
+
 Note that you must locate the player activity year URL:
 
-![image](https://cloud.githubusercontent.com/assets/532545/21462536/19086f4c-c912-11e6-93eb-589ea1ac877d.png)
+![image](https://cloud.githubusercontent.com/assets/532545/21462561/64b00504-c912-11e6-8800-854500ff0b7c.png)
+
+The script scrapes all the match data on this page, as well as iterates through each match to find the match stats url to scrape the match stats:
+
+![image](https://cloud.githubusercontent.com/assets/532545/21462584/a93b1d80-c912-11e6-9528-75fa64791182.png)
 
 In addition to the CSV output, the console output is the following, for debugging purposes, since the ATP website is not coded properly, and there are often scraping errors, upon which I would have to revise the XPaths and/or the code accordingly. This console output allows me to figure out exactly which match the scraper broke down.
 
-```
+```shell
 $ time python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"
 Barclays ATP World Tour Finals | Finals | Novak Djokovic
 Barclays ATP World Tour Finals | Semi-Finals | Stan Wawrinka
