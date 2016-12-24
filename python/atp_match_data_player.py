@@ -19,7 +19,7 @@ import json
 import csv
 import sys
 
-def xml_parse(url, xpath):
+def html_parse(url, xpath):
     page = requests.get(url)
     tree = html.fromstring(page.content)
     result = tree.xpath(xpath)
@@ -63,50 +63,50 @@ csv_array = header + csv_array
 
 # XPaths
 tourney_count_xpath = "//div[contains(@class, 'activity-tournament-table')]"
-tourney_count_parsed = xml_parse(year_url, tourney_count_xpath)
+tourney_count_parsed = html_parse(year_url, tourney_count_xpath)
 tourney_count = len(tourney_count_parsed)
 
 tourney_location_xpath = "//span[contains(@class, 'tourney-location')]/text()"
-tourney_location_parsed = xml_parse(year_url, tourney_location_xpath)
+tourney_location_parsed = html_parse(year_url, tourney_location_xpath)
 tourney_location_cleaned = regex_strip_array(tourney_location_parsed)
 
 tourney_dates_xpath = "//span[contains(@class, 'tourney-dates')]/text()"
-tourney_dates_parsed = xml_parse(year_url, tourney_dates_xpath)
+tourney_dates_parsed = html_parse(year_url, tourney_dates_xpath)
 tourney_dates_cleaned = regex_strip_array(tourney_dates_parsed)
 
 tourney_draw_xpath = "//a[contains(@class, 'not-in-system')]/span/text()"
-tourney_draw_parsed = xml_parse(year_url, tourney_draw_xpath)
+tourney_draw_parsed = html_parse(year_url, tourney_draw_xpath)
 tourney_draw_cleaned = regex_strip_array(tourney_draw_parsed)
 
 tourney_conditions_xpath = "//div[contains(., 'Outdoor') or contains(., 'Indoor')]/text()[normalize-space()]"
-tourney_conditions_parsed = xml_parse(year_url, tourney_conditions_xpath)
+tourney_conditions_parsed = html_parse(year_url, tourney_conditions_xpath)
 
 tourney_surface_xpath = "//div[contains(., 'Outdoor') or contains(., 'Indoor')]/span/text()[normalize-space()]"
-tourney_surface_parsed = xml_parse(year_url, tourney_surface_xpath)
+tourney_surface_parsed = html_parse(year_url, tourney_surface_xpath)
 
 tourney_prize_money_xpath = "//td[contains(@class, 'prize-money')]/div/div/span/text()"
-tourney_prize_money_parsed = xml_parse(year_url, tourney_prize_money_xpath)
+tourney_prize_money_parsed = html_parse(year_url, tourney_prize_money_xpath)
 tourney_prize_money_cleaned = regex_strip_array(tourney_prize_money_parsed)
 
 tourney_fin_commit_xpath = "//td[contains(@class, 'fin-commit')]/div/div/span/text()"
-tourney_fin_commit_parsed = xml_parse(year_url, tourney_fin_commit_xpath)
+tourney_fin_commit_parsed = html_parse(year_url, tourney_fin_commit_xpath)
 tourney_fin_commit_cleaned = regex_strip_array(tourney_fin_commit_parsed)
 
 player_tourney_activity_xpath = "//div[contains(@class, 'activity-tournament-caption')]/text()"
-player_tourney_activity_parsed = xml_parse(year_url, player_tourney_activity_xpath)
+player_tourney_activity_parsed = html_parse(year_url, player_tourney_activity_xpath)
 
 # Iterate over each tournament
 for i in xrange(0, tourney_count):
 
     tourney_href_xpath = "//div[contains(@class, 'activity-tournament-table')][" + str(i+1) + "]/table[1]/tbody/tr/td[2]/a/@href"
-    tourney_href_parsed = xml_parse(year_url, tourney_href_xpath)
+    tourney_href_parsed = html_parse(year_url, tourney_href_xpath)
 
     # Condition for Davis Cup tournaments, which lack info that the other tournaments have
     if len(tourney_href_parsed) == 0:
         tourney_name_slug = ""
         tourney_id = ""
         tourney_name_xpath = "//div[contains(@class, 'activity-tournament-table')][" + str(i+1) + "]/table[1]/tbody/tr/td[2]/span[contains(@class, 'tourney-title')]/text()"
-        tourney_name_parsed = xml_parse(year_url, tourney_name_xpath)
+        tourney_name_parsed = html_parse(year_url, tourney_name_xpath)
         tourney_name_cleaned = regex_strip_array(tourney_name_parsed)
         tourney_name = tourney_name_cleaned[0]
     # Condition for non-Davis Cup tournaments
@@ -116,7 +116,7 @@ for i in xrange(0, tourney_count):
         tourney_name_slug = tourney_href_split[3]    
         tourney_id = tourney_href_split[4]
         tourney_name_xpath = "//div[contains(@class, 'activity-tournament-table')][" + str(i+1) + "]/table[1]/tbody/tr/td[2]/a/text()"
-        tourney_name_parsed = xml_parse(year_url, tourney_name_xpath)
+        tourney_name_parsed = html_parse(year_url, tourney_name_xpath)
         tourney_name = tourney_name_parsed[0]        
 
     tourney_location = tourney_location_cleaned[i]
@@ -142,39 +142,38 @@ for i in xrange(0, tourney_count):
     player_prize_money = ""
 
     mega_table_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr"
-    mega_table_parsed = xml_parse(year_url,mega_table_xpath)
+    mega_table_parsed = html_parse(year_url,mega_table_xpath)
     tourney_match_count = len(mega_table_parsed)
 
     # Iterate over each match
     for j in xrange(0, tourney_match_count):
-
         # Mega table XPaths
         match_round_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[1]/text()"
-        match_round_parsed = xml_parse(year_url, match_round_xpath)
+        match_round_parsed = html_parse(year_url, match_round_xpath)
 
         opponent_name_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[3]/div[2]/a/text()"
-        opponent_name_parsed = xml_parse(year_url, opponent_name_xpath)
+        opponent_name_parsed = html_parse(year_url, opponent_name_xpath)
 
         opponent_player_url_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[3]/div[2]/a/@href"
-        opponent_player_url_parsed = xml_parse(year_url, opponent_player_url_xpath)
+        opponent_player_url_parsed = html_parse(year_url, opponent_player_url_xpath)
 
         opponent_rank_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[2]/text()"
-        opponent_rank_parsed = xml_parse(year_url, opponent_rank_xpath)
+        opponent_rank_parsed = html_parse(year_url, opponent_rank_xpath)
 
         match_won_loss_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[4]/text()"
-        match_won_loss_parsed = xml_parse(year_url, match_won_loss_xpath)
+        match_won_loss_parsed = html_parse(year_url, match_won_loss_xpath)
 
         match_score_node_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[5]/a/node()"
-        match_score_node_parsed = xml_parse(year_url, match_score_node_xpath)
+        match_score_node_parsed = html_parse(year_url, match_score_node_xpath)
 
         match_score_text_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[5]/a/text()"
-        match_score_text_parsed = xml_parse(year_url, match_score_text_xpath)       
+        match_score_text_parsed = html_parse(year_url, match_score_text_xpath)       
 
         match_score_tiebreak_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[5]/a/sup/text()"
-        match_score_tiebreak_parsed = xml_parse(year_url, match_score_tiebreak_xpath)
+        match_score_tiebreak_parsed = html_parse(year_url, match_score_tiebreak_xpath)
 
         match_stats_url_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[5]/a/@href"
-        match_stats_url_parsed = xml_parse(year_url, match_stats_url_xpath)
+        match_stats_url_parsed = html_parse(year_url, match_stats_url_xpath)
 
         # Condition to skip "Bye" matches
         if len(opponent_name_parsed) > 0:
@@ -185,9 +184,6 @@ for i in xrange(0, tourney_count):
             opponent_player_id = opponent_player_url_split[4]
             opponent_rank = regex_strip_string(opponent_rank_parsed[0])
             match_win_loss = regex_strip_string(match_won_loss_parsed[0])
-
-            # Debug
-            print tourney_name + " | " + match_round + " | " + opponent_name
 
             # Condition if match has no tiebreaks
             if len(match_score_tiebreak_parsed) == 0:
@@ -249,8 +245,11 @@ for i in xrange(0, tourney_count):
                 games_won = 0
                 games_lost = 0
                 for k in xrange(0, len(match_score_no_tiebreak_array)):
-                    games_won += int(match_score_no_tiebreak_array[k][0])
-                    games_lost += int(match_score_no_tiebreak_array[k][1])
+                    # Regex match to test for numbers, to skip cases like '(RET)'
+                    test = re.match(r'\d*', match_score_no_tiebreak_array[k])
+                    if len(test.group(0)) > 0:
+                        games_won += int(match_score_no_tiebreak_array[k][0])
+                        games_lost += int(match_score_no_tiebreak_array[k][1])
                 games_total = games_won + games_lost
 
                 # Count tiebreaks
@@ -268,12 +267,17 @@ for i in xrange(0, tourney_count):
                 sets_won = 0
                 sets_lost = 0
                 for k in xrange(0, sets_total):
-                    if int(match_score_no_tiebreak_array[k][0]) > int(match_score_no_tiebreak_array[k][1]):
-                        sets_won += 1
-                    else:
-                        sets_lost += 1
+                    # Regex match to test for numbers, to skip cases like '(RET)'
+                    test = re.match(r'\d*', match_score_no_tiebreak_array[k])
+                    if len(test.group(0)) > 0:
+                        if int(match_score_no_tiebreak_array[k][0]) > int(match_score_no_tiebreak_array[k][1]):
+                            sets_won += 1
+                        else:
+                            sets_lost += 1
 
-            # Match stats
+            # Parsing the individual match stats from the JSON data
+
+            # Condition if the match stats URL is unavailable
             if len(match_stats_url_parsed[0]) == 0:
                 match_time = ""
                 match_duration = ""
@@ -350,11 +354,12 @@ for i in xrange(0, tourney_count):
                 opponent_total_points_total = ""
                 opponent_total_points_won_percentage = ""                
 
+            # Condition if the match stats URL is available
             elif len(match_stats_url_parsed[0]) > 0:
                 match_stats_url = url_prefix + match_stats_url_parsed[0]
 
                 match_time_xpath = "//td[contains(@class, 'time')]/text()"
-                match_time_parsed = xml_parse(match_stats_url, match_time_xpath)
+                match_time_parsed = html_parse(match_stats_url, match_time_xpath)
                 match_time_cleaned = regex_strip_array(match_time_parsed)
                 
                 # match_time = match_time_cleaned[0].split(": ")[1]
@@ -365,7 +370,7 @@ for i in xrange(0, tourney_count):
                 match_duration = 60*match_time_hours + match_time_minutes                
 
                 match_stats_xpath = "//*[@id='matchStatsData']/text()"
-                match_stats_parsed = xml_parse(match_stats_url, match_stats_xpath)
+                match_stats_parsed = html_parse(match_stats_url, match_stats_xpath)
 
                 match_stats_cleaned = regex_strip_string(match_stats_parsed[0])
                 json_string = match_stats_cleaned
@@ -612,6 +617,9 @@ for i in xrange(0, tourney_count):
                     opponent_total_points_won = winner_total_points_won
                     opponent_total_points_total = winner_total_points_total
                     opponent_total_points_won_percentage = winner_total_points_won_percentage
+
+            # Command line output for debugging
+            print tourney_name + " | " + match_round + " | " + opponent_name
 
             # Store the data
             data = [tourney_year, tourney_name, tourney_name_slug, tourney_id, tourney_location, tourney_dates, tourney_singles_draw, tourney_doubles_draw, tourney_conditions, tourney_surface, player_name, player_slug, player_id, player_event_points, player_ranking, match_round, opponent_name, opponent_name_slug, opponent_player_id, opponent_rank, match_win_loss, match_score, sets_won, sets_lost, sets_total, games_won, games_lost, games_total, tiebreaks_won, tiebreaks_lost, tiebreaks_total, match_time, match_duration, player_aces, player_double_faults, player_first_serves_in, player_first_serves_total, player_first_serve_percentage, player_first_serve_points_won, player_first_serve_points_total, player_first_serve_points_won_percentage, player_second_serve_points_won, player_second_serve_points_total, player_second_serve_points_won_percentage, player_break_points_saved, player_break_points_serve_total, player_break_points_saved_percentage, player_service_points_won, player_service_points_total, player_service_points_won_percentage, player_first_serve_return_won, player_first_serve_return_total, player_first_serve_return_percentage, player_second_serve_return_won, player_second_serve_return_total, player_second_serve_return_won_percentage, player_break_points_converted, player_break_points_return_total, player_break_points_converted_percentage, player_service_games_played, player_return_games_played, player_return_points_won, player_return_points_total, player_total_points_won, player_total_points_total, player_total_points_won_percentage, opponent_aces, opponent_double_faults, opponent_first_serves_in, opponent_first_serves_total, opponent_first_serve_percentage, opponent_first_serve_points_won, opponent_first_serve_points_total, opponent_first_serve_points_won_percentage, opponent_second_serve_points_won, opponent_second_serve_points_total, opponent_second_serve_points_won_percentage, opponent_break_points_saved, opponent_break_points_serve_total, opponent_break_points_saved_percentage, opponent_service_points_won, opponent_service_points_total, opponent_service_points_won_percentage, opponent_first_serve_return_won, opponent_first_serve_return_total, opponent_first_serve_return_percentage, opponent_second_serve_return_won, opponent_second_serve_return_total, opponent_second_serve_return_won_percentage, opponent_break_points_converted, opponent_break_points_return_total, opponent_break_points_converted_percentage, opponent_service_games_played, opponent_return_games_played, opponent_return_points_won, opponent_return_points_total, opponent_total_points_won, opponent_total_points_total, opponent_total_points_won_percentage]
