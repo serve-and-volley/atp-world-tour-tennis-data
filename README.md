@@ -82,6 +82,8 @@ user	0m19.618s
 sys     0m1.259s
 ```
 
+On my end, it takes ~3.22 seconds to scrape the data for each match, so for some players with long careers (e.g. Roger Federer), the total time it takes to scrape all the data for a given player will be over an hour.
+
 <div id="part-a3"></div>
 
 ### A3. CSV headers [^](#contents)
