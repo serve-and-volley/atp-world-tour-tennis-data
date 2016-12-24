@@ -1,10 +1,8 @@
-<div id="#contents"></div>
-
 # ATP World Tour tennis data
 
-This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of Dec 2016. 
+This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of Dec 2016. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
 
-(Note: If the site layout is redesigned, then these scripts will no longer work.)
+<div id="#contents"></div>
 
 ## Contents
 - A. [Scraping match data by player name and by year](#part-a)
