@@ -1,5 +1,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #                                                                                                                               #
+#   This script scrapes the ATP match data and stats by player name and by year                                                 #
+#                                                                                                                               #
 #   Example of how to run this script on the command line:                                                                      #
 #   $ time python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"   #
 #                                                                                                                               #
@@ -36,7 +38,10 @@ def regex_strip_array(array):
         array[i] = regex_strip_string(array[i])
     return array
 
+# Command line input
 year_url = sys.argv[1]
+
+# Parsing the command line input
 year_url_split = year_url.split("/")
 player_slug = year_url_split[4]
 player_id = year_url_split[5]
@@ -147,6 +152,7 @@ for i in xrange(0, tourney_count):
 
     # Iterate over each match
     for j in xrange(0, tourney_match_count):
+
         # Mega table XPaths
         match_round_xpath = "//table[contains(@class, 'mega-table')][" + str(i+1) + "]/tbody/tr[" + str(j+1) + "]/td[1]/text()"
         match_round_parsed = html_parse(year_url, match_round_xpath)
@@ -187,6 +193,7 @@ for i in xrange(0, tourney_count):
 
             # Condition if match has no tiebreaks
             if len(match_score_tiebreak_parsed) == 0:
+
                 # Match score
                 match_score = match_score_node_parsed[0].strip()
                 
@@ -224,6 +231,7 @@ for i in xrange(0, tourney_count):
             
             # Condition if match score has tiebreaks
             else:
+                
                 # Match score       
                 match_score = ""
                 tiebreak_set_split_count = len(match_score_text_parsed)
@@ -276,7 +284,6 @@ for i in xrange(0, tourney_count):
                             sets_lost += 1
 
             # Parsing the individual match stats from the JSON data
-
             # Condition if the match stats URL is unavailable
             if len(match_stats_url_parsed[0]) == 0:
                 match_time = ""
