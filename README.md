@@ -46,6 +46,8 @@ The script scrapes all the match data on this page, as well as iterates through 
 
 ![image](https://cloud.githubusercontent.com/assets/532545/21462584/a93b1d80-c912-11e6-9528-75fa64791182.png)
 
+<div id="part-a2"></div>
+
 ### A2. Command line output [^](#contents)
 In addition to the CSV output, the command line output is the following, for debugging purposes, since the ATP website is error-prone, and there are lots of inconsistencies in the ATP website HTML. These errors and inconsistencies lead to scraping errors, upon which I would have to revise the XPaths and/or the code accordingly. This console output allows me to figure out exactly which where in the site (i.e. which match) the scraper breaks down.
 
@@ -81,6 +83,8 @@ real	15m59.516s
 user	0m19.618s
 sys     0m1.259s
 ```
+
+<div id="part-a3"></div>
 
 ### A3. CSV headers [^](#contents)
 The following are the 99 column headers. Note that I didn't include the "tournament prize money" and "player prize money" data because of problems with outputting unicode to CSV format in my version of Python 2.7.5. I think the more recent versions of Python have rectified this problem, however updating my version of Python is non-trivial, and I don't have the time to do it right now. In any case, the unicode problem is due to the pound sterling `£` and euro `€`characters.
