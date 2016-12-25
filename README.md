@@ -1,8 +1,8 @@
+<div id="contents"></div>
+
 # ATP World Tour tennis data
 
 This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of Dec 2016. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
-
-<div id="#contents"></div>
 
 ## Contents
 - A. [Scraping match data by player name and by year](#part-a)
@@ -14,7 +14,7 @@ This repository contains Python scripts that scrape tennis data from the <a href
   - B2. [Command line output](#part-b2)
   - B3. [CSV column headers](#part-b3)
 
-<div id="#part-a"></div>
+<div id="part-a"></div>
 
 ## A. Scraping the match data by player name and by year [^](#contents)
 
@@ -190,7 +190,7 @@ opponent_total_points_total
 opponent_total_points_won_percentage
 ```
 
-<div id="#part-b"></div>
+<div id="part-b"></div>
 
 ## B. Scraping the match data by year [^](#contents)
 
@@ -202,3 +202,5 @@ The following Python script:
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/atp_match_data_year_no_stats.py" target="_blank">atp_match_data_year_no_stats.py</a>
 
 collects all of the tournament and match data in a given year from the ATP World Tour website (but not the individual match stats, because of runtime issues, that's for a different script), and exports the following example CSV file:
+
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/year/2016_0-66.csv" target="_blank">2016_0-66.csv<a/> (1.21 MB)
