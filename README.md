@@ -56,6 +56,16 @@ $ python atp_match_data_player.py roger-federer f324 1998 2016
 1998 | Toulouse | Round of 16 | Richard Fromberg
 1998 | Toulouse | Round of 32 | Guillaume Raoux
 1998 | Geneva | Round of 32 | Orlin Stanoytchev
+1998 | Gstaad | Round of 32 | Lucas Arnold Ker
+1999 | Brest | Finals | Max Mirnyi
+1999 | Brest | Semi-Finals | Martin Damm
+1999 | Brest | Quarter-Finals | Michael Llodra
+1999 | Brest | Round of 16 | Rodolphe Gilbert
+1999 | Brest | Round of 32 | Lionel Roux
+1999 | Lyon | Round of 32 | Lleyton Hewitt
+1999 | Lyon | Round of 64 | Daniel Vacek
+1999 | Vienna | Semi-Finals | Greg Rusedski
+1999 | Vienna | Quarter-Finals | Karol Kucera
 ⋮
 [etc]
 ⋮
