@@ -31,10 +31,10 @@ collects all of the tournament and match data for a single player in a given yea
 
 The Python script takes input arguments from the command line, so for this example it would be:
 ```shell
-$ python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"
+$ python atp_match_data_player.py roger-federer f324 1998 2016
 ```
 
-Note that you must locate the player activity year URL:
+Note that you must locate the player activity year URL to find the player name slug `roger-federer` and the player id `f324`:
 - http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016
 
 ![image](https://cloud.githubusercontent.com/assets/532545/21462561/64b00504-c912-11e6-8800-854500ff0b7c.png)
@@ -50,38 +50,16 @@ The script scrapes all the match data on this page, as well as iterates through 
 In addition to the CSV output, the command line output is the following, for debugging purposes, since the ATP website is error-prone, and there are lots of inconsistencies in the ATP website HTML. These errors and inconsistencies lead to scraping errors, upon which I would have to revise the XPaths and/or the code accordingly. This console output allows me to figure out exactly which where in the site (i.e. which match) the scraper breaks down.
 
 ```shell
-$ time python atp_match_data_player.py "http://www.atpworldtour.com/players/roger-federer/f324/player-activity?year=2016"
-Barclays ATP World Tour Finals | Finals | Novak Djokovic
-Barclays ATP World Tour Finals | Semi-Finals | Stan Wawrinka
-Barclays ATP World Tour Finals | Round Robin | Kei Nishikori
-Barclays ATP World Tour Finals | Round Robin | Novak Djokovic
-Barclays ATP World Tour Finals | Round Robin | Tomas Berdych
-ATP World Tour Masters 1000 Paris | Round of 16 | John Isner
-ATP World Tour Masters 1000 Paris | Round of 32 | Andreas Seppi
-Basel | Finals | Rafael Nadal
-Basel | Semi-Finals | Jack Sock
-Basel | Quarter-Finals | David Goffin
-Basel | Round of 16 | Philipp Kohlschreiber
-Basel | Round of 32 | Mikhail Kukushkin
-ATP World Tour Masters 1000 Shanghai | Round of 32 | Albert Ramos-Vinolas
-SUI vs. NED WG Play-Off | Round Robin | Thiemo de Bakker
-SUI vs. NED WG Play-Off | Round Robin | Jesse Huta Galung
-US Open | Finals | Novak Djokovic
-US Open | Semi-Finals | Stan Wawrinka
-US Open | Quarter-Finals | Richard Gasquet
-US Open | Round of 16 | John Isner
-US Open | Round of 32 | Philipp Kohlschreiber
-US Open | Round of 64 | Steve Darcis
-US Open | Round of 128 | Leonardo Mayer
+$ python atp_match_data_player.py roger-federer f324 1998 2016
+1998 | Basel | Round of 32 | Andre Agassi
+1998 | Toulouse | Quarter-Finals | Jan Siemerink
+1998 | Toulouse | Round of 16 | Richard Fromberg
+1998 | Toulouse | Round of 32 | Guillaume Raoux
+1998 | Geneva | Round of 32 | Orlin Stanoytchev
 ⋮
 [etc]
 ⋮
-
-real	15m59.516s
-user	0m19.618s
-sys     0m1.259s
 ```
-
 On my end, it takes ~3.22 seconds to scrape the data for each match, so for some players with long careers (e.g. Roger Federer), the total time it takes to scrape all the data for a given player will be over an hour.
 
 <div id="part-a3"></div>
@@ -129,32 +107,24 @@ player_first_serves_total
 player_first_serve_percentage
 player_first_serve_points_won
 player_first_serve_points_total
-player_first_serve_points_won_percentage
 player_second_serve_points_won
 player_second_serve_points_total
-player_second_serve_points_won_percentage
 player_break_points_saved
 player_break_points_serve_total
-player_break_points_saved_percentage
 player_service_points_won
 player_service_points_total
-player_service_points_won_percentage
 player_first_serve_return_won
 player_first_serve_return_total
-player_first_serve_return_percentage
 player_second_serve_return_won
 player_second_serve_return_total
-player_second_serve_return_won_percentage
 player_break_points_converted
 player_break_points_return_total
-player_break_points_converted_percentage
 player_service_games_played
 player_return_games_played
 player_return_points_won
 player_return_points_total
 player_total_points_won
 player_total_points_total
-player_total_points_won_percentage
 opponent_aces
 opponent_double_faults
 opponent_first_serves_in
@@ -162,32 +132,24 @@ opponent_first_serves_total
 opponent_first_serve_percentage
 opponent_first_serve_points_won
 opponent_first_serve_points_total
-opponent_first_serve_points_won_percentage
 opponent_second_serve_points_won
 opponent_second_serve_points_total
-opponent_second_serve_points_won_percentage
 opponent_break_points_saved
 opponent_break_points_serve_total
-opponent_break_points_saved_percentage
 opponent_service_points_won
 opponent_service_points_total
-opponent_service_points_won_percentage
 opponent_first_serve_return_won
 opponent_first_serve_return_total
-opponent_first_serve_return_percentage
 opponent_second_serve_return_won
 opponent_second_serve_return_total
-opponent_second_serve_return_won_percentage
 opponent_break_points_converted
 opponent_break_points_return_total
-opponent_break_points_converted_percentage
 opponent_service_games_played
 opponent_return_games_played
 opponent_return_points_won
 opponent_return_points_total
 opponent_total_points_won
 opponent_total_points_total
-opponent_total_points_won_percentage
 ```
 
 <div id="part-b"></div>
