@@ -9,7 +9,7 @@ This repository contains Python scripts that scrape tennis data from the <a href
 ## Example
 The following Python script: 
 
-* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/player_match_data.py" target="_blank">player_match_data.py</a>
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/deprecated/v1/player_match_data.py" target="_blank">player_match_data.py</a>
 
 collects all of the tournament and match stats for a single player, and exports the following example CSV file:
 
