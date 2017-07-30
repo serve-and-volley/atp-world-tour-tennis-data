@@ -27,7 +27,7 @@ The following Python script:
 
 collects all of the tournament and match data for a single player in a given year from the ATP World Tour website, and exports the following example CSV file:
 
-* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/players/roger-federer/roger-federer_2015.csv" target="_blank">roger-federer_2015.csv</a> (33 KB)
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/csv/previous_versions/players/roger-federer_1998-2016.csv" target="_blank">roger-federer_1998-2016.csv</a> (33 KB)
 
 The Python script takes input arguments from the command line, so for this example it would be:
 ```shell
