@@ -23,7 +23,7 @@ This repository contains Python scripts that scrape tennis data from the <a href
 ### A1. The `atp_match_data_player.py` script [^](#contents)
 The following Python script: 
 
-* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/atp_match_data_player.py" target="_blank">atp_match_data_player.py</a>
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/deprecated/v2/atp_match_data_player.py" target="_blank">atp_match_data_player.py</a>
 
 collects all of the tournament and match data for a single player in a given year from the ATP World Tour website, and exports the following example CSV file:
 
@@ -171,7 +171,7 @@ opponent_total_points_total
 ### B1. The `atp_match_data_year_no_stats.py` script [^](#contents)
 The following Python script: 
 
-* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/atp_match_data_year_no_stats.py" target="_blank">atp_match_data_year_no_stats.py</a>
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/deprecated/v2/atp_match_data_year_no_stats.py" target="_blank">atp_match_data_year_no_stats.py</a>
 
 collects all of the tournament and match data in a given year from the ATP World Tour website (but not the individual match stats, because of runtime issues, that's for a different script), and exports the following example CSV file:
 
