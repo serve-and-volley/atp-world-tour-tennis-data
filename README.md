@@ -59,6 +59,9 @@ from pages like the following:
 
 ![image](https://user-images.githubusercontent.com/532545/28861915-f76a5dfa-7717-11e7-85cd-696e62627971.png)
 
+The CSV file for all tournament data from 1877-2016 is found in:
+* https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/1_tournaments
+
 <div id="part-a2"></div>
 
 ### A2. Example usage [^](#contents)
@@ -78,9 +81,6 @@ real	0m8.617s
 user	0m0.675s
 sys	0m0.062s
 ```
-
-The CSV file for all tournament data from 1877-2016 is found in:
-* https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/1_tournaments
 
 <div id="part-b"></div>
 
@@ -124,6 +124,9 @@ from pages like the following:
 * http://www.atpworldtour.com/en/scores/archive/wimbledon/540/2016/results
 
 ![image](https://user-images.githubusercontent.com/532545/28890551-4f2793e6-777c-11e7-9497-a6bedafdad06.png)
+
+The CSV files for all match scores data from 1877-2016 is found in:
+* https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/2_match_scores
 
 <div id="part-b2"></div>
 
@@ -229,6 +232,11 @@ loser_total_points_total
 
 from pages like the following:
 * http://www.atpworldtour.com/en/tournaments/australian-open/580/2017/match-stats/F324/N409/live/MS001/match-stats
+
+The CSV files for all match stats data from 1991-2016 is found in:
+* https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/3_match_stats
+
+[Note: the ATP did not start keeping match stats data until 1991.]
 
 <div id="part-c2"></div>
 
