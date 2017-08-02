@@ -88,7 +88,7 @@ The CSV file for all tournament data from 1877-2016 is found in:
 
 <div id="part-b1"></div>
 
-### A1. The `match_scores.py` script [^](#contents)
+### B1. The `match_scores.py` script [^](#contents)
 The following Python script:
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/match_scores.py" target="_blank">match_scores.py</a>
 
@@ -162,11 +162,13 @@ user	0m0.810s
 sys	0m0.099s
 ```
 
+<div id="part-c"></div>
+
 ## C. Scraping match stats for each match
 
 <div id="part-c1"></div>
 
-### c1. The `match_stats.py` script [^](#contents)
+### C1. The `match_stats.py` script [^](#contents)
 The following Python script:
 * <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/match_stats.py" target="_blank">match_stats.py</a>
 
@@ -275,6 +277,7 @@ real	2m46.015s
 user	0m0.000s
 sys	0m0.001s
 ```
+
 <div id="part-c3"></div>
 
 ### C3. Example usage [^](#contents)
