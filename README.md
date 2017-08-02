@@ -233,7 +233,36 @@ from pages like the following:
 <div id="part-c2"></div>
 
 ### C2. Example usage [^](#contents)
-Example command line usage and output is as follows:
+
+#### C2a. Example error 1: Connection error
+Example command line usage and output is as follows, with the resulting connection error:
+```
+$ time python match_stats.py 2012 31
+
+Collecting match stats data for 66 tournaments:
+
+Index    Tourney slug       Matches
+-----    ------------       -------
+31       roland-garros      239/239 (100%)
+32       halle              29/47 (62%)Traceback (most recent call last):
+  File "match_stats.py", line 51, in <module>
+    match_stats_data_scrape += asynchronous(match_stats_url_suffixes, scrape_match_stats, tourney_index, tourney_slug)
+  File "/Users/kevin/Desktop/atp_scrape/final/functions.py", line 567, in asynchronous
+    scrape_match_stats_output += future.result()
+  File "/Library/Python/2.7/site-packages/concurrent/futures/_base.py", line 422, in result
+    return self.__get_result()
+  File "/Library/Python/2.7/site-packages/concurrent/futures/_base.py", line 381, in __get_result
+    raise exception_type, self._exception, self._traceback
+requests.exceptions.ConnectionError: None: Max retries exceeded with url: /en/tournaments/gerry-weber-open/500/2012/match-stats/k776/bg52/match-stats (Caused by redirect)
+
+real	0m25.230s
+user	0m3.706s
+sys	0m0.827s
+```
+When this happens, I recommend waiting for ~5 minutes before running the script starting on the index of the tournament that didn't reach 100% completion in scraping.
+
+#### C2b. Example error 2: Parsing error
+Example command line usage and output is as follows, with the resulting parsing error:
 ```
 $ time python match_stats.py 2013 0
 
@@ -280,7 +309,9 @@ sys	0m0.001s
 
 <div id="part-c3"></div>
 
-### C3. Example usage [^](#contents)
+For errors like this you will need to kill the process id's before resuming scraping on the index of the tournament that didn't reach 100% completion in scraping.
+
+### C3. Asynchronous scraping issues [^](#contents)
 
 Because this script scrapes asynchronously (you can adjust the max number of workers in the <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/functions.py#L560" target="_blank">functions.py</a> file), you will run into connection problems as the ATP servers are being hammered by the script. Always remember to kill the process id (PID) after you are forced to stop the script, for example:
 
