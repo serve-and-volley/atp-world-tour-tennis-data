@@ -91,7 +91,7 @@ def tournaments(year):
 
     tourney_fin_commit_xpath = "//td[contains(@class, 'fin-commit')]/div/div/span/text()"
     tourney_fin_commit_parsed = xpath_parse(year_tree, tourney_fin_commit_xpath)
-    tourney_fin_commit_cleaned = regex_strip_array(tourney_fin_commit_parsed)    
+    tourney_fin_commit_cleaned = regex_strip_array(tourney_fin_commit_parsed)
 
     output = []
     for i in xrange(0, tourney_count):
@@ -127,17 +127,17 @@ def tournaments(year):
         else:
             tourney_url_suffix = ''
             tourney_slug = ''
-            tourney_id = ''    
+            tourney_id = ''
 
         # Singles winner info
         singles_winner_name_xpath = "//tr[@class = 'tourney-result'][" + str(i + 1) + "]/td/div[contains(., 'SGL:')]/a/text()"
         singles_winner_name_parsed = xpath_parse(year_tree, singles_winner_name_xpath)
         singles_winner_name_cleaned = regex_strip_array(singles_winner_name_parsed)
-        if len(singles_winner_name_cleaned) > 0: 
+        if len(singles_winner_name_cleaned) > 0:
             singles_winner_name = singles_winner_name_cleaned[0]
             singles_winner_url_xpath = "//tr[@class = 'tourney-result'][" + str(i + 1) + "]/td/div[contains(., 'SGL:')]/a/@href"
             singles_winner_url_parsed = xpath_parse(year_tree, singles_winner_url_xpath)
-            if len(singles_winner_url_parsed) > 0: 
+            if len(singles_winner_url_parsed) > 0:
                 singles_winner_url = singles_winner_url_parsed[0]
                 singles_winner_url_split = singles_winner_url.split('/')
                 singles_winner_player_slug = singles_winner_url_split[3]
@@ -145,7 +145,7 @@ def tournaments(year):
             else:
                 singles_winner_url = ''
                 singles_winner_player_slug = ''
-                singles_winner_player_id = ''            
+                singles_winner_player_id = ''
         else: # Case where tourney missing winner name but has a tourney URL
             if tourney_url_suffix != '':
                 # Check tourney URL for Finals match winner
@@ -161,16 +161,16 @@ def tournaments(year):
                     singles_winner_url = missing_winner_url_parsed[0]
                     singles_winner_url_split = singles_winner_url.split('/')
                     singles_winner_player_slug = singles_winner_url_split[3]
-                    singles_winner_player_id = singles_winner_url_split[4]                    
+                    singles_winner_player_id = singles_winner_url_split[4]
                 else:
                     singles_winner_url = ''
                     singles_winner_player_slug = ''
-                    singles_winner_player_id = ''          
+                    singles_winner_player_id = ''
             else: # Case where tourney is missing URL
                 singles_winner_name = ''
                 singles_winner_url = ''
                 singles_winner_player_slug = ''
-                singles_winner_player_id = '' 
+                singles_winner_player_id = ''
 
         # Doubles winners info
         doubles_winners_name_xpath = "//tr[@class = 'tourney-result'][" + str(i + 1) + "]/td/div[contains(., 'DBL:')]/a/text()"
@@ -303,14 +303,14 @@ def scrape_year(year):
             for j in xrange(0, spacing_count):
                 spacing += ' '
 
-            print year + '    ' + str(tourney_order) + spacing +  '    ' + tourney_name     
+            print year + '    ' + str(tourney_order) + spacing +  '    ' + tourney_name
 
-        # Store data        
+        # Store data
         tourney_data.append([year, tourney_order, tourney_name, tourney_id, tourney_slug, tourney_location, tourney_dates, tourney_singles_draw, tourney_doubles_draw, tourney_conditions, tourney_surface, tourney_fin_commit])
 
     output = [tourney_data, tourney_urls]
     return output
-    
+
 def scrape_tourney(tourney_url_suffix):
     url_prefix = "http://www.atpworldtour.com"
     tourney_url = url_prefix + tourney_url_suffix
@@ -319,7 +319,7 @@ def scrape_tourney(tourney_url_suffix):
     tourney_slug = url_split[6]
 
     # Tourney tree
-    tourney_tree = html_parse_tree(tourney_url)     
+    tourney_tree = html_parse_tree(tourney_url)
 
     tourney_round_name_xpath = "//table[contains(@class, 'day-table')]/thead/tr/th/text()"
     tourney_round_name_parsed = xpath_parse(tourney_tree, tourney_round_name_xpath)
@@ -327,7 +327,7 @@ def scrape_tourney(tourney_url_suffix):
 
     match_urls = []
     match_data = []
-    # Iterate through each round    
+    # Iterate through each round
     for i in xrange(0, tourney_round_count):
         round_order = i + 1
 
@@ -336,10 +336,10 @@ def scrape_tourney(tourney_url_suffix):
         round_match_count_xpath = "//table[contains(@class, 'day-table')]/tbody[" + str(i + 1) + "]/tr/td[contains(@class, 'day-table-score')]/a"
         round_match_count_parsed = xpath_parse(tourney_tree, round_match_count_xpath)
         round_match_count = len(round_match_count_parsed)
-        
+
         winner_name_xpath = "//table[contains(@class, 'day-table')]/tbody[" + str(i + 1) + "]/tr[*]/td[contains(@class, 'day-table-name')][1]/a/text()"
         winner_name_parsed = xpath_parse(tourney_tree, winner_name_xpath)
-              
+
         winner_url_xpath = "//table[contains(@class, 'day-table')]/tbody[" + str(i + 1) + "]/tr[*]/td[contains(@class, 'day-table-name')][1]/a/@href"
         winner_url_parsed = xpath_parse(tourney_tree, winner_url_xpath)
 
@@ -360,7 +360,7 @@ def scrape_tourney(tourney_url_suffix):
                 match_scores_cleaned.append(regex_strip_string(element))
             else:
                 match_scores_cleaned.append("TIEBREAK")
-        
+
         concat_match_scores = ""
         element_count = len(match_scores_cleaned)
         for j in xrange(0,  element_count - 1):
@@ -379,7 +379,7 @@ def scrape_tourney(tourney_url_suffix):
             winner_url = winner_url_parsed[j]
             winner_url_split = winner_url.split('/')
             winner_slug = winner_url_split[3]
-            winner_player_id = winner_url_split[4]            
+            winner_player_id = winner_url_split[4]
 
             # Loser
             loser_name = loser_name_parsed[j].encode('utf-8')
@@ -393,7 +393,7 @@ def scrape_tourney(tourney_url_suffix):
                 loser_url = ''
                 loser_slug = ''
                 loser_player_id = ''
-            
+
             # Match score
             match_score = match_scores[j].strip()
 
@@ -406,7 +406,7 @@ def scrape_tourney(tourney_url_suffix):
                     match_stats_url_cleaned.append(regex_strip_string(element))
                 else:
                     match_stats_url_cleaned.append("TIEBREAK")
-            
+
             if len(match_stats_url_cleaned) > 0:
                 match_stats_url_suffix = match_stats_url_cleaned[0]
                 match_stats_url_suffix_split = match_stats_url_suffix.split('/')
@@ -419,7 +419,7 @@ def scrape_tourney(tourney_url_suffix):
 
             # Store data
             match_data.append([tourney_long_slug, tourney_round_name, round_order, match_order, winner_name, winner_player_id, winner_slug, loser_name, loser_player_id, loser_slug, match_score, match_stats_url_suffix])
-            #time.sleep(.100)       
+            #time.sleep(.100)
 
     output = [match_data, match_urls]
     return output
@@ -435,96 +435,77 @@ def scrape_match_stats(match_url_suffix):
     try:
         match_time_xpath = "//td[contains(@class, 'time')]/text()"
         match_time_parsed = xpath_parse(match_tree, match_time_xpath)
-        match_time_cleaned = regex_strip_array(match_time_parsed)        
+        match_time_cleaned = regex_strip_array(match_time_parsed)
         match_time = match_time_cleaned[0].replace("Time: ", "")
-        match_time_split = match_time.split(":")            
+        match_time_split = match_time.split(":")
         match_time_hours = int(match_time_split[0])
         match_time_minutes = int(match_time_split[1])
-        match_duration = 60*match_time_hours + match_time_minutes                                        
+        match_duration = 60*match_time_hours + match_time_minutes
     except Exception:
         match_time = ""
-        match_duration = ""      
+        match_duration = ""
 
     # Match stats
-    match_stats_xpath = "//*[@id='matchStatsData']/text()"
+    match_stats_xpath = "//*[(@id = 'completedMatchStats')]//span/text() | //*[(@id = 'completedMatchStats')]//a/text()"
     match_stats_parsed = xpath_parse(match_tree, match_stats_xpath)
-    match_stats_cleaned = regex_strip_string(match_stats_parsed[0])
-    json_string = match_stats_cleaned
-    json_data = json.loads(json_string)
+    match_stats_cleaned = regex_strip_array(match_stats_parsed)
+
+    def extrac_frac(string):
+        return string.strip('()').split('/')
 
     # Winner stats
-    winner_aces = json_data[0]["playerStats"]["Aces"]
-    winner_double_faults = json_data[0]["playerStats"]["DoubleFaults"]
+    winner_aces = match_stats_cleaned[6]
+    winner_double_faults = match_stats_cleaned[8]
 
-    winner_first_serves_in = json_data[0]["playerStats"]["FirstServeDividend"]
-    winner_first_serves_total = json_data[0]["playerStats"]["FirstServeDivisor"]
+    winner_first_serves_in, winner_first_serves_total = extrac_frac(match_stats_cleaned[11])
 
-    winner_first_serve_points_won = json_data[0]["playerStats"]["FirstServePointsWonDividend"]
-    winner_first_serve_points_total = json_data[0]["playerStats"]["FirstServePointsWonDivisor"]
+    winner_first_serve_points_won, winner_first_serve_points_total = extrac_frac(match_stats_cleaned[15])
 
-    winner_second_serve_points_won = json_data[0]["playerStats"]["SecondServePointsWonDividend"]
-    winner_second_serve_points_total = json_data[0]["playerStats"]["SecondServePointsWonDivisor"]
+    winner_second_serve_points_won, winner_second_serve_points_total = extrac_frac(match_stats_cleaned[19])
 
-    winner_break_points_saved = json_data[0]["playerStats"]["BreakPointsSavedDividend"]
-    winner_break_points_serve_total = json_data[0]["playerStats"]["BreakPointsSavedDivisor"]
+    winner_break_points_saved, winner_break_points_serve_total = extrac_frac(match_stats_cleaned[23])
 
-    winner_service_points_won = json_data[0]["playerStats"]["TotalServicePointsWonDividend"]
-    winner_service_points_total = json_data[0]["playerStats"]["TotalServicePointsWonDivisor"]
+    winner_service_points_won, winner_service_points_total = extrac_frac(match_stats_cleaned[49])
 
-    winner_first_serve_return_won = json_data[0]["playerStats"]["FirstServeReturnPointsDividend"]
-    winner_first_serve_return_total = json_data[0]["playerStats"]["FirstServeReturnPointsDivisor"]
+    winner_first_serve_return_won, winner_first_serve_return_total = extrac_frac(match_stats_cleaned[35])
 
-    winner_second_serve_return_won = json_data[0]["playerStats"]["SecondServePointsDividend"]
-    winner_second_serve_return_total = json_data[0]["playerStats"]["SecondServePointsDivisor"]
+    winner_second_serve_return_won, winner_second_serve_return_total = extrac_frac(match_stats_cleaned[39])
 
-    winner_break_points_converted = json_data[0]["playerStats"]["BreakPointsConvertedDividend"]
-    winner_break_points_return_total = json_data[0]["playerStats"]["BreakPointsConvertedDivisor"]
+    winner_break_points_converted, winner_break_points_return_total = extrac_frac(match_stats_cleaned[43])
 
-    winner_service_games_played = json_data[0]["playerStats"]["ServiceGamesPlayed"]
-    winner_return_games_played = json_data[0]["playerStats"]["ReturnGamesPlayed"]
+    winner_service_games_played = match_stats_cleaned[26]
+    winner_return_games_played = match_stats_cleaned[46]
 
-    winner_return_points_won = json_data[0]["playerStats"]["TotalReturnPointsWonDividend"]
-    winner_return_points_total = json_data[0]["playerStats"]["TotalReturnPointsWonDivisor"]
+    winner_return_points_won, winner_return_points_total = extrac_frac(match_stats_cleaned[53])
 
-    winner_total_points_won = json_data[0]["playerStats"]["TotalPointsWonDividend"]
-    winner_total_points_total = json_data[0]["playerStats"]["TotalPointsWonDivisor"]            
+    winner_total_points_won, winner_total_points_total = extrac_frac(match_stats_cleaned[57])
 
     # Loser stats
-    loser_aces = json_data[0]["opponentStats"]["Aces"]
-    loser_double_faults = json_data[0]["opponentStats"]["DoubleFaults"]
+    loser_aces = match_stats_cleaned[7]
+    loser_double_faults = match_stats_cleaned[9]
 
-    loser_first_serves_in = json_data[0]["opponentStats"]["FirstServeDividend"]
-    loser_first_serves_total = json_data[0]["opponentStats"]["FirstServeDivisor"]
+    loser_first_serves_in, loser_first_serves_total = extrac_frac(match_stats_cleaned[13])
 
-    loser_first_serve_points_won = json_data[0]["opponentStats"]["FirstServePointsWonDividend"]
-    loser_first_serve_points_total = json_data[0]["opponentStats"]["FirstServePointsWonDivisor"]
+    loser_first_serve_points_won, loser_first_serve_points_total = extrac_frac(match_stats_cleaned[17])
 
-    loser_second_serve_points_won = json_data[0]["opponentStats"]["SecondServePointsWonDividend"]
-    loser_second_serve_points_total = json_data[0]["opponentStats"]["SecondServePointsWonDivisor"]
+    loser_second_serve_points_won, loser_second_serve_points_total = extrac_frac(match_stats_cleaned[21])
 
-    loser_break_points_saved = json_data[0]["opponentStats"]["BreakPointsSavedDividend"]
-    loser_break_points_serve_total = json_data[0]["opponentStats"]["BreakPointsSavedDivisor"]
+    loser_break_points_saved, loser_break_points_serve_total = extrac_frac(match_stats_cleaned[25])
 
-    loser_service_points_won = json_data[0]["opponentStats"]["TotalServicePointsWonDividend"]
-    loser_service_points_total = json_data[0]["opponentStats"]["TotalServicePointsWonDivisor"]
+    loser_service_points_won, loser_service_points_total = extrac_frac(match_stats_cleaned[51])
 
-    loser_first_serve_return_won = json_data[0]["opponentStats"]["FirstServeReturnPointsDividend"]
-    loser_first_serve_return_total = json_data[0]["opponentStats"]["FirstServeReturnPointsDivisor"]
+    loser_first_serve_return_won, loser_first_serve_return_total = extrac_frac(match_stats_cleaned[37])
 
-    loser_second_serve_return_won = json_data[0]["opponentStats"]["SecondServePointsDividend"]
-    loser_second_serve_return_total = json_data[0]["opponentStats"]["SecondServePointsDivisor"]
+    loser_second_serve_return_won, loser_second_serve_return_total = extrac_frac(match_stats_cleaned[41])
 
-    loser_break_points_converted = json_data[0]["opponentStats"]["BreakPointsConvertedDividend"]
-    loser_break_points_return_total = json_data[0]["opponentStats"]["BreakPointsConvertedDivisor"]
+    loser_break_points_converted, loser_break_points_return_total = extrac_frac(match_stats_cleaned[25])
 
-    loser_service_games_played = json_data[0]["opponentStats"]["ServiceGamesPlayed"]
-    loser_return_games_played = json_data[0]["opponentStats"]["ReturnGamesPlayed"]
+    loser_service_games_played = match_stats_cleaned[27]
+    loser_return_games_played = match_stats_cleaned[47]
 
-    loser_return_points_won = json_data[0]["opponentStats"]["TotalReturnPointsWonDividend"]
-    loser_return_points_total = json_data[0]["opponentStats"]["TotalReturnPointsWonDivisor"]
+    loser_return_points_won, loser_return_points_total = extrac_frac(match_stats_cleaned[55])
 
-    loser_total_points_won = json_data[0]["opponentStats"]["TotalPointsWonDividend"]
-    loser_total_points_total = json_data[0]["opponentStats"]["TotalPointsWonDivisor"]
+    loser_total_points_won, loser_total_points_total = extrac_frac(match_stats_cleaned[59])
 
     # Store data
     output = [match_url_suffix, match_time, match_duration, winner_aces, winner_double_faults, winner_first_serves_in, winner_first_serves_total, winner_first_serve_points_won, winner_first_serve_points_total, winner_second_serve_points_won, winner_second_serve_points_total, winner_break_points_saved, winner_break_points_serve_total, winner_service_points_won, winner_service_points_total, winner_first_serve_return_won, winner_first_serve_return_total, winner_second_serve_return_won, winner_second_serve_return_total, winner_break_points_converted, winner_break_points_return_total, winner_service_games_played, winner_return_games_played, winner_return_points_won, winner_return_points_total, winner_total_points_won, winner_total_points_total, loser_aces, loser_double_faults, loser_first_serves_in, loser_first_serves_total, loser_first_serve_points_won, loser_first_serve_points_total, loser_second_serve_points_won, loser_second_serve_points_total, loser_break_points_saved, loser_break_points_serve_total, loser_service_points_won, loser_service_points_total, loser_first_serve_return_won, loser_first_serve_return_total, loser_second_serve_return_won, loser_second_serve_return_total, loser_break_points_converted, loser_break_points_return_total, loser_service_games_played, loser_return_games_played, loser_return_points_won, loser_return_points_total, loser_total_points_won, loser_total_points_total]
@@ -550,7 +531,7 @@ def synchronous(url_array, parsing_function, tourney_index, tourney_slug):
         sys.stdout.flush()
 
         # Pause to prevent timeouts
-        #time.sleep(1)         
+        #time.sleep(1)
     print ""
     return results
 
@@ -575,10 +556,10 @@ def asynchronous(url_array, parsing_function, tourney_index, tourney_slug):
             spacing1 = format_spacing(5, tourney_index)
             spacing2 = format_spacing(15, tourney_slug)
             sys.stdout.write('\r' + tourney_index + spacing1 + '    ' + tourney_slug + spacing2 + '    ' + current_count + "/" + str(total_matches) + " (" + str(percent_completed) + ")")
-            sys.stdout.flush()            
+            sys.stdout.flush()
 
             # Pause to prevent timeouts
-            #time.sleep(1) 
+            #time.sleep(1)
 
     print ""
     return results
