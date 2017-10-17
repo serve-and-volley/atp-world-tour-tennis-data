@@ -498,7 +498,7 @@ def scrape_match_stats(match_url_suffix):
 
     loser_second_serve_return_won, loser_second_serve_return_total = extrac_frac(match_stats_cleaned[41])
 
-    loser_break_points_converted, loser_break_points_return_total = extrac_frac(match_stats_cleaned[25])
+    loser_break_points_converted, loser_break_points_return_total = extrac_frac(match_stats_cleaned[45])
 
     loser_service_games_played = match_stats_cleaned[27]
     loser_return_games_played = match_stats_cleaned[47]
