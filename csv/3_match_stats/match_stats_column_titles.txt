@@ -1,4 +1,6 @@
-match_url_suffix
+tourney_order
+match_id
+match_stats_url_suffix
 match_time
 match_duration
 winner_aces

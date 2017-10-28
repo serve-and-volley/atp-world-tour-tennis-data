@@ -5,6 +5,8 @@ tourney_id
 tourney_slug
 tourney_location
 tourney_dates
+tourney_month
+tourney_day
 tourney_singles_draw
 tourney_doubles_draw
 tourney_conditions
@@ -23,3 +25,4 @@ doubles_winner_2_name
 doubles_winner_2_url
 doubles_winner_2_player_slug
 doubles_winner_2_player_id
+tourney_year_id

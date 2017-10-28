@@ -19,6 +19,7 @@ for h in xrange(int(start_year), int(end_year) + 1):
     print 'Year    Order    Tournament                                Matches'
     print '----    -----    ----------                                -------'
     
+    #for i in xrange(68, 69):
     for i in xrange(0 , len(tourney_urls_scrape)):
         if len(tourney_urls_scrape[i]) > 0:
             # STEP 2: Scrape tournament page    
