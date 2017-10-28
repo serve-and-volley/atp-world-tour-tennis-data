@@ -2,7 +2,7 @@
 
 # ATP World Tour tennis data
 
-This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of July 2017. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
+This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of October 2017. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
 
 ## Contents
 - A. [Scraping tournament data by year](#part-a)
@@ -35,6 +35,8 @@ tourney_id
 tourney_slug
 tourney_location
 tourney_dates
+tourney_month
+tourney_day
 tourney_singles_draw
 tourney_doubles_draw
 tourney_conditions
@@ -53,6 +55,7 @@ doubles_winner_2_name
 doubles_winner_2_url
 doubles_winner_2_player_slug
 doubles_winner_2_player_id
+tourney_year_id
 ```
 from pages like the following:
 * http://www.atpworldtour.com/en/scores/results-archive?year=2016
@@ -94,19 +97,10 @@ The following Python script:
 
 scrapes the following data:
 ```
-match_year
+tourney_year_id
 tourney_order
-tourney_name
-tourney_id
 tourney_slug
-tourney_location
-tourney_dates
-tourney_singles_draw
-tourney_doubles_draw
-tourney_conditions
-tourney_surface
-tourney_fin_commit
-tourney_long_slug
+tourney_url_suffix
 tourney_round_name
 round_order
 match_order
@@ -116,7 +110,16 @@ winner_slug
 loser_name
 loser_player_id
 loser_slug
-match_score
+winner_seed
+loser_seed
+match_score_tiebreaks
+winner_sets_won
+loser_sets_won
+winner_games_won
+loser_games_won
+winner_tiebreaks_won
+loser_tiebreaks_won
+match_id
 match_stats_url_suffix
 ```
 
@@ -177,7 +180,9 @@ The following Python script:
 
 scrapes the following data:
 ```
-match_url_suffix
+tourney_order
+match_id
+match_stats_url_suffix
 match_time
 match_duration
 winner_aces
@@ -231,7 +236,9 @@ loser_total_points_total
 ```
 
 from pages like the following:
-* http://www.atpworldtour.com/en/tournaments/australian-open/580/2017/match-stats/F324/N409/live/MS001/match-stats
+* http://www.atpworldtour.com/en/scores/2017/580/MS001/match-stats
+
+![image](https://user-images.githubusercontent.com/532545/32137303-285141dc-bbd2-11e7-90c8-cc84f427a356.png)
 
 The CSV files for all match stats data from 1991-2016 is found in:
 * https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/3_match_stats
