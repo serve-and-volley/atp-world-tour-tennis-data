@@ -135,4 +135,24 @@ CREATE TABLE match_stats (
 -- Ingesting the 'match_stats' indexed CSV file
 \copy match_stats FROM '~/Desktop/test_atp/_output/3_match_stats/match_stats_indexed_1991-2016.csv' DELIMITER ',' CSV
 
+/* RANKINGS */
+CREATE TABLE rankings (
+    id                  integer,
+    week_title          varchar(10),
+    week_year           integer,
+    week_month          integer,
+    week_day            integer,
+    rank_text           varchar(5),
+    rank_number         integer,
+    move_positions      integer,
+    move_direction      varchar(5),
+    player_age          integer,
+    ranking_points      integer,
+    tourneys_played     integer,
+    player_url          varchar(100),
+    player_slug         varchar(40),
+    player_id           varchar(10)
+);
 
+-- Ingesting the 'rankings' indexed CSV file
+\copy rankings FROM '~/Desktop/test_atp/rankings_1973-2016_INDEXED.csv' DELIMITER ',' CSV

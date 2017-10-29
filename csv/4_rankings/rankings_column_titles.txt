@@ -1,0 +1,14 @@
+week_title
+week_year
+week_month
+week_day
+rank_text
+rank_number
+move_positions
+move_direction
+player_age
+ranking_points
+tourneys_played
+player_url
+player_slug
+player_id
