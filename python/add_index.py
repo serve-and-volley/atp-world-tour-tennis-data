@@ -15,15 +15,16 @@ def read_csv(array, filename):
             array.append(row)
     return array
 
-input_csv_filename = ''
-output_csv_filename = ''
+start_index = 2606798
+input_csv_filename = 'rankings_2017_0-37.csv'
+output_csv_filename = 'rankings_2017_0-37_INDEXED'
 
 unindexed = []
 read_csv(unindexed, input_csv_filename)
 
 indexed = []
 for i in xrange(0, len(unindexed)):
-    row = [i+1] + unindexed[i]
+    row = [i + start_index + 1] + unindexed[i]
     indexed.append(row)
 
 array2csv(indexed, output_csv_filename)

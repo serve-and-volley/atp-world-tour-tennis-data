@@ -156,3 +156,4 @@ CREATE TABLE rankings (
 
 -- Ingesting the 'rankings' indexed CSV file
 \copy rankings FROM '~/Desktop/test_atp/rankings_1973-2016_INDEXED.csv' DELIMITER ',' CSV
+\copy rankings FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/rankings_2017_0-37_INDEXED.csv' DELIMITER ',' CSV
