@@ -157,3 +157,31 @@ CREATE TABLE rankings (
 -- Ingesting the 'rankings' indexed CSV file
 \copy rankings FROM '~/Desktop/test_atp/rankings_1973-2016_INDEXED.csv' DELIMITER ',' CSV
 \copy rankings FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/rankings_2017_0-37_INDEXED.csv' DELIMITER ',' CSV
+
+/* PLAYERS */
+CREATE TABLE players (
+    id              integer,
+    player_id       varchar(10),
+    player_slug     varchar(40),
+    first_name      varchar(40),
+    last_name       varchar(40),
+    player_url      varchar(200),
+    flag_code       varchar(10),
+    residence       varchar(60),
+    birthplace      varchar(60),
+    birthdate       varchar(15),
+    birth_year      integer,
+    birth_month     integer,
+    birth_day       integer,
+    turned_pro      integer,
+    weight_lbs      integer,
+    weight_kg       integer,
+    height_ft       integer,
+    height_inches   integer,
+    height_cm       integer,
+    handedness      varchar(15),
+    backhand        varchar(20)
+
+);
+
+\copy players FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/player_overviews_INDEXED.csv' DELIMITER ',' CSV
