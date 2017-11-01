@@ -538,9 +538,12 @@ def scrape_match_stats(match_url_suffix):
     winner_slug_parsed = xpath_parse(match_tree, winner_slug_xpath)
     winner_slug = winner_slug_parsed[0].split('/')[4]
 
-    loser_slug_xpath = "//div[@class='player-right-name']/a/@href"
-    loser_slug_parsed = xpath_parse(match_tree, loser_slug_xpath)
-    loser_slug = loser_slug_parsed[0].split('/')[4]
+    try:
+        loser_slug_xpath = "//div[@class='player-right-name']/a/@href"
+        loser_slug_parsed = xpath_parse(match_tree, loser_slug_xpath)
+        loser_slug = loser_slug_parsed[0].split('/')[4]
+    except Exception:
+        loser_slug = ''
 
     match_id = match_year + '-' + tourney_id + '-' + winner_slug + '-' + loser_slug
 
