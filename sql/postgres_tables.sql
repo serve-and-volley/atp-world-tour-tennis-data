@@ -41,6 +41,7 @@ CREATE TABLE tournaments (
 -- Ingesting the 'tournaments' indexed CSV file
 \copy tournaments FROM '~/Desktop/test_atp/_output/1_tournaments/tournaments_indexed_1877-2016.csv' DELIMITER ',' CSV
 \copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/tournaments_2017-2017_INDEXED.csv' DELIMITER ',' CSV
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/tournaments_2017_66-67.csv' DELIMITER ',' CSV
 
 /* MATCH SCORES */
 CREATE TABLE match_scores (
@@ -74,6 +75,7 @@ CREATE TABLE match_scores (
 -- Ingesting the 'match_scores' indexed CSV file
 \copy match_scores FROM '~/Desktop/test_atp/_output/2_match_scores/match_scores_indexed_1877-2016.csv' DELIMITER ',' CSV
 \copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/match_scores_2017-2017_INDEXED.csv' DELIMITER ',' CSV
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/match_scores_2017_66-67_INDEXED.csv' DELIMITER ',' CSV
 
 /* MATCH STATS */
 CREATE TABLE match_stats (
@@ -136,6 +138,7 @@ CREATE TABLE match_stats (
 -- Ingesting the 'match_stats' indexed CSV file
 \copy match_stats FROM '~/Desktop/test_atp/_output/3_match_stats/match_stats_indexed_1991-2016.csv' DELIMITER ',' CSV
 \copy match_stats FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/match_stats_2017_0-64_INDEXED.csv' DELIMITER ',' CSV
+\copy match_stats FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/match_stats_2017_65-66_INDEXED.csv' DELIMITER ',' CSV
 
 /* RANKINGS */
 CREATE TABLE rankings (
