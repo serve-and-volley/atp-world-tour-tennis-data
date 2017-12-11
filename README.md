@@ -4,6 +4,8 @@
 
 This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of October 2017. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
 ## Contents
 - A. [Scraping tournament data by year](#part-a)
   - A1.  [The `tournaments.py` script](#part-a1)
