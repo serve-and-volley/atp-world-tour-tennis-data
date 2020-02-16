@@ -31,39 +31,42 @@ The following Python script:
 
 scrapes the following data:
 ```
-tourney_year
-tourney_order
-tourney_name
-tourney_id
-tourney_slug
-tourney_location
-tourney_dates
-tourney_month
-tourney_day
-tourney_singles_draw
-tourney_doubles_draw
-tourney_conditions
-tourney_surface
-tourney_fin_commit
-tourney_url_suffix
-singles_winner_name
-singles_winner_url
-singles_winner_player_slug
-singles_winner_player_id
-doubles_winner_1_name
-doubles_winner_1_url
-doubles_winner_1_player_slug
-doubles_winner_1_player_id
-doubles_winner_2_name
-doubles_winner_2_url
-doubles_winner_2_player_slug
-doubles_winner_2_player_id
 tourney_year_id
+ tourney_order
+ tourney_type
+ tourney_name
+ tourney_id
+ tourney_slug
+ tourney_location
+ tourney_date
+ year
+ tourney_month
+ tourney_day
+ tourney_singles_draw
+ tourney_doubles_draw
+ tourney_conditions
+ tourney_surface
+ tourney_fin_commit_raw
+ currency
+ tourney_fin_commit
+ tourney_url_suffix
+ singles_winner_name
+ singles_winner_url
+ singles_winner_player_slug
+ singles_winner_player_id
+ doubles_winner_1_name
+ doubles_winner_1_url
+ doubles_winner_1_player_slug
+ doubles_winner_1_player_id
+ doubles_winner_2_name
+ doubles_winner_2_url
+ doubles_winner_2_player_slug
+ doubles_winner_2_player_id
 ```
-from pages like the following:
-* http://www.atpworldtour.com/en/scores/results-archive?year=2016
 
-![image](https://user-images.githubusercontent.com/532545/28861915-f76a5dfa-7717-11e7-85cd-696e62627971.png)
+from pages like the following:
+* https://www.atptour.com/en/scores/results-archive?year=2019
+![image](https://user-images.githubusercontent.com/532545/74613783-6e7f7f80-50df-11ea-9f70-7860e4696c6f.png)
 
 The CSV file for all tournament data from 1877-2016 is found in:
 * https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/1_tournaments
@@ -73,19 +76,24 @@ The CSV file for all tournament data from 1877-2016 is found in:
 ### A2. Example usage [^](#contents)
 Example command line usage and output is as follows:
 ```
-$ time python tournaments.py 2012 2016
+$ time python3 tournaments.py 2010 2019
 
 Year    Tournaments
 ----    -----------
+2010    66
+2011    66
 2012    67
 2013    65
-2014    64
+2014    65
 2015    66
 2016    67
+2017    69
+2018    69
+2019    68
 
-real	0m8.617s
-user	0m0.675s
-sys	0m0.062s
+real	0m14.230s
+user	0m7.306s
+sys	0m0.104s
 ```
 
 <div id="part-b"></div>
