@@ -9,7 +9,6 @@ import numbers
 from concurrent.futures import ProcessPoolExecutor
 import concurrent.futures
 
-
 def html_parse_tree(url):
     page = requests.get(url)
     tree = html.fromstring(page.content)
@@ -26,7 +25,7 @@ def regex_strip_string(string):
     return string
 
 def regex_strip_array(array):
-    for i in xrange(0, len(array)):
+    for i in range(0, len(array)):
         array[i] = regex_strip_string(array[i]).strip()
     return array
 
@@ -48,7 +47,7 @@ def read_csv(array, filename):
 def format_spacing(max_spacing, variable):
     spacing_count = max_spacing - len(variable)
     output = ''
-    for i in xrange(0, spacing_count):
+    for i in range(0, spacing_count):
         output += ' '
     return output
 
@@ -59,8 +58,8 @@ def fraction_stats(string):
 
 def tournaments(year):
     # Setup
-    year_url = "http://www.atpworldtour.com/en/scores/results-archive?year=" + year
-    url_prefix = "http://www.atpworldtour.com"
+    year_url = "http://www.atptour.com/en/scores/results-archive?year=" + year
+    url_prefix = "http://www.atptour.com"
 
     # HTML tree
     year_tree = html_parse_tree(year_url)
@@ -101,7 +100,7 @@ def tournaments(year):
     tourney_fin_commit_cleaned = regex_strip_array(tourney_fin_commit_parsed)    
 
     output = []
-    for i in xrange(0, tourney_count):
+    for i in range(0, tourney_count):
         tourney_order = i + 1
 
         # Assign variables
@@ -224,7 +223,7 @@ def tournaments(year):
         # Store data
         output.append([year, tourney_order, tourney_name, tourney_id, tourney_slug, tourney_location, tourney_dates, tourney_month, tourney_day, tourney_singles_draw, tourney_doubles_draw, tourney_conditions, tourney_surface, tourney_fin_commit, tourney_url_suffix, singles_winner_name, singles_winner_url, singles_winner_player_slug, singles_winner_player_id, doubles_winner_1_name, doubles_winner_1_url, doubles_winner_1_player_slug, doubles_winner_1_player_id, doubles_winner_2_name, doubles_winner_2_url, doubles_winner_2_player_slug, doubles_winner_2_player_id, tourney_year_id])
     # Output progress
-    print year + '    ' + str(tourney_count)
+    print(year + '    ' + str(tourney_count))
     # Output data
     return output
 
@@ -247,7 +246,7 @@ def scrape_year(year):
     tourney_data = []
     tourney_urls = []
     problem_tourneys = []
-    for i in xrange(0, tourney_count):
+    for i in range(0, tourney_count):
         tourney_order = i + 1
         tourney_name = tourney_title_cleaned[i].encode('utf-8')
 
@@ -275,10 +274,10 @@ def scrape_year(year):
 
     # Print missing info
     if len(problem_tourneys) > 0:
-        print ''
-        print 'Tournaments with missing match info...'
-        print 'Year    Order    Tournament'
-        print '----    -----    ----------'
+        print('')
+        print('Tournaments with missing match info...')
+        print('Year    Order    Tournament')
+        print('----    -----    ----------')
 
         for tourney in problem_tourneys:
             year = tourney[0]
@@ -287,10 +286,10 @@ def scrape_year(year):
 
             spacing_count = 5 - len(str(tourney_order))
             spacing = ''
-            for j in xrange(0, spacing_count):
+            for j in range(0, spacing_count):
                 spacing += ' '
 
-            print year + '    ' + str(tourney_order) + spacing +  '    ' + tourney_name    
+            print(year + '    ' + str(tourney_order) + spacing +  '    ' + tourney_name)
 
     # Output data
     output = [tourney_data, tourney_urls]
@@ -315,7 +314,7 @@ def scrape_tourney(tourney_url_suffix):
     match_urls = []
     match_data = []
     # Iterate through each round    
-    for i in xrange(0, tourney_round_count):
+    for i in range(0, tourney_round_count):
         round_order = i + 1
 
         tourney_round_name = tourney_round_name_parsed[i]
@@ -326,7 +325,7 @@ def scrape_tourney(tourney_url_suffix):
         round_match_count = len(round_match_count_parsed)
 
         # Iterate through each match
-        for j in xrange(0, round_match_count):
+        for j in range(0, round_match_count):
             match_order = j + 1
 
             # Winner
@@ -409,7 +408,7 @@ def scrape_tourney(tourney_url_suffix):
                 # Finalize match scores
                 concat_match_score = ""
                 element_count = len(match_score_cleaned)
-                for k in xrange(0,  element_count - 1):
+                for k in range(0,  element_count - 1):
                     concat_match_score += match_score_cleaned[k] + "::"
                 concat_match_score += match_score_cleaned[element_count - 1]
 
@@ -419,7 +418,7 @@ def scrape_tourney(tourney_url_suffix):
                 # Finalize tiebreak scores
                 concat_tiebreak_score = ""
                 tiebreak_element_count = len(tiebreak_score_cleaned)
-                for k in xrange(0, tiebreak_element_count - 1):
+                for k in range(0, tiebreak_element_count - 1):
                     concat_tiebreak_score += tiebreak_score_cleaned[k] + "::"
                 concat_tiebreak_score += tiebreak_score_cleaned[element_count -1]
 
@@ -706,7 +705,7 @@ def synchronous(url_array, parsing_function, tourney_index, tourney_slug):
 
         # Pause to prevent timeouts
         #time.sleep(1)         
-    print ""
+    print("")
     return results
 
 def asynchronous(url_array, parsing_function, tourney_index, tourney_slug):
@@ -736,5 +735,5 @@ def asynchronous(url_array, parsing_function, tourney_index, tourney_slug):
             # Pause to prevent timeouts
             #time.sleep(1) 
 
-    print ""
+    print("")
     return results

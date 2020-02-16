@@ -7,12 +7,12 @@ end_year = str(sys.argv[2])
 
 # Iterate through the years and scrape tourney data
 
-print ''
-print 'Year    Tournaments'
-print '----    -----------'
+print('')
+print('Year    Tournaments')
+print('----    -----------')
 
 tourney_data = []
-for h in xrange(int(start_year), int(end_year) + 1):
+for h in range(int(start_year), int(end_year) + 1):
     year = str(h)
     tourney_data += tournaments(year)
 

@@ -51,7 +51,7 @@ for i in xrange(int(start_index), tourney_count):
         match_stats_data_scrape += asynchronous(match_stats_url_suffixes, scrape_match_stats, tourney_index, tourney_slug)
 
         # Parse match stats synchronously
-        #match_stats_data_scrape += synchronous(match_stats_url_suffixes, scrape_match_stats, tourney_index, tourney_slug)
+        # match_stats_data_scrape += synchronous(match_stats_url_suffixes, scrape_match_stats, tourney_index, tourney_slug)
 
     else:
         spacing1 = format_spacing(5, tourney_index)
