@@ -15,9 +15,9 @@ def read_csv(array, filename):
             array.append(row)
     return array
 
-start_index = 91957
-input_csv_filename = 'match_stats_2017_0-64.csv'
-output_csv_filename = 'match_stats_2017_0-64_INDEXED'
+start_index = 2606799
+input_csv_filename = 'rankings_2017.csv'
+output_csv_filename = 'rankings_2017_INDEXED'
 
 unindexed = []
 read_csv(unindexed, input_csv_filename)

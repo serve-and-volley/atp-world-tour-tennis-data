@@ -161,7 +161,7 @@ CREATE TABLE rankings (
 
 -- Ingesting the 'rankings' indexed CSV file
 \copy rankings FROM '~/Desktop/test_atp/rankings_1973-2016_INDEXED.csv' DELIMITER ',' CSV
-\copy rankings FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/rankings_2017_0-37_INDEXED.csv' DELIMITER ',' CSV
+\copy rankings FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/rankings_2017_INDEXED.csv' DELIMITER ',' CSV
 
 /* PLAYERS */
 CREATE TABLE players (
@@ -189,3 +189,10 @@ CREATE TABLE players (
 );
 
 \copy players FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/player_overviews_INDEXED.csv' DELIMITER ',' CSV
+
+-- Convert to dates
+ALTER TABLE rankings
+ALTER COLUMN week_date 
+
+TYPE DATE 
+using to_date(week_date, 'YYYY-MM-DD');

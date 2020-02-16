@@ -1,8 +1,8 @@
 import sys
 from functions import html_parse_tree, xpath_parse, regex_strip_array, read_csv, array2csv
 
-start_index = int(sys.argv[1])
-end_index = int(sys.argv[2])
+#start_index = int(sys.argv[1])
+#end_index = int(sys.argv[2])
 
 csv_file = 'weeks.csv'
 
@@ -17,8 +17,9 @@ print "Index    Week"
 print "-----    ----"
 
 #for h in xrange(index, 1):
-#for h in xrange(index, len(weeks_list)):
-for h in xrange(start_index, end_index + 1):
+index = 0
+for h in xrange(index, len(weeks_list)):
+#for h in xrange(start_index, end_index + 1):
     week = weeks_list[h][0]
     week_url = "http://www.atpworldtour.com/en/rankings/singles?rankDate=" + week + "&rankRange=1-3000"
 
