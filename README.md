@@ -148,36 +148,38 @@ The CSV files for all match scores data from 1877-2016 is found in:
 ### B2. Example usage [^](#contents)
 Example command line usage and output is as follows:
 ```
-$ time python match_scores.py 1967 1968
+$ time python3 match_scores.py 1967 1968
 
 Scraping match info for 4 tournaments...
 Year    Order    Tournament                                Matches
 ----    -----    ----------                                -------
-1967    1        Australian Championships                  58
-1967    2        French Championships                      123
-1967    3        Wimbledon                                 127
-1967    4        US Championships                          127
+1967    1        australian-championships                  58
+1967    2        french-championships                      123
+1967    3        wimbledon                                 127
+1967    4        us-championships                          127
 
-Scraping match info for 13 tournaments...
+Scraping match info for 15 tournaments...
 Year    Order    Tournament                                Matches
 ----    -----    ----------                                -------
-1968    1        Australian Chps.                          61
-1968    2        Bournemouth                               31
-1968    3        Roland Garros                             127
-1968    4        Beckenham                                 43
-1968    5        London / Queen's Club                     53
-1968    6        Wimbledon                                 127
-1968    7        Dublin                                    31
-1968    8        Gstaad                                    31
-1968    9        Montreal / Toronto                        0
-1968    10       Hamburg                                   47
-1968    11       US Open                                   95
-1968    12       Los Angeles                               68
-1968    13       Buenos Aires                              36
+1968    1        australian-chps                           61
+1968    2        bournemouth                               31
+1968    3        rome                                      103
+1968    4        roland-garros                             126
+1968    5        barcelona                                 57
+1968    6        london                                    53
+1968    7        wimbledon                                 127
+1968    8        cincinnati                                11
+1968    9        dublin                                    31
+1968    10       gstaad                                    31
+1968    11       hamburg                                   47
+1968    12       toronto                                   0
+1968    13       us-open                                   95
+1968    14       los-angeles                               68
+1968    15       buenos-aires                              36
 
-real	0m21.406s
-user	0m0.810s
-sys	0m0.099s
+real	0m21.037s
+user	0m8.330s
+sys	  0m0.211s
 ```
 
 <div id="part-c"></div>
