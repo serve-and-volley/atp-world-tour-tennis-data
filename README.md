@@ -177,9 +177,9 @@ Year    Order    Tournament                                Matches
 1968    14       los-angeles                               68
 1968    15       buenos-aires                              36
 
-real	0m21.037s
-user	0m8.330s
-sys	  0m0.211s
+real    0m21.037s
+user    0m8.330s
+sys     0m0.211s
 ```
 
 <div id="part-c"></div>
