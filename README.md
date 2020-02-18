@@ -136,9 +136,9 @@ match_stats_url_suffix
 ```
 
 from pages like the following:
-* http://www.atpworldtour.com/en/scores/archive/wimbledon/540/2016/results
+* https://www.atptour.com/en/scores/archive/australian-open/580/2019/results
 
-![image](https://user-images.githubusercontent.com/532545/28890551-4f2793e6-777c-11e7-9497-a6bedafdad06.png)
+![image](https://user-images.githubusercontent.com/532545/74780146-ffd02c80-526c-11ea-9bea-360bfbd965ff.png)
 
 The CSV files for all match scores data from 1877-2016 is found in:
 * https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/2_match_scores
