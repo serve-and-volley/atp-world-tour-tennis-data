@@ -7,75 +7,84 @@
 
 /* TOURNAMENTS */
 CREATE TABLE tournaments (
-    id                              integer,
-    tourney_year                    integer,
+    tourney_year_id                 varchar,
     tourney_order                   integer,
-    tourney_name                    varchar(60),
+    tourney_type                    varchar,
+    tourney_name                    varchar,
     tourney_id                      integer,
-    tourney_slug                    varchar(30),
-    tourney_location                varchar(40),
-    tourney_dates                   varchar(10),
+    tourney_slug                    varchar,
+    tourney_location                varchar,
+    tourney_date                    varchar,
+    tourney_year                    integer,
     tourney_month                   integer,
     tourney_day                     integer,
     tourney_singles_draw            integer,
     tourney_doubles_draw            integer,
-    tourney_conditions              varchar(10),
-    tourney_surface                 varchar(10),
-    tourney_fin_commit              varchar(15),
-    tourney_url_suffix              varchar(200),
-    singles_winner_name             varchar(40),
-    singles_winner_url              varchar(200),
-    singles_winner_player_slug      varchar(40),
-    singles_winner_player_id        varchar(10),
-    doubles_winner_1_name           varchar(40),
-    doubles_winner_1_url            varchar(200),
-    doubles_winner_1_player_slug    varchar(40),
-    doubles_winner_1_player_id      varchar(10),
-    doubles_winner_2_name           varchar(40),
-    doubles_winner_2_url            varchar(200),
-    doubles_winner_2_player_slug    varchar(40),
-    doubles_winner_2_player_id      varchar(10),
-    tourney_year_id                 varchar(15)
+    tourney_conditions              varchar,
+    tourney_surface                 varchar,
+    tourney_fin_commit_raw          varchar,
+    currency                        varchar,
+    tourney_fin_commit              integer,
+    tourney_url_suffix              varchar,
+    singles_winner_name             varchar,
+    singles_winner_url              varchar,
+    singles_winner_player_slug      varchar,
+    singles_winner_player_id        varchar,
+    doubles_winner_1_name           varchar,
+    doubles_winner_1_url            varchar,
+    doubles_winner_1_player_slug    varchar,
+    doubles_winner_1_player_id      varchar,
+    doubles_winner_2_name           varchar,
+    doubles_winner_2_url            varchar,
+    doubles_winner_2_player_slug    varchar,
+    doubles_winner_2_player_id      varchar
 );
 
 -- Ingesting the 'tournaments' indexed CSV file
-\copy tournaments FROM '~/Desktop/test_atp/_output/1_tournaments/tournaments_indexed_1877-2016.csv' DELIMITER ',' CSV
-\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/tournaments_2017-2017_INDEXED.csv' DELIMITER ',' CSV
-\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/tournaments_2017_66-67.csv' DELIMITER ',' CSV
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_1877-1967.csv' DELIMITER ',' CSV;
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_1968-1969.csv' DELIMITER ',' CSV;
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_1970-1979.csv' DELIMITER ',' CSV;
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_1980-1989.csv' DELIMITER ',' CSV;
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_1990-1999.csv' DELIMITER ',' CSV;
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_2000-2009.csv' DELIMITER ',' CSV;
+\copy tournaments FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/1_tournaments/tournaments_2010-2019.csv' DELIMITER ',' CSV;
 
 /* MATCH SCORES */
 CREATE TABLE match_scores (
-    id                      integer,
-    tourney_year_id         varchar(15),
+    tourney_year_id         varchar,
     tourney_order           integer,
-    tourney_slug            varchar(30),
-    tourney_url_suffix      varchar(200),
-    tourney_round_name      varchar(20),
+    tourney_slug            varchar,
+    tourney_url_suffix      varchar,
+    tourney_round_name      varchar,
     round_order             integer,
     match_order             integer,
-    winner_name             varchar(40),
-    winner_player_id        varchar(10),
-    winner_slug             varchar(40),
-    loser_name              varchar(40),
-    loser_player_id         varchar(10),
-    loser_slug              varchar(40),
-    winner_seed             varchar(5),
-    loser_seed              varchar(5),
-    match_score_tiebreaks   varchar(40),
+    winner_name             varchar,
+    winner_player_id        varchar,
+    winner_slug             varchar,
+    loser_name              varchar,
+    loser_player_id         varchar,
+    loser_slug              varchar,
+    winner_seed             varchar,
+    loser_seed              varchar,
+    match_score_tiebreaks   varchar,
     winner_sets_won         integer,
     loser_sets_won          integer,
     winner_games_won        integer,
     loser_games_won         integer,
     winner_tiebreaks_won    integer,
     loser_tiebreaks_won     integer,
-    match_id                varchar(40),
-    match_stats_url_suffix  varchar(200)
+    match_id                varchar,
+    match_stats_url_suffix  varchar
 );
 
 -- Ingesting the 'match_scores' indexed CSV file
-\copy match_scores FROM '~/Desktop/test_atp/_output/2_match_scores/match_scores_indexed_1877-2016.csv' DELIMITER ',' CSV
-\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/match_scores_2017-2017_INDEXED.csv' DELIMITER ',' CSV
-\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/python/match_scores_2017_66-67_INDEXED.csv' DELIMITER ',' CSV
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_1877-1967.csv' DELIMITER ',' CSV;
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_1968-1969.csv' DELIMITER ',' CSV;
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_1970-1979.csv' DELIMITER ',' CSV;
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_1980-1989.csv' DELIMITER ',' CSV;
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_1990-1999.csv' DELIMITER ',' CSV;
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_2000-2009.csv' DELIMITER ',' CSV;
+\copy match_scores FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/2_match_scores/match_scores_2010-2019.csv' DELIMITER ',' CSV;
 
 /* MATCH STATS */
 CREATE TABLE match_stats (

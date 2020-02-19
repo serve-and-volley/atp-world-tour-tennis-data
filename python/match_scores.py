@@ -4,6 +4,12 @@ import requests
 import re
 import csv
 
+# # # # # # # # #
+#               #
+#   FUNCTIONS   #
+#               #
+# # # # # # # # #
+
 def array2csv(array, filename):
     with open(filename, "w+") as my_csv:
         csvWriter = csv.writer(my_csv, delimiter = ',')
