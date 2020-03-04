@@ -4,6 +4,12 @@ import requests
 import re
 import csv
 
+# # # # # # # # #
+#               #
+#   FUNCTIONS   #
+#               #
+# # # # # # # # #
+
 def array2csv(array, filename):
     with open(filename, "w+") as my_csv:
         csvWriter = csv.writer(my_csv, delimiter = ',')
@@ -50,7 +56,6 @@ def scrape_year(year):
     problem_tourneys = []
     for i in range(0, tourney_count):
         tourney_order = i + 1
-        #tourney_name = tourney_title_cleaned[i].encode('utf-8')
         tourney_name = tourney_title_cleaned[i]
 
         # Assign variables
@@ -73,7 +78,7 @@ def scrape_year(year):
             problem_tourneys.append([year, tourney_order, tourney_name])
         
         # Store data        
-        tourney_data.append([tourney_year_id, tourney_order, tourney_slug, tourney_url_suffix])
+        tourney_data.append([tourney_year_id, tourney_order, tourney_name, tourney_slug, tourney_url_suffix])
 
     # Print missing info
     if len(problem_tourneys) > 0:
@@ -114,9 +119,71 @@ def scrape_tourney(tourney_url_suffix):
     tourney_round_name_parsed = xpath_parse(tourney_tree, tourney_round_name_xpath)
     tourney_round_count = len(tourney_round_name_parsed)
 
+    # Tourney dates
+    try:
+        tourney_dates_xpath = "//span[contains(@class, 'tourney-dates')]/text()"
+        tourney_dates_parsed = xpath_parse(tourney_tree, tourney_dates_xpath)
+        tourney_dates_cleaned = regex_strip_string(tourney_dates_parsed[0])
+        tourney_dates_split = tourney_dates_cleaned.split(' - ')
+        start_date = tourney_dates_split[0]
+        end_date = tourney_dates_split[1]
+        start_date_split = tourney_dates_split[0].split('.')
+        end_date_split = tourney_dates_split[1].split('.')
+        start_year = int(start_date_split[0])
+        start_month = int(start_date_split[1])
+        start_day = int(start_date_split[2])
+        end_year = int(end_date_split[0])
+        end_month =  int(end_date_split[1])
+        end_day =  int(end_date_split[2])
+    except Exception:
+        start_date = ''
+        start_year = ''
+        start_month = ''
+        start_day = ''
+        end_date = ''
+        end_year = ''
+        end_month = ''
+        end_day = ''
+
+    # Prize money    
+    prize_money_xpath = "//td[contains(@class, 'prize-money')]/div[2]/div/span/text()"
+    prize_money_parsed = xpath_parse(tourney_tree, prize_money_xpath)
+    prize_money_cleaned = regex_strip_array(prize_money_parsed)
+
+    if len(prize_money_cleaned) == 0 or prize_money_cleaned[0] == '': 
+        prize_money_raw = ''
+        prize_money = ''
+        currency = ''
+
+    elif len(prize_money_cleaned) > 0:
+        prize_money_raw = prize_money_cleaned[0]
+        
+        if tourney_id == '319' or tourney_id == '306':
+            prize_money = prize_money_raw.replace(',', '')
+            prize_money = int(re.findall('\d+', prize_money)[0])
+            currency = 'EUR'
+        else:
+            if prize_money_raw[0] == '$': currency = 'USD'
+            elif prize_money_raw[0] == '£': currency = 'GBP'
+            elif prize_money_raw[0] == '€': currency = 'EUR'
+            elif prize_money_raw[0] == 'A': currency = 'AUD'
+            else: currency = 'PROBLEM'
+
+            prize_money = prize_money_raw.replace(',', '')
+            prize_money = prize_money.replace('$', '')
+            prize_money = prize_money.replace('£', '')
+            prize_money = prize_money.replace('€', '')
+            prize_money = prize_money.replace('A', '')
+            prize_money = int(prize_money)            
+
+    else: 
+        prize_money_raw = 'PROBLEM'
+        prize_money = ''
+        currency = ''
+
+    # Iterate through each round   
     match_urls = []
     match_data = []
-    # Iterate through each round    
     for i in range(0, tourney_round_count):
         round_order = i + 1
 
@@ -128,7 +195,6 @@ def scrape_tourney(tourney_url_suffix):
         round_match_count = len(round_match_count_parsed)
 
         # Iterate through each match
-        #for j in range(0, round_match_count):
         for j in range(0, round_match_count):
             match_order = j + 1
             round_match_id = str(tourney_round_count - i) + '-' + str(round_match_count - j)
@@ -299,32 +365,28 @@ def scrape_tourney(tourney_url_suffix):
                                 loser_sets_won += 1
                                 winner_games_won += int(sets[0:2])
                                 loser_games_won += int(sets[2:4])
-
-                # Match id
-                match_id = tourney_year + "-" + tourney_id + "-" + round_match_id + "-" + winner_player_id + "-" + loser_player_id
                                         
                 # Match stats URL
                 match_stats_url_xpath = tourney_match_count_xpath = "//table[contains(@class, 'day-table')]/tbody[" + str(i + 1) + "]/tr[" + str(j + 1) + "]/td[contains(@class, 'day-table-score')]/a/@href"
                 match_stats_url_parsed = xpath_parse(tourney_tree, match_stats_url_xpath)
                 match_stats_url_cleaned = []
                 for element in match_stats_url_parsed:
-                    if len(element) > 0:
-                        match_stats_url_cleaned.append(regex_strip_string(element))
-                    else:
-                        match_stats_url_cleaned.append("TIEBREAK")
-                
+                    if len(element) > 0: match_stats_url_cleaned.append(regex_strip_string(element))
+                    #else: match_stats_url_cleaned.append("TIEBREAK")
+
+                # Match id                
                 if len(match_stats_url_cleaned) > 0:
                     match_stats_url_suffix = match_stats_url_cleaned[0]
                     match_stats_url_suffix_split = match_stats_url_suffix.split('/')
-                    #tourney_long_slug = match_stats_url_suffix_split[3]
-                    #tourney_match_id = match_stats_url_split[10]
+                    match_index = match_stats_url_suffix_split[5]
                     match_urls.append(match_stats_url_suffix)
                 else:
                     match_stats_url_suffix = ''
-                    tourney_long_slug = ''
+                    match_index = 'NULL'
+                match_id = tourney_year + "-" + tourney_id + "-" + match_index + "-" + round_match_id + "-" + winner_player_id + "-" + loser_player_id
 
                 # Store data
-                match_data.append([tourney_round_name, round_order, match_order, winner_name, winner_player_id, winner_slug, loser_name, loser_player_id, loser_slug, winner_seed, loser_seed, match_score_tiebreaks, winner_sets_won, loser_sets_won, winner_games_won, loser_games_won, winner_tiebreaks_won, loser_tiebreaks_won, match_id, match_stats_url_suffix])
+                match_data.append([start_date, start_year, start_month, start_day, end_date, end_year, end_month, end_day, currency, prize_money, match_index, tourney_round_name, round_order, match_order, winner_name, winner_player_id, winner_slug, loser_name, loser_player_id, loser_slug, winner_seed, loser_seed, match_score_tiebreaks, winner_sets_won, loser_sets_won, winner_games_won, loser_games_won, winner_tiebreaks_won, loser_tiebreaks_won, match_id, match_stats_url_suffix])
                 #time.sleep(.100)       
 
     output = [match_data, match_urls]
@@ -354,7 +416,7 @@ for h in range(int(start_year), int(end_year) + 1):
     print('Year    Order    Tournament                                Matches')
     print('----    -----    ----------                                -------')
     
-    for i in range(0 , len(tourney_urls_scrape)):    
+    for i in range(0 , len(tourney_urls_scrape)):
         if len(tourney_urls_scrape[i]) > 0:
             # STEP 2: Scrape tournament page    
             match_data_scrape = []
@@ -378,7 +440,8 @@ for h in range(int(start_year), int(end_year) + 1):
             spacing2 = ''
             for j in range(0, spacing_count2): spacing2 += ' '            
 
-            print(year + '    ' + str(tourney_data_scrape[i][1]) + spacing1 + '    ' + tourney_data_scrape[i][2] + spacing2 + ' ' + str(len(match_data_scrape)))
+            if len(match_data_scrape) == 0: print(year + '    ' + '\x1b[1;31m' + str(tourney_data_scrape[i][1]) + spacing1 + '    ' + tourney_data_scrape[i][2] + spacing2 + ' ' + str(len(match_data_scrape)) + '\x1b[0m')
+            else: print(year + '    ' + str(tourney_data_scrape[i][1]) + spacing1 + '    ' + tourney_data_scrape[i][2] + spacing2 + ' ' + str(len(match_data_scrape)))
 
         filename = "match_scores_" + start_year + "-" + end_year + '.csv'
         array2csv(tourney_match, filename)
