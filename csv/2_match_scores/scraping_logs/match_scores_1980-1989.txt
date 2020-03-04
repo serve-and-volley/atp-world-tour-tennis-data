@@ -1,0 +1,987 @@
+$ time python3 match_scores.py 1980 1989
+
+Scraping match info for 104 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1980    1        Hobart                                    31
+1980    2        Auckland                                  31
+1980    3        Masters Doubles WCT                       0
+1980    4        Birmingham WCT                            31
+1980    5        Baltimore                                 31
+1980    6        Philadelphia WCT                          47
+1980    7        Richmond WCT                              31
+1980    8        San Juan                                  31
+1980    9        Pepsi Grand Slam                          3
+1980    10       Rancho Mirage                             60
+1980    11       Sarasota                                  31
+1980    12       Denver                                    31
+1980    13       Salisbury WCT                             16
+1980    14       Memphis                                   47
+1980    15       Lagos                                     31
+1980    16       Washington Indoor                         0
+1980    17       Washington Indoor                         31
+1980    18       Cairo                                     31
+1980    19       Rotterdam WCT                             31
+1980    20       San Jose Costa Rica                       31
+1980    21       Stuttgart Indoor                          31
+1980    22       Frankfurt WCT                             31
+1980    23       Metz                                      31
+1980    24       Milan WCT                                 31
+1980    25       Dayton                                    31
+1980    26       Nice                                      31
+1980    27       Monte Carlo WCT                           31
+1980    28       New Orleans                               31
+1980    29       Tampa                                     31
+1980    30       Houston WCT                               31
+1980    31       Tulsa                                     31
+1980    32       Johannesburg                              31
+1980    33       Johannesburg                              31
+1980    34       Los Angeles                               47
+1980    35       Las Vegas                                 31
+1980    36       Dallas WCT                                7
+1980    37       Sao Paulo                                 31
+1980    38       Forest Hills WCT                          27
+1980    39       Nations Cup                               30
+1980    40       Hamburg                                   63
+1980    41       Florence                                  31
+1980    42       Rome                                      63
+1980    43       Munich                                    31
+1980    44       Roland Garros                             127
+1980    45       London / Queen's Club                     63
+1980    46       Brussels                                  31
+1980    47       Surbiton                                  31
+1980    48       Vienna Outdoor                            31
+1980    49       Wimbledon                                 127
+1980    50       Gstaad                                    31
+1980    51       Newport                                   31
+1980    52       Boston                                    63
+1980    53       Bastad                                    31
+1980    54       Stuttgart Outdoor                         31
+1980    55       Washington                                63
+1980    56       Hilversum                                 31
+1980    57       Kitzbuhel                                 31
+1980    58       North Conway                              63
+1980    59       South Orange                              31
+1980    60       Indianapolis                              63
+1980    61       Columbus                                  31
+1980    62       Montreal / Toronto                        63
+1980    63       Cleveland                                 31
+1980    64       Stowe                                     31
+1980    65       Cincinnati                                63
+1980    66       Atlanta                                   31
+1980    67       US Open                                   127
+1980    68       Sawgrass Doubles                          0
+1980    69       Palermo                                   31
+1980    70       Bournemouth                               31
+1980    71       San Francisco                             47
+1980    72       Bordeaux                                  31
+1980    73       Geneva                                    31
+1980    74       Madrid                                    47
+1980    75       Maui                                      31
+1980    76       Barcelona                                 63
+1980    77       Brisbane                                  31
+1980    78       Tel Aviv                                  31
+1980    79       Sydney Indoor                             31
+1980    80       Basel                                     31
+1980    81       Republic Of China                         31
+1980    82       Melbourne Indoor                          31
+1980    83       Tokyo Outdoor                             63
+1980    84       Vienna                                    47
+1980    85       Tokyo Indoor                              31
+1980    86       Cologne                                   31
+1980    87       Paris Indoor                              31
+1980    88       Hong Kong                                 31
+1980    89       Quito                                     31
+1980    90       Stockholm                                 31
+1980    91       Wembley                                   31
+1980    92       Taipei                                    31
+1980    93       Bogota                                    31
+1980    94       Buenos Aires                              31
+1980    95       Bangkok                                   31
+1980    96       Bologna                                   31
+1980    97       Santiago                                  31
+1980    98       Johannesburg                              31
+1980    99       WCT Challenge Cup                         15
+1980    100      Sydney Outdoor                            63
+1980    101      Sofia                                     31
+1980    102      Australian Open                           63
+1980    103      Masters                                   15
+1980    104      Masters Doubles                           0
+
+Scraping match info for 99 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1981    1        Adelaide                                  31
+1981    2        Auckland                                  31
+1981    3        Masters Doubles WCT                       0
+1981    4        Monterrey WCT                             31
+1981    5        Guaruja                                   31
+1981    6        San Juan                                  31
+1981    7        Philadelphia WCT                          47
+1981    8        Vina Del Mar                              31
+1981    9        Richmond WCT                              31
+1981    10       Mar Del Plata                             31
+1981    11       Pepsi Grand Slam                          3
+1981    12       La Quinta                                 63
+1981    13       Memphis                                   47
+1981    14       Mexico City                               31
+1981    15       Salisbury WCT                             0
+1981    16       Denver                                    31
+1981    17       Brussels WCT                              31
+1981    18       Cairo                                     31
+1981    19       Tampa                                     31
+1981    20       Rotterdam WCT                             31
+1981    21       Nancy                                     31
+1981    22       Milan WCT                                 31
+1981    23       Stuttgart Indoor                          31
+1981    24       Napa                                      31
+1981    25       Frankfurt WCT                             31
+1981    26       Linz                                      31
+1981    27       Houston WCT                               31
+1981    28       Johannesburg                              31
+1981    29       Johannesburg                              31
+1981    30       Nice                                      31
+1981    31       Monte Carlo                               30
+1981    32       Los Angeles                               31
+1981    33       Las Vegas                                 31
+1981    34       Bournemouth                               31
+1981    35       Dallas WCT                                7
+1981    36       Forest Hills WCT                          42
+1981    37       Nations Cup                               30
+1981    38       Hamburg                                   63
+1981    39       Florence                                  31
+1981    40       Rome                                      63
+1981    41       Munich                                    31
+1981    42       Roland Garros                             127
+1981    43       London / Queen's Club                     63
+1981    44       Brussels                                  31
+1981    45       Bristol                                   31
+1981    46       Venice                                    31
+1981    47       Wimbledon                                 127
+1981    48       Gstaad                                    31
+1981    49       Newport                                   31
+1981    50       Boston                                    63
+1981    51       Kitzbuhel                                 47
+1981    52       Stuttgart Outdoor                         31
+1981    53       Washington                                63
+1981    54       Bastad                                    31
+1981    55       Hilversum                                 31
+1981    56       North Conway                              63
+1981    57       South Orange                              31
+1981    58       Indianapolis                              63
+1981    59       Columbus                                  31
+1981    60       Montreal / Toronto                        63
+1981    61       Cleveland                                 31
+1981    62       Stowe                                     31
+1981    63       Cincinnati                                63
+1981    64       Atlanta                                   31
+1981    65       US Open                                   127
+1981    66       Sawgrass Doubles                          0
+1981    67       Palermo                                   31
+1981    68       San Francisco                             47
+1981    69       Bordeaux                                  31
+1981    70       Geneva                                    31
+1981    71       Madrid                                    31
+1981    72       Maui                                      31
+1981    73       Barcelona                                 63
+1981    74       Brisbane                                  31
+1981    75       Tel Aviv                                  31
+1981    76       Sydney Indoor                             31
+1981    77       Basel                                     31
+1981    78       Melbourne Indoor                          31
+1981    79       Tokyo Outdoor                             63
+1981    80       Vienna                                    47
+1981    81       Tokyo Indoor                              31
+1981    82       Cologne                                   31
+1981    83       Paris Indoor                              31
+1981    84       Stockholm                                 63
+1981    85       Hong Kong                                 31
+1981    86       Quito                                     31
+1981    87       Wembley                                   30
+1981    88       Taipei                                    31
+1981    89       Buenos Aires                              31
+1981    90       Bangkok                                   31
+1981    91       Bologna                                   31
+1981    92       Johannesburg                              31
+1981    93       Manila                                    31
+1981    94       Santiago                                  31
+1981    95       Sydney Outdoor                            63
+1981    96       Sofia                                     30
+1981    97       Australian Open                           63
+1981    98       Masters                                   15
+1981    99       Masters Doubles                           0
+
+Scraping match info for 108 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1982    1        Adelaide                                  31
+1982    2        Adelaide-2                                0
+1982    3        Masters Doubles WCT                       0
+1982    4        Auckland                                  31
+1982    5        Guaruja                                   31
+1982    6        Mexico City WCT                           15
+1982    7        Philadelphia                              31
+1982    8        Delray Beach WCT                          15
+1982    9        Vina Del Mar                              31
+1982    10       Denver                                    31
+1982    11       Buenos Aires                              31
+1982    12       Richmond WCT                              15
+1982    13       Memphis                                   47
+1982    14       Caracas                                   31
+1982    15       La Quinta                                 63
+1982    16       Monterrey                                 31
+1982    17       Genova WCT                                31
+1982    18       Cairo                                     31
+1982    19       Brussels                                  31
+1982    20       Munich-2 WCT                              31
+1982    21       Linz                                      31
+1982    22       Rotterdam                                 31
+1982    23       Strasbourg WCT                            31
+1982    24       Metz                                      31
+1982    25       Milan                                     31
+1982    26       Zurich WCT                                31
+1982    27       Frankfurt                                 31
+1982    28       Nice                                      31
+1982    29       Monte Carlo                               31
+1982    30       Houston WCT                               31
+1982    31       Los Angeles                               31
+1982    32       Las Vegas                                 31
+1982    33       Bournemouth                               31
+1982    34       Dallas WCT                                7
+1982    35       Madrid                                    31
+1982    36       Tampa                                     31
+1982    37       Hilton Head WCT                           31
+1982    38       Forest Hills WCT                          60
+1982    39       World Team Cup                            30
+1982    40       Hamburg                                   63
+1982    41       Florence                                  31
+1982    42       Rome                                      63
+1982    43       Munich                                    31
+1982    44       Roland Garros                             127
+1982    45       London / Queen's Club                     63
+1982    46       Venice                                    31
+1982    47       Bristol                                   31
+1982    48       Wimbledon                                 127
+1982    49       Gstaad                                    31
+1982    50       Newport                                   31
+1982    51       Zell Am See WCT                           31
+1982    52       Boston                                    63
+1982    53       Bastad                                    31
+1982    54       Stuttgart Outdoor                         31
+1982    55       Washington                                63
+1982    56       Kitzbuhel                                 47
+1982    57       Hilversum                                 31
+1982    58       Cap d'Agde WCT                            31
+1982    59       North Conway                              63
+1982    60       South Orange                              31
+1982    61       Indianapolis                              63
+1982    62       Columbus                                  31
+1982    63       Montreal / Toronto                        63
+1982    64       Cleveland                                 31
+1982    65       La Costa WCT                              15
+1982    66       Cincinnati                                63
+1982    67       Stowe                                     31
+1982    68       US Open                                   127
+1982    69       Sawgrass Doubles                          0
+1982    70       Palermo                                   31
+1982    71       Los Angeles-2 WCT                         31
+1982    72       San Francisco                             31
+1982    73       Bordeaux                                  31
+1982    74       Geneva                                    31
+1982    75       Maui                                      31
+1982    76       Barcelona                                 63
+1982    77       Melbourne Indoor                          31
+1982    78       Sydney Indoor                             31
+1982    79       Basel                                     31
+1982    80       Naples WCT                                7
+1982    81       Amsterdam WCT                             15
+1982    82       Tokyo Outdoor                             63
+1982    83       Vienna                                    31
+1982    84       Tokyo Indoor                              31
+1982    85       Cologne                                   31
+1982    86       Paris Indoor                              31
+1982    87       Stockholm                                 63
+1982    88       Baltimore WCT                             15
+1982    89       Hong Kong                                 31
+1982    90       Quito                                     31
+1982    91       Wembley                                   31
+1982    92       Taipei                                    31
+1982    93       Dortmund WCT                              31
+1982    94       Sao Paulo                                 31
+1982    95       Ancona                                    31
+1982    96       Bangkok                                   31
+1982    97       Johannesburg                              31
+1982    98       Itaparica                                 31
+1982    99       Bahia                                     0
+1982    100      Chicago-2 WCT                             15
+1982    101      Australian Open                           95
+1982    102      Toulouse                                  31
+1982    103      Sydney Outdoor                            63
+1982    104      Hartford WCT                              15
+1982    105      Adelaide-2                                31
+1982    106      Melbourne                                 31
+1982    107      Masters                                   11
+1982    108      Masters Doubles                           0
+
+Scraping match info for 84 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1983    1        Masters Doubles WCT                       0
+1983    2        Auckland                                  31
+1983    3        Guaruja                                   47
+1983    4        Detroit WCT                               7
+1983    5        Philadelphia                              47
+1983    6        Caracas                                   31
+1983    7        Richmond WCT                              31
+1983    8        Memphis                                   47
+1983    9        Vina Del Mar                              31
+1983    10       Delray Beach WCT                          31
+1983    11       La Quinta                                 63
+1983    12       Monterrey                                 31
+1983    13       Brussels                                  31
+1983    14       Nancy                                     31
+1983    15       Rotterdam                                 31
+1983    16       Munich WCT                                31
+1983    17       Milan                                     31
+1983    18       Nice                                      31
+1983    19       Monte Carlo                               31
+1983    20       Lisbon                                    31
+1983    21       Houston-WCT                               31
+1983    22       Los Angeles                               47
+1983    23       Aix-En-Provence                           31
+1983    24       Hilton Head WCT                           7
+1983    25       Las Vegas                                 31
+1983    26       Bournemouth                               31
+1983    27       Madrid                                    31
+1983    28       Tampa                                     31
+1983    29       Dallas WCT                                11
+1983    30       Forest Hills WCT                          41
+1983    31       World Team Cup                            30
+1983    32       Hamburg                                   55
+1983    33       Florence                                  31
+1983    34       Rome                                      55
+1983    35       Munich                                    31
+1983    36       Roland Garros                             127
+1983    37       London / Queen's Club                     63
+1983    38       Venice                                    31
+1983    39       Bristol                                   31
+1983    40       Wimbledon                                 127
+1983    41       Gstaad                                    31
+1983    42       Newport                                   31
+1983    43       Boston                                    55
+1983    44       Stuttgart Outdoor                         31
+1983    45       Bastad                                    31
+1983    46       Washington                                55
+1983    47       Kitzbuhel                                 47
+1983    48       Hilversum                                 31
+1983    49       North Conway                              55
+1983    50       South Orange                              31
+1983    51       Indianapolis                              55
+1983    52       Columbus                                  31
+1983    53       Montreal / Toronto                        55
+1983    54       Cincinnati                                63
+1983    55       Stowe                                     31
+1983    56       US Open                                   127
+1983    57       Dallas                                    31
+1983    58       Palermo                                   31
+1983    59       San Francisco                             31
+1983    60       Bordeaux                                  31
+1983    61       Geneva                                    31
+1983    62       Maui                                      31
+1983    63       Barcelona                                 63
+1983    64       Brisbane                                  31
+1983    65       Sydney Indoor                             31
+1983    66       Basel                                     31
+1983    67       Tel Aviv                                  31
+1983    68       Tokyo Outdoor                             63
+1983    69       Vienna                                    31
+1983    70       Tokyo Indoor                              31
+1983    71       Cologne                                   31
+1983    72       Stockholm                                 47
+1983    73       Hong Kong                                 31
+1983    74       Wembley                                   31
+1983    75       Taipei                                    31
+1983    76       Ferrara                                   31
+1983    77       Johannesburg                              31
+1983    78       Toulouse                                  31
+1983    79       Bahia                                     31
+1983    80       Australian Open                           95
+1983    81       Sydney Outdoor                            63
+1983    82       Adelaide                                  31
+1983    83       Masters                                   11
+1983    84       Masters Doubles                           0
+
+Scraping match info for 75 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1984    1        Masters Doubles WCT                       0
+1984    2        Auckland                                  31
+1984    3        Philadelphia                              47
+1984    4        Richmond WCT                              15
+1984    5        Memphis                                   47
+1984    6        La Quinta                                 55
+1984    7        Madrid                                    31
+1984    8        Brussels                                  31
+1984    9        Rotterdam                                 30
+1984    10       Metz                                      31
+1984    11       Milan                                     31
+1984    12       Boca West                                 31
+1984    13       Houston WCT                               15
+1984    14       Bari                                      31
+1984    15       WCT Invitational/Houston                  0
+1984    16       Luxembourg                                31
+1984    17       Nice                                      31
+1984    18       Monte Carlo                               31
+1984    19       Aix-En-Provence                           31
+1984    20       Dallas WCT                                11
+1984    21       Forest Hills WCT                          51
+1984    22       Hamburg                                   55
+1984    23       Florence                                  31
+1984    24       Rome                                      63
+1984    25       Munich                                    31
+1984    26       World Team Cup                            26
+1984    27       Roland Garros                             127
+1984    28       London / Queen's Club                     63
+1984    29       Bristol                                   47
+1984    30       Wimbledon                                 127
+1984    31       Gstaad                                    31
+1984    32       Newport                                   31
+1984    33       Boston                                    55
+1984    34       Stuttgart Outdoor                         31
+1984    35       Bastad                                    31
+1984    36       Washington                                55
+1984    37       Kitzbuhel                                 47
+1984    38       Hilversum                                 31
+1984    39       North Conway                              63
+1984    40       Livingston                                31
+1984    41       Indianapolis                              55
+1984    42       Cleveland                                 31
+1984    43       Montreal / Toronto                        55
+1984    44       Columbus                                  31
+1984    45       Cincinnati                                63
+1984    46       US Open                                   127
+1984    47       Los Angeles                               47
+1984    48       Palermo                                   31
+1984    49       Tel Aviv                                  31
+1984    50       San Francisco                             31
+1984    51       Geneva                                    31
+1984    52       Bordeaux                                  31
+1984    53       Honolulu                                  31
+1984    54       Barcelona                                 63
+1984    55       Brisbane                                  31
+1984    56       Sydney Indoor                             31
+1984    57       Basel                                     31
+1984    58       Tokyo Outdoor                             63
+1984    59       Tokyo Indoor                              31
+1984    60       Melbourne Indoor                          31
+1984    61       Cologne                                   31
+1984    62       Hong Kong                                 31
+1984    63       Vienna                                    31
+1984    64       Stockholm                                 47
+1984    65       Taipei                                    31
+1984    66       Wembley                                   31
+1984    67       Treviso                                   31
+1984    68       Johannesburg                              31
+1984    69       Toulouse                                  31
+1984    70       Australian Open                           95
+1984    71       Sydney Outdoor                            55
+1984    72       Adelaide                                  31
+1984    73       Melbourne                                 31
+1984    74       Masters                                   11
+1984    75       Masters Doubles                           0
+
+Scraping match info for 75 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1985    1        Masters Doubles WCT                       0
+1985    2        Auckland                                  31
+1985    3        Philadelphia                              47
+1985    4        Memphis                                   47
+1985    5        Delray Beach                              127
+1985    6        La Quinta                                 55
+1985    7        Toronto Indoor                            31
+1985    8        Houston                                   31
+1985    9        Buenos Aires                              31
+1985    10       Brussels                                  31
+1985    11       Rotterdam                                 31
+1985    12       Nancy                                     31
+1985    13       Milan                                     31
+1985    14       Fort Myers                                31
+1985    15       Monte Carlo                               47
+1985    16       Chicago                                   31
+1985    17       Dallas                                    11
+1985    18       Nice                                      31
+1985    19       Bari                                      31
+1985    20       Atlanta                                   31
+1985    21       Marbella                                  31
+1985    22       Las Vegas                                 31
+1985    23       Hamburg                                   55
+1985    24       Forest Hills                              63
+1985    25       Munich                                    31
+1985    26       Rome                                      63
+1985    27       Madrid                                    31
+1985    28       World Team Cup                            26
+1985    29       Florence                                  31
+1985    30       Roland Garros                             127
+1985    31       London / Queen's Club                     63
+1985    32       Bologna                                   31
+1985    33       Bristol                                   47
+1985    34       Wimbledon                                 127
+1985    35       Boston                                    55
+1985    36       Gstaad                                    31
+1985    37       Newport                                   31
+1985    38       Washington                                55
+1985    39       Bastad                                    31
+1985    40       Indianapolis                              55
+1985    41       Hilversum                                 31
+1985    42       Livingston                                31
+1985    43       Stratton Mountain                         63
+1985    44       Kitzbuhel                                 63
+1985    45       Montreal / Toronto                        55
+1985    46       Cleveland                                 31
+1985    47       Cincinnati                                63
+1985    48       US Open                                   127
+1985    49       Palermo                                   31
+1985    50       Stuttgart Outdoor                         31
+1985    51       Los Angeles                               31
+1985    52       Geneva                                    31
+1985    53       Bordeaux                                  31
+1985    54       Barcelona                                 63
+1985    55       San Francisco                             31
+1985    56       Johannesburg                              31
+1985    57       Toulouse                                  31
+1985    58       Brisbane                                  31
+1985    59       Sydney Indoor                             31
+1985    60       Basel                                     31
+1985    61       Tokyo Outdoor                             63
+1985    62       Tel Aviv                                  31
+1985    63       Tokyo Indoor                              31
+1985    64       Melbourne Indoor                          31
+1985    65       Cologne                                   31
+1985    66       Stockholm                                 31
+1985    67       Wembley                                   31
+1985    68       Hong Kong                                 31
+1985    69       Vienna                                    31
+1985    70       Australian Open                           95
+1985    71       Sydney Outdoor                            55
+1985    72       Adelaide                                  31
+1985    73       Melbourne                                 31
+1985    74       Masters                                   15
+1985    75       Masters Doubles                           0
+
+Scraping match info for 71 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1986    1        Auckland                                  31
+1986    2        Masters Doubles WCT                       0
+1986    3        Philadelphia                              47
+1986    4        Memphis                                   47
+1986    5        Toronto Indoor                            31
+1986    6        Boca West                                 127
+1986    7        La Quinta                                 55
+1986    8        Milan                                     31
+1986    9        Metz                                      31
+1986    10       Brussels                                  31
+1986    11       Fort Myers                                31
+1986    12       Chicago                                   31
+1986    13       Rotterdam                                 31
+1986    14       Atlanta                                   31
+1986    15       Cologne                                   31
+1986    16       Dallas                                    11
+1986    17       Bari                                      31
+1986    18       Nice                                      31
+1986    19       Monte Carlo                               47
+1986    20       Indianapolis                              55
+1986    21       Madrid                                    31
+1986    22       Forest Hills                              63
+1986    23       Munich                                    31
+1986    24       Rome                                      63
+1986    25       World Team Cup                            26
+1986    26       Florence                                  31
+1986    27       Roland Garros                             127
+1986    28       London / Queen's Club                     63
+1986    29       Bologna                                   31
+1986    30       Athens                                    31
+1986    31       Bristol                                   47
+1986    32       Wimbledon                                 127
+1986    33       Gstaad                                    31
+1986    34       Bordeaux                                  31
+1986    35       Newport                                   31
+1986    36       Boston                                    55
+1986    37       Bastad                                    31
+1986    38       Livingston                                31
+1986    39       Washington                                55
+1986    40       Hilversum                                 31
+1986    41       Stratton Mountain                         63
+1986    42       Kitzbuhel                                 63
+1986    43       Montreal / Toronto                        55
+1986    44       St. Vincent                               31
+1986    45       Cincinnati                                63
+1986    46       US Open                                   127
+1986    47       Geneva                                    31
+1986    48       Stuttgart Outdoor                         47
+1986    49       Hamburg                                   55
+1986    50       Los Angeles                               31
+1986    51       Barcelona                                 63
+1986    52       San Francisco                             31
+1986    53       Palermo                                   31
+1986    54       Scottsdale                                31
+1986    55       Toulouse                                  31
+1986    56       Tel Aviv                                  31
+1986    57       Sydney Indoor                             31
+1986    58       Basel                                     31
+1986    59       Tokyo Outdoor                             63
+1986    60       Tokyo Indoor                              31
+1986    61       Vienna                                    31
+1986    62       Paris                                     31
+1986    63       Hong Kong                                 31
+1986    64       Stockholm                                 55
+1986    65       Wembley                                   31
+1986    66       Buenos Aires                              31
+1986    67       Houston                                   31
+1986    68       Johannesburg                              31
+1986    69       Itaparica                                 31
+1986    70       Masters                                   15
+1986    71       Masters Doubles                           0
+
+Scraping match info for 78 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1987    1        Adelaide                                  31
+1987    2        Auckland                                  31
+1987    3        Australian Open                           95
+1987    4        Guaruja                                   31
+1987    5        Sydney Outdoor                            31
+1987    6        Philadelphia                              47
+1987    7        Lyon                                      31
+1987    8        Memphis                                   47
+1987    9        Indian Wells                              55
+1987    10       Key Biscayne                              127
+1987    11       Orlando                                   31
+1987    12       Rotterdam                                 31
+1987    13       Brussels                                  31
+1987    14       Nancy                                     31
+1987    15       Milan                                     31
+1987    16       Chicago                                   31
+1987    17       Bari                                      31
+1987    18       Dallas WCT                                7
+1987    19       Tokyo Outdoor                             55
+1987    20       Nice                                      31
+1987    21       Monte Carlo                               47
+1987    22       Seoul                                     31
+1987    23       Hamburg                                   55
+1987    24       Forest Hills                              63
+1987    25       Munich                                    31
+1987    26       Rome                                      63
+1987    27       World Team Cup                            26
+1987    28       Florence                                  31
+1987    29       Roland Garros                             127
+1987    30       London / Queen's Club                     63
+1987    31       Bologna                                   31
+1987    32       Athens                                    31
+1987    33       Bristol                                   47
+1987    34       Wimbledon                                 127
+1987    35       Boston                                    55
+1987    36       Gstaad                                    31
+1987    37       Newport                                   31
+1987    38       Indianapolis                              55
+1987    39       Stuttgart Outdoor                         47
+1987    40       Bordeaux                                  31
+1987    41       Livingston                                31
+1987    42       Schenectady                               31
+1987    43       Washington                                55
+1987    44       Bastad                                    31
+1987    45       Hilversum                                 31
+1987    46       Stratton Mountain                         62
+1987    47       Kitzbuhel                                 63
+1987    48       Montreal / Toronto                        55
+1987    49       Prague                                    31
+1987    50       St. Vincent                               31
+1987    51       Cincinnati                                63
+1987    52       Rye Brook                                 31
+1987    53       US Open                                   127
+1987    54       Geneva                                    31
+1987    55       Madrid                                    31
+1987    56       Los Angeles                               31
+1987    57       Barcelona                                 55
+1987    58       San Francisco                             31
+1987    59       Palermo                                   31
+1987    60       Scottsdale                                31
+1987    61       Basel                                     31
+1987    62       Brisbane                                  31
+1987    63       Sydney Indoor                             31
+1987    64       Toulouse                                  31
+1987    65       Tel Aviv                                  31
+1987    66       Vienna                                    31
+1987    67       Tokyo Indoor                              31
+1987    68       Hong Kong                                 31
+1987    69       Paris                                     31
+1987    70       Stockholm                                 55
+1987    71       Sao Paulo                                 31
+1987    72       Wembley                                   31
+1987    73       Frankfurt                                 31
+1987    74       Johannesburg                              31
+1987    75       Buenos Aires                              31
+1987    76       Itaparica                                 31
+1987    77       Masters                                   15
+1987    78       Masters Doubles                           0
+
+Scraping match info for 81 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1988    1        Wellington                                31
+1988    2        Adelaide                                  31
+1988    3        Auckland                                  31
+1988    4        Sydney Outdoor                            31
+1988    5        Australian Open                           127
+1988    6        Guaruja                                   31
+1988    7        Rotterdam                                 31
+1988    8        Lyon                                      31
+1988    9        Milan                                     31
+1988    10       Memphis                                   47
+1988    11       Philadelphia                              47
+1988    12       Metz                                      31
+1988    13       Indian Wells                              55
+1988    14       Orlando                                   31
+1988    15       Key Biscayne                              127
+1988    16       Dallas WCT                                7
+1988    17       Tokyo Outdoor                             55
+1988    18       Nice                                      31
+1988    19       Madrid                                    31
+1988    20       Monte Carlo                               47
+1988    21       Seoul                                     31
+1988    22       Hamburg                                   55
+1988    23       Charleston                                31
+1988    24       Forest Hills                              63
+1988    25       Munich                                    47
+1988    26       Rome                                      63
+1988    27       World Team Cup                            26
+1988    28       Florence                                  31
+1988    29       Roland Garros                             127
+1988    30       London / Queen's Club                     63
+1988    31       Bologna                                   31
+1988    32       Athens                                    31
+1988    33       Bristol                                   47
+1988    34       Wimbledon                                 127
+1988    35       Boston                                    55
+1988    36       Gstaad                                    31
+1988    37       Newport                                   31
+1988    38       Stuttgart Outdoor                         47
+1988    39       Bastad                                    47
+1988    40       Washington                                55
+1988    41       Schenectady                               31
+1988    42       Stratton Mountain                         63
+1988    43       Bordeaux                                  31
+1988    44       Hilversum                                 31
+1988    45       Indianapolis                              55
+1988    46       Kitzbuhel                                 63
+1988    47       Montreal / Toronto                        55
+1988    48       Prague                                    31
+1988    49       St. Vincent                               31
+1988    50       Cincinnati                                63
+1988    51       Livingston                                31
+1988    52       Rye Brook                                 31
+1988    53       US Open                                   127
+1988    54       Barcelona                                 55
+1988    55       Los Angeles                               31
+1988    56       Geneva                                    31
+1988    57       Bari                                      31
+1988    58       Seoul Olympics                            63
+1988    59       San Francisco                             31
+1988    60       Palermo                                   47
+1988    61       Scottsdale                                31
+1988    62       Basel                                     31
+1988    63       Brisbane                                  31
+1988    64       Sydney Indoor                             31
+1988    65       Toulouse                                  31
+1988    66       Tel Aviv                                  31
+1988    67       Vienna                                    31
+1988    68       Frankfurt                                 31
+1988    69       Tokyo Indoor                              31
+1988    70       Paris                                     31
+1988    71       Hong Kong                                 0
+1988    72       Stockholm                                 55
+1988    73       Sao Paulo                                 31
+1988    74       Buenos Aires                              31
+1988    75       Wembley                                   31
+1988    76       Detroit                                   31
+1988    77       Johannesburg                              31
+1988    78       Brussels                                  31
+1988    79       Itaparica                                 31
+1988    80       Masters                                   15
+1988    81       Masters Doubles                           0
+
+Scraping match info for 78 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1989    1        Wellington                                31
+1989    2        Adelaide                                  31
+1989    3        Auckland                                  31
+1989    4        Sydney Outdoor                            31
+1989    5        Australian Open                           127
+1989    6        Rotterdam                                 31
+1989    7        Guaruja                                   31
+1989    8        Milan                                     31
+1989    9        Memphis                                   47
+1989    10       Philadelphia                              47
+1989    11       Lyon                                      31
+1989    12       Nancy                                     31
+1989    13       Dallas WCT                                7
+1989    14       Scottsdale                                31
+1989    15       Indian Wells                              55
+1989    16       Key Biscayne                              127
+1989    17       Rio De Janeiro                            31
+1989    18       Athens                                    31
+1989    19       Seoul                                     31
+1989    20       Tokyo Outdoor                             55
+1989    21       Nice                                      31
+1989    22       Monte Carlo                               47
+1989    23       Singapore                                 31
+1989    24       Forest Hills                              55
+1989    25       Munich                                    47
+1989    26       Hamburg                                   55
+1989    27       Charleston                                31
+1989    28       Rome                                      63
+1989    29       World Team Cup                            26
+1989    30       Florence                                  31
+1989    31       Roland Garros                             127
+1989    32       London / Queen's Club                     0
+1989    33       Bologna                                   31
+1989    34       Bristol                                   31
+1989    35       Bari                                      31
+1989    36       Wimbledon                                 127
+1989    37       Boston                                    55
+1989    38       Gstaad                                    31
+1989    39       Newport                                   31
+1989    40       Schenectady                               31
+1989    41       Washington                                55
+1989    42       Stuttgart Outdoor                         47
+1989    43       Hilversum                                 31
+1989    44       Stratton Mountain                         63
+1989    45       Kitzbuhel                                 63
+1989    46       Bastad                                    31
+1989    47       Indianapolis                              55
+1989    48       Prague                                    31
+1989    49       Livingston                                31
+1989    50       Montreal / Toronto                        55
+1989    51       Cincinnati                                63
+1989    52       St. Vincent                               31
+1989    53       San Marino                                31
+1989    54       US Open                                   127
+1989    55       Geneva                                    31
+1989    56       Madrid                                    31
+1989    57       Barcelona                                 55
+1989    58       Los Angeles                               31
+1989    59       San Francisco                             31
+1989    60       Bordeaux                                  31
+1989    61       Palermo                                   31
+1989    62       Orlando                                   31
+1989    63       Brisbane                                  31
+1989    64       Basel                                     31
+1989    65       Sydney Indoor                             31
+1989    66       Toulouse                                  31
+1989    67       Vienna                                    31
+1989    68       Tel Aviv                                  31
+1989    69       Tokyo Indoor                              31
+1989    70       Frankfurt                                 31
+1989    71       Paris                                     31
+1989    72       Stockholm                                 47
+1989    73       Sao Paulo                                 31
+1989    74       Wembley                                   31
+1989    75       Johannesburg                              31
+1989    76       Itaparica                                 31
+1989    77       Masters                                   15
+1989    78       Masters Doubles                           0
+
+real    13m42.740s
+user    5m32.767s
+sys 0m8.327s
+
+<kevins-mbp:kevin> 0 [02-25 22:39] ~/Documents/GitHub/atp-world-tour-tennis-data/python 
+$ time python3 match_scores.py 1989 1989
+
+Scraping match info for 78 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1989    1        Wellington                                31
+1989    2        Adelaide                                  31
+1989    3        Auckland                                  31
+1989    4        Sydney Outdoor                            31
+1989    5        Australian Open                           127
+1989    6        Rotterdam                                 31
+1989    7        Guaruja                                   31
+1989    8        Milan                                     31
+1989    9        Memphis                                   47
+1989    10       Philadelphia                              47
+1989    11       Lyon                                      31
+1989    12       Nancy                                     31
+1989    13       Dallas WCT                                7
+1989    14       Scottsdale                                31
+1989    15       Indian Wells                              55
+1989    16       Key Biscayne                              127
+1989    17       Rio De Janeiro                            31
+1989    18       Athens                                    31
+1989    19       Seoul                                     31
+1989    20       Tokyo Outdoor                             55
+1989    21       Nice                                      31
+1989    22       Monte Carlo                               47
+1989    23       Singapore                                 31
+1989    24       Forest Hills                              55
+1989    25       Munich                                    47
+1989    26       Hamburg                                   55
+1989    27       Charleston                                31
+1989    28       Rome                                      63
+1989    29       World Team Cup                            26
+1989    30       Florence                                  31
+1989    31       Roland Garros                             127
+1989    32       London / Queen's Club                     63
+1989    33       Bologna                                   31
+1989    34       Bristol                                   31
+1989    35       Bari                                      31
+1989    36       Wimbledon                                 127
+1989    37       Boston                                    55
+1989    38       Gstaad                                    31
+1989    39       Newport                                   31
+1989    40       Schenectady                               31
+1989    41       Washington                                55
+1989    42       Stuttgart Outdoor                         47
+1989    43       Hilversum                                 31
+1989    44       Stratton Mountain                         63
+1989    45       Kitzbuhel                                 63
+1989    46       Bastad                                    31
+1989    47       Indianapolis                              55
+1989    48       Prague                                    31
+1989    49       Livingston                                31
+1989    50       Montreal / Toronto                        55
+1989    51       Cincinnati                                63
+1989    52       St. Vincent                               31
+1989    53       San Marino                                31
+1989    54       US Open                                   127
+1989    55       Geneva                                    31
+1989    56       Madrid                                    31
+1989    57       Barcelona                                 55
+1989    58       Los Angeles                               31
+1989    59       San Francisco                             31
+1989    60       Bordeaux                                  31
+1989    61       Palermo                                   31
+1989    62       Orlando                                   31
+1989    63       Brisbane                                  31
+1989    64       Basel                                     31
+1989    65       Sydney Indoor                             31
+1989    66       Toulouse                                  31
+1989    67       Vienna                                    31
+1989    68       Tel Aviv                                  31
+1989    69       Tokyo Indoor                              31
+1989    70       Frankfurt                                 31
+1989    71       Paris                                     31
+1989    72       Stockholm                                 47
+1989    73       Sao Paulo                                 31
+1989    74       Wembley                                   31
+1989    75       Johannesburg                              31
+1989    76       Itaparica                                 31
+1989    77       Masters                                   15
+1989    78       Masters Doubles                           0
+
+real    0m25.577s
+user    0m19.338s
+sys     0m0.382s
