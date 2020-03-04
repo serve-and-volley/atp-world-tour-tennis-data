@@ -1,0 +1,728 @@
+$ time python3 match_scores.py 2000 2009
+
+Scraping match info for 72 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2000    1        Doha                                      31
+2000    2        Chennai                                   31
+2000    3        Adelaide                                  31
+2000    4        Auckland                                  31
+2000    5        Sydney                                    31
+2000    6        Australian Open                           127
+2000    7        Dubai                                     31
+2000    8        Marseille                                 31
+2000    9        San Jose                                  31
+2000    10       Rotterdam                                 31
+2000    11       Memphis                                   47
+2000    12       London                                    31
+2000    13       Mexico City                               31
+2000    14       Santiago                                  31
+2000    15       Copenhagen                                31
+2000    16       Delray Beach                              31
+2000    17       Bogota                                    31
+2000    18       Scottsdale                                31
+2000    19       ATP Masters 1000 Indian Wells             63
+2000    20       ATP Masters 1000 Miami                    95
+2000    21       Estoril                                   31
+2000    22       Atlanta                                   31
+2000    23       Casablanca                                31
+2000    24       ATP Masters 1000 Monte Carlo              63
+2000    25       Barcelona                                 55
+2000    26       Mallorca                                  31
+2000    27       Munich                                    31
+2000    28       Orlando                                   31
+2000    29       ATP Masters 1000 Rome                     63
+2000    30       ATP Masters 1000 Hamburg                  63
+2000    31       World Team Cup                            26
+2000    32       St. Poelten                               31
+2000    33       Roland Garros                             127
+2000    34       Halle                                     31
+2000    35       London / Queen's Club                     55
+2000    36       's-Hertogenbosch                          31
+2000    37       Nottingham                                31
+2000    38       Wimbledon                                 127
+2000    39       Gstaad                                    31
+2000    40       Bastad                                    31
+2000    41       Newport                                   31
+2000    42       Stuttgart Outdoor                         31
+2000    43       Amsterdam                                 31
+2000    44       Umag                                      31
+2000    45       Kitzbuhel                                 47
+2000    46       Los Angeles                               31
+2000    47       San Marino                                31
+2000    48       ATP Masters 1000 Canada                   63
+2000    49       ATP Masters 1000 Cincinnati               63
+2000    50       Indianapolis                              55
+2000    51       Washington                                55
+2000    52       Long Island                               47
+2000    53       US Open                                   127
+2000    54       Tashkent                                  31
+2000    55       Bucharest                                 31
+2000    56       Sydney Olympics                           64
+2000    57       Palermo                                   31
+2000    58       Hong Kong                                 31
+2000    59       Tokyo                                     55
+2000    60       Vienna                                    31
+2000    61       Toulouse                                  31
+2000    62       Shanghai                                  31
+2000    63       Basel                                     31
+2000    64       Moscow                                    31
+2000    65       ATP Masters 1000 Stuttgart                47
+2000    66       Lyon                                      31
+2000    67       St. Petersburg                            31
+2000    68       ATP Masters 1000 Paris                    47
+2000    69       Stockholm                                 31
+2000    70       Brighton                                  31
+2000    71       Tennis Masters Cup                        15
+2000    72       Doubles Championship                      0
+
+Scraping match info for 71 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2001    1        Doha                                      31
+2001    2        Chennai                                   31
+2001    3        Adelaide                                  31
+2001    4        Sydney                                    31
+2001    5        Auckland                                  31
+2001    6        Australian Open                           127
+2001    7        Bogota                                    31
+2001    8        Milan                                     31
+2001    9        Marseille                                 31
+2001    10       Vina del Mar                              31
+2001    11       Copenhagen                                31
+2001    12       Rotterdam                                 31
+2001    13       Memphis                                   47
+2001    14       Buenos Aires                              31
+2001    15       Dubai                                     31
+2001    16       Acapulco                                  31
+2001    17       San Jose                                  31
+2001    18       Scottsdale                                31
+2001    19       Delray Beach                              31
+2001    20       ATP Masters 1000 Indian Wells             63
+2001    21       ATP Masters 1000 Miami                    95
+2001    22       Estoril                                   31
+2001    23       Casablanca                                31
+2001    24       ATP Masters 1000 Monte Carlo              63
+2001    25       Barcelona                                 55
+2001    26       Atlanta                                   31
+2001    27       Mallorca                                  31
+2001    28       Munich                                    31
+2001    29       Houston                                   31
+2001    30       ATP Masters 1000 Rome                     63
+2001    31       ATP Masters 1000 Hamburg                  63
+2001    32       World Team Cup                            26
+2001    33       St. Poelten                               31
+2001    34       Roland Garros                             127
+2001    35       Halle                                     31
+2001    36       London / Queen's Club                     55
+2001    37       Nottingham                                31
+2001    38       's-Hertogenbosch                          31
+2001    39       Wimbledon                                 127
+2001    40       Gstaad                                    31
+2001    41       Bastad                                    31
+2001    42       Newport                                   31
+2001    43       Stuttgart                                 47
+2001    44       Amsterdam                                 31
+2001    45       Umag                                      31
+2001    46       Kitzbuhel                                 47
+2001    47       Los Angeles                               31
+2001    48       Sopot - WS                                31
+2001    49       ATP Masters 1000 Canada                   63
+2001    50       ATP Masters 1000 Cincinnati               63
+2001    51       Indianapolis                              55
+2001    52       Washington                                55
+2001    53       Long Island                               31
+2001    54       US Open                                   127
+2001    55       Tashkent                                  31
+2001    56       Bucharest                                 31
+2001    57       Costa do  Sauipe                          31
+2001    58       Shanghai                                  31
+2001    59       Hong Kong                                 31
+2001    60       Palermo                                   31
+2001    61       Moscow                                    31
+2001    62       Tokyo                                     55
+2001    63       Lyon                                      31
+2001    64       Vienna                                    31
+2001    65       ATP Masters 1000 Stuttgart                47
+2001    66       Basel                                     31
+2001    67       St. Petersburg                            31
+2001    68       Stockholm                                 31
+2001    69       ATP Masters 1000 Paris                    47
+2001    70       Tennis Masters Cup                        15
+2001    71       ATP Doubles Challenge Cup                 0
+
+Scraping match info for 67 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2002    1        Doha                                      31
+2002    2        Chennai                                   31
+2002    3        Adelaide                                  31
+2002    4        Sydney                                    31
+2002    5        Auckland                                  31
+2002    6        Australian Open                           127
+2002    7        Milan                                     31
+2002    8        Marseille                                 31
+2002    9        Copenhagen                                31
+2002    10       Vina del Mar                              31
+2002    11       Rotterdam                                 31
+2002    12       Memphis                                   31
+2002    13       Buenos Aires                              31
+2002    14       Dubai                                     31
+2002    15       Acapulco                                  31
+2002    16       San Jose                                  31
+2002    17       Delray Beach                              31
+2002    18       Scottsdale                                31
+2002    19       ATP Masters 1000 Indian Wells             63
+2002    20       ATP Masters 1000 Miami                    95
+2002    21       Estoril                                   31
+2002    22       Casablanca                                31
+2002    23       ATP Masters 1000 Monte Carlo              63
+2002    24       Barcelona                                 55
+2002    25       Houston                                   31
+2002    26       Mallorca                                  31
+2002    27       Munich                                    31
+2002    28       ATP Masters 1000 Rome                     63
+2002    29       ATP Masters 1000 Hamburg                  63
+2002    30       World Team Cup                            26
+2002    31       St. Poelten                               31
+2002    32       Roland Garros                             127
+2002    33       Halle                                     31
+2002    34       London / Queen's Club                     55
+2002    35       Nottingham                                31
+2002    36       's-Hertogenbosch                          31
+2002    37       Wimbledon                                 127
+2002    38       Gstaad                                    31
+2002    39       Newport                                   31
+2002    40       Bastad                                    31
+2002    41       Stuttgart                                 31
+2002    42       Amersfoort                                31
+2002    43       Umag                                      31
+2002    44       Kitzbuhel                                 47
+2002    45       Los Angeles                               31
+2002    46       Sopot                                     31
+2002    47       ATP Masters 1000 Canada                   63
+2002    48       ATP Masters 1000 Cincinnati               63
+2002    49       Indianapolis                              55
+2002    50       Washington                                55
+2002    51       Long Island                               47
+2002    52       US Open                                   127
+2002    53       Costa do Sauipe                           31
+2002    54       Tashkent                                  31
+2002    55       Bucharest                                 31
+2002    56       Hong Kong                                 31
+2002    57       Palermo                                   31
+2002    58       Moscow                                    31
+2002    59       Tokyo                                     55
+2002    60       Vienna                                    31
+2002    61       Lyon                                      31
+2002    62       ATP Masters 1000 Madrid                   47
+2002    63       Basel                                     31
+2002    64       St. Petersburg                            31
+2002    65       Stockholm                                 31
+2002    66       ATP Masters 1000 Paris                    47
+2002    67       Tennis Masters Cup                        15
+
+Scraping match info for 68 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2003    1        Doha                                      31
+2003    2        Chennai                                   31
+2003    3        Adelaide                                  31
+2003    4        Auckland                                  31
+2003    5        Sydney                                    31
+2003    6        Australian Open                           127
+2003    7        Milan                                     31
+2003    8        Marseille                                 31
+2003    9        San Jose                                  31
+2003    10       Viña del Mar                              31
+2003    11       Rotterdam                                 31
+2003    12       Memphis                                   31
+2003    13       Buenos Aires                              31
+2003    14       Dubai                                     31
+2003    15       Acapulco                                  31
+2003    16       Copenhagen                                31
+2003    17       Delray Beach                              31
+2003    18       Scottsdale                                31
+2003    19       ATP Masters 1000 Indian Wells             63
+2003    20       ATP Masters 1000 Miami                    95
+2003    21       Estoril                                   31
+2003    22       Casablanca                                31
+2003    23       ATP Masters 1000 Monte Carlo              63
+2003    24       Barcelona                                 55
+2003    25       Houston                                   31
+2003    26       Valencia                                  31
+2003    27       Munich                                    31
+2003    28       ATP Masters 1000 Rome                     63
+2003    29       ATP Masters 1000 Hamburg                  63
+2003    30       World Team Championship                   26
+2003    31       St. Poelten                               31
+2003    32       Roland Garros                             127
+2003    33       London / Queen's Club                     55
+2003    34       Halle                                     31
+2003    35       Nottingham                                31
+2003    36       's-Hertogenbosch                          31
+2003    37       Wimbledon                                 127
+2003    38       Gstaad                                    31
+2003    39       Bastad                                    31
+2003    40       Newport                                   31
+2003    41       Stuttgart                                 47
+2003    42       Amersfoort                                31
+2003    43       Kitzbuhel                                 47
+2003    44       Indianapolis                              47
+2003    45       Umag                                      31
+2003    46       Washington                                47
+2003    47       Sopot                                     31
+2003    48       Los Angeles                               31
+2003    49       ATP Masters 1000 Canada                   63
+2003    50       ATP Masters 1000 Cincinnati               63
+2003    51       Long Island                               31
+2003    52       US Open                                   127
+2003    53       Bucharest                                 31
+2003    54       Costa do Sauipe                           31
+2003    55       Bangkok                                   31
+2003    56       Palermo                                   31
+2003    57       Shanghai                                  31
+2003    58       Moscow                                    31
+2003    59       Tokyo                                     47
+2003    60       Metz                                      31
+2003    61       Lyon                                      31
+2003    62       Vienna                                    31
+2003    63       ATP Masters 1000 Madrid                   47
+2003    64       Basel                                     31
+2003    65       St. Petersburg                            31
+2003    66       Stockholm                                 31
+2003    67       ATP Masters 1000 Paris                    47
+2003    68       Tennis Masters Cup                        15
+
+Scraping match info for 69 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2004    1        Doha                                      31
+2004    2        Adelaide                                  31
+2004    3        Chennai                                   31
+2004    4        Auckland                                  31
+2004    5        Sydney                                    31
+2004    6        Australian Open                           127
+2004    7        Milan                                     31
+2004    8        San Jose                                  31
+2004    9        Viña del Mar                              31
+2004    10       Rotterdam                                 31
+2004    11       Memphis                                   31
+2004    12       Buenos Aires                              31
+2004    13       Marseille                                 31
+2004    14       Costa do Sauipe                           31
+2004    15       Dubai                                     31
+2004    16       Acapulco                                  31
+2004    17       Scottsdale                                31
+2004    18       ATP Masters 1000 Indian Wells             95
+2004    19       ATP Masters 1000 Miami                    95
+2004    20       Estoril                                   31
+2004    21       Valencia                                  31
+2004    22       Houston                                   31
+2004    23       ATP Masters 1000 Monte Carlo              63
+2004    24       Barcelona                                 55
+2004    25       Munich                                    31
+2004    26       ATP Masters 1000 Rome                     63
+2004    27       ATP Masters 1000 Hamburg                  63
+2004    28       World Team Championship                   26
+2004    29       Casablanca                                31
+2004    30       St. Poelten                               31
+2004    31       Roland Garros                             127
+2004    32       Halle                                     31
+2004    33       London / Queen's Club                     55
+2004    34       Nottingham                                31
+2004    35       's-Hertogenbosch                          31
+2004    36       Wimbledon                                 127
+2004    37       Gstaad                                    31
+2004    38       Bastad                                    31
+2004    39       Newport                                   31
+2004    40       Stuttgart                                 47
+2004    41       Amersfoort                                31
+2004    42       Los Angeles                               31
+2004    43       Kitzbuhel                                 47
+2004    44       Indianapolis                              47
+2004    45       Umag                                      31
+2004    46       ATP Masters 1000 Canada                   63
+2004    47       ATP Masters 1000 Cincinnati               63
+2004    48       Sopot                                     31
+2004    49       Washington                                31
+2004    50       Athens Olympics                           64
+2004    51       Long Island                               31
+2004    52       US Open                                   127
+2004    53       Beijing                                   31
+2004    54       Bucharest                                 31
+2004    55       Delray Beach                              31
+2004    56       Bangkok                                   31
+2004    57       Palermo                                   31
+2004    58       Shanghai                                  31
+2004    59       Lyon                                      31
+2004    60       Tokyo                                     47
+2004    61       Moscow                                    31
+2004    62       Vienna                                    31
+2004    63       Metz                                      31
+2004    64       ATP Masters 1000 Madrid                   47
+2004    65       Basel                                     31
+2004    66       St. Petersburg                            31
+2004    67       Stockholm                                 31
+2004    68       ATP Masters 1000 Paris                    47
+2004    69       Tennis Masters Cup                        15
+
+Scraping match info for 68 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2005    1        Doha                                      31
+2005    2        Adelaide                                  31
+2005    3        Chennai                                   31
+2005    4        Auckland                                  31
+2005    5        Sydney                                    31
+2005    6        Australian Open                           127
+2005    7        Delray Beach                              31
+2005    8        Milan                                     31
+2005    9        Viña del Mar                              31
+2005    10       Marseille                                 31
+2005    11       Buenos Aires                              31
+2005    12       San Jose                                  31
+2005    13       Rotterdam                                 31
+2005    14       Memphis                                   31
+2005    15       Costa do Sauipe                           31
+2005    16       Dubai                                     31
+2005    17       Acapulco                                  31
+2005    18       Scottsdale                                31
+2005    19       ATP Masters 1000 Indian Wells             95
+2005    20       ATP Masters 1000 Miami                    95
+2005    21       Valencia                                  31
+2005    22       Casablanca                                31
+2005    23       ATP Masters 1000 Monte Carlo              63
+2005    24       Barcelona                                 55
+2005    25       Houston                                   31
+2005    26       Estoril                                   31
+2005    27       Munich                                    31
+2005    28       ATP Masters 1000 Rome                     63
+2005    29       ATP Masters 1000 Hamburg                  63
+2005    30       World Team Championship                   26
+2005    31       St. Poelten                               31
+2005    32       Roland Garros                             127
+2005    33       Halle                                     31
+2005    34       London / Queen's Club                     55
+2005    35       Nottingham                                31
+2005    36       's-Hertogenbosch                          31
+2005    37       Wimbledon                                 127
+2005    38       Gstaad                                    31
+2005    39       Bastad                                    31
+2005    40       Newport                                   31
+2005    41       Stuttgart                                 47
+2005    42       Indianapolis                              47
+2005    43       Amersfoort                                31
+2005    44       Kitzbuhel                                 47
+2005    45       Umag                                      31
+2005    46       Los Angeles                               31
+2005    47       Washington                                47
+2005    48       Sopot                                     31
+2005    49       ATP Masters 1000 Canada                   63
+2005    50       ATP Masters 1000 Cincinnati               63
+2005    51       New Haven                                 47
+2005    52       US Open                                   127
+2005    53       Beijing                                   31
+2005    54       Bucharest                                 31
+2005    55       Bangkok                                   31
+2005    56       Ho Chi Minh City                          31
+2005    57       Palermo                                   31
+2005    58       Tokyo                                     47
+2005    59       Metz                                      31
+2005    60       Moscow                                    31
+2005    61       Stockholm                                 31
+2005    62       Vienna                                    31
+2005    63       ATP Masters 1000 Madrid                   47
+2005    64       Basel                                     31
+2005    65       St. Petersburg                            31
+2005    66       Lyon                                      31
+2005    67       ATP Masters 1000 Paris                    47
+2005    68       Tennis Masters Cup                        15
+
+Scraping match info for 68 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2006    1        Doha                                      31
+2006    2        Adelaide                                  31
+2006    3        Chennai                                   31
+2006    4        Auckland                                  31
+2006    5        Sydney                                    31
+2006    6        Australian Open                           127
+2006    7        Delray Beach                              31
+2006    8        Viña del Mar                              31
+2006    9        Zagreb                                    31
+2006    10       Marseille                                 31
+2006    11       Buenos Aires                              31
+2006    12       San Jose                                  31
+2006    13       Rotterdam                                 31
+2006    14       Memphis                                   31
+2006    15       Costa do Sauipe                           31
+2006    16       Dubai                                     31
+2006    17       Acapulco                                  31
+2006    18       Las Vegas                                 31
+2006    19       ATP Masters 1000 Indian Wells             95
+2006    20       ATP Masters 1000 Miami                    95
+2006    21       Valencia                                  31
+2006    22       Houston                                   31
+2006    23       ATP Masters 1000 Monte Carlo              63
+2006    24       Barcelona                                 55
+2006    25       Casablanca                                31
+2006    26       Estoril                                   31
+2006    27       Munich                                    31
+2006    28       ATP Masters 1000 Rome                     63
+2006    29       ATP Masters 1000 Hamburg                  63
+2006    30       World Team Championship                   26
+2006    31       Poertschach                               31
+2006    32       Roland Garros                             127
+2006    33       Halle                                     31
+2006    34       London / Queen's Club                     55
+2006    35       Nottingham                                31
+2006    36       's-Hertogenbosch                          31
+2006    37       Wimbledon                                 127
+2006    38       Gstaad                                    31
+2006    39       Bastad                                    31
+2006    40       Newport                                   31
+2006    41       Stuttgart                                 47
+2006    42       Indianapolis                              47
+2006    43       Amersfoort                                31
+2006    44       Kitzbuhel                                 47
+2006    45       Los Angeles                               31
+2006    46       Umag                                      31
+2006    47       Washington                                47
+2006    48       Sopot                                     31
+2006    49       ATP Masters 1000 Canada                   63
+2006    50       ATP Masters 1000 Cincinnati               63
+2006    51       New Haven                                 47
+2006    52       US Open                                   127
+2006    53       Beijing                                   31
+2006    54       Bucharest                                 31
+2006    55       Bangkok                                   31
+2006    56       Mumbai                                    31
+2006    57       Palermo                                   31
+2006    58       Tokyo                                     47
+2006    59       Metz                                      31
+2006    60       Moscow                                    31
+2006    61       Stockholm                                 31
+2006    62       Vienna                                    31
+2006    63       ATP Masters 1000 Madrid                   47
+2006    64       Basel                                     31
+2006    65       St. Petersburg                            31
+2006    66       Lyon                                      31
+2006    67       ATP Masters 1000 Paris                    47
+2006    68       Tennis Masters Cup                        15
+
+Scraping match info for 67 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2007    1        Doha                                      53
+2007    2        Adelaide                                  39
+2007    3        Chennai                                   59
+2007    4        Sydney                                    59
+2007    5        Auckland                                  59
+2007    6        Australian Open                           239
+2007    7        Delray Beach                              51
+2007    8        Viña del Mar                              40
+2007    9        Zagreb                                    59
+2007    10       Marseille                                 59
+2007    11       Costa do Sauipe                           59
+2007    12       San Jose                                  56
+2007    13       Rotterdam                                 43
+2007    14       Memphis                                   43
+2007    15       Buenos Aires                              51
+2007    16       Dubai                                     43
+2007    17       Acapulco                                  43
+2007    18       Las Vegas                                 51
+2007    19       ATP Masters 1000 Indian Wells             131
+2007    20       ATP Masters 1000 Miami                    131
+2007    21       Houston                                   53
+2007    22       Valencia                                  59
+2007    23       ATP Masters 1000 Monte Carlo              76
+2007    24       Barcelona                                 76
+2007    25       Casablanca                                59
+2007    26       Estoril                                   43
+2007    27       Munich                                    59
+2007    28       ATP Masters 1000 Rome                     76
+2007    29       ATP Masters 1000 Hamburg                  76
+2007    30       World Team Championship                   26
+2007    31       Poertschach                               43
+2007    32       Roland Garros                             239
+2007    33       Halle                                     59
+2007    34       London / Queen's Club                     83
+2007    35       's-Hertogenbosch                          52
+2007    36       Nottingham                                59
+2007    37       Wimbledon                                 239
+2007    38       Gstaad                                    51
+2007    39       Bastad                                    59
+2007    40       Newport                                   52
+2007    41       Stuttgart                                 43
+2007    42       Los Angeles                               58
+2007    43       Amersfoort                                58
+2007    44       Kitzbuhel                                 65
+2007    45       Indianapolis                              51
+2007    46       Umag                                      59
+2007    47       Washington                                59
+2007    48       Sopot                                     56
+2007    49       ATP Masters 1000 Canada                   76
+2007    50       ATP Masters 1000 Cincinnati               76
+2007    51       New Haven                                 75
+2007    52       US Open                                   239
+2007    53       Beijing                                   59
+2007    54       Bucharest                                 59
+2007    55       Bangkok                                   57
+2007    56       Mumbai                                    50
+2007    57       Tokyo                                     65
+2007    58       Metz                                      55
+2007    59       Stockholm                                 43
+2007    60       Vienna                                    43
+2007    61       Moscow                                    59
+2007    62       ATP Masters 1000 Madrid                   65
+2007    63       Basel                                     59
+2007    64       St. Petersburg                            51
+2007    65       Lyon                                      31
+2007    66       ATP Masters 1000 Paris                    65
+2007    67       Tennis Masters Cup                        15
+
+Scraping match info for 67 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2008    1        Doha                                      59
+2008    2        Adelaide                                  31
+2008    3        Chennai                                   59
+2008    4        Sydney                                    58
+2008    5        Auckland                                  54
+2008    6        Australian Open                           239
+2008    7        Viña del Mar                              59
+2008    8        Marseille                                 59
+2008    9        Costa do Sauipe                           59
+2008    10       Delray Beach                              59
+2008    11       Rotterdam                                 43
+2008    12       Buenos Aires                              59
+2008    13       San Jose                                  59
+2008    14       Acapulco                                  43
+2008    15       Memphis                                   43
+2008    16       Zagreb                                    59
+2008    17       Dubai                                     43
+2008    18       Las Vegas                                 53
+2008    19       ATP Masters 1000 Indian Wells             131
+2008    20       ATP Masters 1000 Miami                    131
+2008    21       Houston                                   41
+2008    22       Estoril                                   59
+2008    23       Valencia                                  59
+2008    24       ATP Masters 1000 Monte Carlo              76
+2008    25       Barcelona                                 76
+2008    26       Munich                                    54
+2008    27       ATP Masters 1000 Rome                     76
+2008    28       ATP Masters 1000 Hamburg                  76
+2008    29       World Team Championship                   26
+2008    30       Casablanca                                51
+2008    31       Poertschach                               58
+2008    32       Roland Garros                             239
+2008    33       Halle                                     59
+2008    34       London / Queen's Club                     83
+2008    35       Warsaw                                    55
+2008    36       s-Hertogenbosch                           40
+2008    37       Nottingham                                59
+2008    38       Wimbledon                                 239
+2008    39       Stuttgart                                 39
+2008    40       Gstaad                                    39
+2008    41       Newport                                   39
+2008    42       Bastad                                    39
+2008    43       Kitzbühel                                 43
+2008    44       Indianapolis                              43
+2008    45       Amersfoort                                34
+2008    46       Umag                                      39
+2008    47       ATP Masters 1000 Canada                   76
+2008    48       ATP Masters 1000 Cincinnati               76
+2008    49       Los Angeles                               39
+2008    50       Washington                                59
+2008    51       Beijing Olympics                          64
+2008    52       New Haven                                 75
+2008    53       US Open                                   239
+2008    54       Bucharest                                 58
+2008    55       Bangkok                                   39
+2008    56       Beijing                                   39
+2008    57       Tokyo                                     65
+2008    58       Metz                                      59
+2008    59       Moscow                                    59
+2008    60       Stockholm                                 59
+2008    61       Vienna                                    43
+2008    62       ATP Masters 1000 Madrid                   65
+2008    63       St. Petersburg                            59
+2008    64       Basel                                     59
+2008    65       Lyon                                      31
+2008    66       ATP Masters 1000 Paris                    65
+2008    67       Tennis Masters Cup                        15
+
+Scraping match info for 66 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+2009    1        Brisbane                                  59
+2009    2        Doha                                      59
+2009    3        Chennai                                   59
+2009    4        Sydney                                    55
+2009    5        Auckland                                  55
+2009    6        Australian Open                           239
+2009    7        Johannesburg                              43
+2009    8        Viña del Mar                              47
+2009    9        Zagreb                                    59
+2009    10       Rotterdam                                 43
+2009    11       San Jose                                  59
+2009    12       Costa do Sauipe                           53
+2009    13       Memphis                                   43
+2009    14       Buenos Aires                              59
+2009    15       Marseille                                 59
+2009    16       Dubai                                     43
+2009    17       Acapulco                                  43
+2009    18       Delray Beach                              59
+2009    19       ATP Masters 1000 Indian Wells             131
+2009    20       ATP Masters 1000 Miami                    131
+2009    21       Houston                                   54
+2009    22       Casablanca                                55
+2009    23       ATP Masters 1000 Monte Carlo              76
+2009    24       Barcelona                                 76
+2009    25       ATP Masters 1000 Rome                     76
+2009    26       Estoril                                   59
+2009    27       Munich                                    59
+2009    28       Belgrade                                  52
+2009    29       ATP Masters 1000 Madrid                   76
+2009    30       World Team Championship                   26
+2009    31       Kitzbühel                                 31
+2009    32       Roland Garros                             239
+2009    33       Halle                                     59
+2009    34       London / Queen's Club                     83
+2009    35       Eastbourne                                50
+2009    36       s-Hertogenbosch                           56
+2009    37       Wimbledon                                 239
+2009    38       Newport                                   53
+2009    39       Bastad                                    52
+2009    40       Stuttgart                                 45
+2009    41       Hamburg                                   63
+2009    42       Indianapolis                              53
+2009    43       Gstaad                                    51
+2009    44       Los Angeles                               55
+2009    45       Umag                                      53
+2009    46       Washington                                65
+2009    47       ATP Masters 1000 Canada                   76
+2009    48       ATP Masters 1000 Cincinnati               76
+2009    49       New Haven                                 75
+2009    50       US Open                                   239
+2009    51       Bucharest                                 59
+2009    52       Metz                                      44
+2009    53       Kuala Lumpur                              39
+2009    54       Bangkok                                   53
+2009    55       Beijing                                   43
+2009    56       Tokyo                                     43
+2009    57       ATP Masters 1000 Shanghai                 76
+2009    58       Moscow                                    59
+2009    59       Stockholm                                 59
+2009    60       St. Petersburg                            59
+2009    61       Lyon                                      31
+2009    62       Vienna                                    43
+2009    63       Valencia                                  43
+2009    64       Basel                                     43
+2009    65       ATP Masters 1000 Paris                    65
+2009    66       ATP Finals                                15
+
+real    7m32.423s
+user    6m25.469s
+sys     0m8.842s

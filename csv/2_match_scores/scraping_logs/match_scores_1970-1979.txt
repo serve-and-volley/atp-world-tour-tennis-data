@@ -1,0 +1,1051 @@
+$ time python3 match_scores.py 1970 1979
+
+Scraping match info for 69 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1970    1        Australian Open                           47
+1970    2        Philadelphia                              47
+1970    3        Miami WCT                                 6
+1970    4        Richmond                                  7
+1970    5        Salisbury                                 45
+1970    6        Corpus Christi WCT                        7
+1970    7        Macon                                     24
+1970    8        Los Angeles WCT                           5
+1970    9        Hampton                                   31
+1970    10       London Indoor                             15
+1970    11       WCT Aetna World Cup                       5
+1970    12       Sydney                                    25
+1970    13       Johannesburg                              48
+1970    14       Johannesburg                              48
+1970    15       San Juan                                  42
+1970    16       Durban                                    42
+1970    17       St. Petersburg                            29
+1970    18       Monte Carlo                               63
+1970    19       Charlotte                                 26
+1970    20       Rome                                      31
+1970    21       Dallas WCT                                16
+1970    22       Houston                                   31
+1970    23       Bournemouth                               31
+1970    24       Atlanta WCT                               15
+1970    25       Brussels                                  30
+1970    26       Las Vegas WCT                             15
+1970    27       Roland Garros                             127
+1970    28       St. Louis WCT                             19
+1970    29       Manchester                                7
+1970    30       Casablanca WCT                            14
+1970    31       Bristol                                   29
+1970    32       Nottingham                                0
+1970    33       London / Queen's Club                     63
+1970    34       Eastbourne                                28
+1970    35       Wimbledon                                 127
+1970    36       Nottingham                                47
+1970    37       Newport                                   48
+1970    38       Bastad                                    31
+1970    39       Dublin                                    30
+1970    40       Washington                                63
+1970    41       Gstaad                                    31
+1970    42       Hoylake                                   43
+1970    43       Leicester                                 15
+1970    44       Cincinnati                                63
+1970    45       Indianapolis                              63
+1970    46       Louisville                                15
+1970    47       Hilversum                                 54
+1970    48       Boston                                    31
+1970    49       Munich                                    27
+1970    50       Montreal / Toronto                        19
+1970    51       Hamburg                                   54
+1970    52       Merion                                    63
+1970    53       Kitzbuhel                                 53
+1970    54       Fort Worth WCT                            9
+1970    55       South Orange                              41
+1970    56       US Open                                   107
+1970    57       Los Angeles                               63
+1970    58       Berkeley                                  63
+1970    59       Vancouver WCT                             15
+1970    60       Midland WCT                               7
+1970    61       Phoenix                                   30
+1970    62       Tucson WCT                                11
+1970    63       Barcelona                                 36
+1970    64       Buenos Aires                              31
+1970    65       Paris Indoor                              31
+1970    66       Wembley                                   31
+1970    67       Stockholm Open                            31
+1970    68       Masters                                   15
+1970    69       Masters Doubles                           0
+
+Tournaments with missing match info...
+Year    Order    Tournament
+----    -----    ----------
+Munich
+1971    1        Munich
+
+Scraping match info for 81 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1971    2        Sydney Outdoor                            25
+1971    3        Melbourne                                 60
+1971    4        Omaha                                     15
+1971    5        Richmond                                  15
+1971    6        New York                                  31
+1971    7        Philadelphia WCT                          31
+1971    8        Salisbury                                 47
+1971    9        Macon                                     41
+1971    10       London Indoor                             19
+1971    11       Hampton                                   31
+1971    12       Auckland                                  31
+1971    13       Australian Open                           47
+1971    14       Caracas                                   25
+1971    15       Chicago WCT                               31
+1971    16       Pensacola                                 26
+1971    17       Durban                                    59
+1971    18       Miami WCT                                 31
+1971    19       Nice                                      47
+1971    20       Johannesburg                              93
+1971    21       Monte Carlo                               31
+1971    22       Des Moines                                15
+1971    23       Palermo                                   33
+1971    24       Charlotte                                 23
+1971    25       Jacksonville                              30
+1971    26       Catania                                   32
+1971    27       Houston                                   31
+1971    28       Houston                                   0
+1971    29       Denver                                    29
+1971    30       WCT Aetna World Cup                       5
+1971    31       Dallas WCT                                31
+1971    32       Paris Outdoor                             27
+1971    33       Kansas City                               7
+1971    34       Rome WCT                                  47
+1971    35       Madrid                                    47
+1971    36       Tehran WCT                                31
+1971    37       Bournemouth                               31
+1971    38       Brussels                                  31
+1971    39       Hamburg                                   35
+1971    40       Roland Garros                             127
+1971    41       Berlin                                    24
+1971    42       Bristol WCT                               28
+1971    43       Eastbourne                                39
+1971    44       London / Queen's Club                     55
+1971    45       Wimbledon                                 127
+1971    46       Bastad                                    31
+1971    47       Gstaad                                    31
+1971    48       Newport                                   31
+1971    49       Dublin                                    31
+1971    50       Munich                                    31
+1971    51       Washington WCT                            63
+1971    52       Louisville WCT                            28
+1971    53       Tanglewood                                61
+1971    54       Kitzbuhel                                 31
+1971    55       Quebec WCT                                29
+1971    56       Hilversum                                 41
+1971    57       Columbus                                  30
+1971    58       Boston WCT                                31
+1971    59       Cincinnati                                63
+1971    60       Senigallia                                47
+1971    61       Montreal / Toronto WCT                    47
+1971    62       Indianapolis                              63
+1971    63       Fort Worth WCT                            30
+1971    64       Merion                                    63
+1971    65       South Orange                              62
+1971    66       Hilton Head                               3
+1971    67       US Open                                   127
+1971    68       Sacramento                                63
+1971    69       Los Angeles                               63
+1971    70       Midland                                   7
+1971    71       Berkeley WCT                              63
+1971    72       Vancouver WCT                             30
+1971    73       Cologne WCT                               31
+1971    74       Barcelona WCT                             52
+1971    75       Wembley                                   31
+1971    76       Stockholm WCT                             47
+1971    77       Bologna WCT                               40
+1971    78       Dallas WCT                                7
+1971    79       Buenos Aires                              31
+1971    80       Masters                                   21
+1971    81       Kingston                                  14
+
+Scraping match info for 93 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1972    1        Auckland                                  31
+1972    2        Australian Open                           49
+1972    3        Baltimore                                 7
+1972    4        Sydney Outdoor                            20
+1972    5        Jacksonville                              15
+1972    6        London Indoor                             15
+1972    7        Adelaide                                  15
+1972    8        Roanoke                                   8
+1972    9        Omaha                                     15
+1972    10       Cleveland                                 7
+1972    11       Des Moines                                15
+1972    12       Kansas City                               15
+1972    13       Richmond WCT                              28
+1972    14       Los Angeles Indoor                        31
+1972    15       Philadelphia WCT                          31
+1972    16       Salisbury                                 52
+1972    17       Toronto WCT                               30
+1972    18       New York                                  49
+1972    19       Miami WCT                                 30
+1972    20       Hampton                                   31
+1972    21       Washington Indoor                         0
+1972    22       Washington Indoor                         31
+1972    23       WCT Aetna World Cup                       5
+1972    24       Chicago WCT                               30
+1972    25       Caracas                                   20
+1972    26       Hilton Head WCT                           15
+1972    27       Johannesburg                              31
+1972    28       Monte Carlo                               31
+1972    29       Macon                                     19
+1972    30       Hong Kong                                 31
+1972    31       Houston WCT                               30
+1972    32       Madrid                                    44
+1972    33       Quebec WCT                                30
+1972    34       Nice                                      47
+1972    35       Charlotte WCT                             30
+1972    36       Rome                                      63
+1972    37       Denver WCT                                30
+1972    38       Las Vegas WCT                             30
+1972    39       Kansas City                               7
+1972    40       Bournemouth                               31
+1972    41       Brussels                                  31
+1972    42       Dallas WCT                                7
+1972    43       Roland Garros                             78
+1972    44       Hamburg                                   49
+1972    45       Bristol                                   31
+1972    46       London / Queen's Club                     63
+1972    47       Eastbourne                                29
+1972    48       Wimbledon                                 127
+1972    49       St. Louis WCT                             31
+1972    50       Bretton Woods                             19
+1972    51       Bastad                                    31
+1972    52       Gstaad                                    30
+1972    53       Dublin                                    31
+1972    54       Washington WCT                            61
+1972    55       Columbus                                  31
+1972    56       Kitzbuhel                                 41
+1972    57       Louisville WCT                            31
+1972    58       Hilversum                                 39
+1972    59       Tanglewood                                31
+1972    60       Dusseldorf                                15
+1972    61       Boston WCT                                31
+1972    62       Cincinnati                                63
+1972    63       Cleveland WCT                             31
+1972    64       Indianapolis                              63
+1972    65       Montreal / Toronto                        69
+1972    66       Fort Worth WCT                            31
+1972    67       South Orange                              31
+1972    68       Merion                                    63
+1972    69       US Open                                   127
+1972    70       Montreal WCT                              31
+1972    71       Seattle                                   31
+1972    72       Sacramento                                31
+1972    73       Los Angeles                               63
+1972    74       Albany                                    63
+1972    75       Alamo WCT                                 29
+1972    76       Tokyo WCT                                 7
+1972    77       Midland                                   7
+1972    78       Barcelona                                 39
+1972    79       Vancouver WCT                             29
+1972    80       Essen WCT                                 30
+1972    81       Paris Indoor                              31
+1972    82       Gothenburg WCT                            31
+1972    83       Stockholm                                 55
+1972    84       Rotterdam WCT                             28
+1972    85       London                                    31
+1972    86       Buenos Aires                              25
+1972    87       Rome WCT                                  7
+1972    88       Johannesburg-2                            15
+1972    89       Johannesburg-2                            15
+1972    90       Brisbane                                  40
+1972    91       Masters                                   15
+1972    92       New York-2                                31
+1972    93       Kingston                                  15
+
+Scraping match info for 110 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1973    1        Australian Open                           55
+1973    2        Sydney Outdoor                            47
+1973    3        Baltimore                                 15
+1973    4        Auckland                                  31
+1973    5        Miami WCT                                 31
+1973    6        Birmingham                                15
+1973    7        London WCT                                31
+1973    8        London WCT                                0
+1973    9        Roanoke                                   7
+1973    10       Lacosta WCT                               31
+1973    11       Omaha                                     24
+1973    12       Milan WCT                                 31
+1973    13       Richmond WCT                              31
+1973    14       Des Moines                                17
+1973    15       Philadelphia WCT                          31
+1973    16       Salt Lake City                            23
+1973    17       Copenhagen WCT                            31
+1973    18       Toronto WCT                               31
+1973    19       Calgary                                   27
+1973    20       Salisbury                                 53
+1973    21       Cologne WCT                               31
+1973    22       Chicago WCT                               31
+1973    23       Hampton                                   31
+1973    24       Paramus                                   7
+1973    25       WCT Aetna World Cup                       5
+1973    26       Hilton Head WCT                           15
+1973    27       Charleston                                15
+1973    28       Atlanta WCT                               31
+1973    29       Washington WCT                            0
+1973    30       Washington WCT                            31
+1973    31       Washington Indoor                         0
+1973    32       Washington Indoor                         29
+1973    33       Jackson                                   15
+1973    34       St. Louis WCT                             31
+1973    35       Vancouver WCT                             31
+1973    36       Valencia                                  44
+1973    37       Houston WCT                               31
+1973    38       Munich WCT                                31
+1973    39       Barcelona                                 47
+1973    40       Brussels WCT                              31
+1973    41       Cleveland WCT                             30
+1973    42       Nice                                      31
+1973    43       Charlotte WCT                             31
+1973    44       Johannesburg WCT                          31
+1973    45       Johannesburg WCT                          31
+1973    46       Monte Carlo                               47
+1973    47       Denver WCT                                31
+1973    48       Gothenburg WCT                            31
+1973    49       Madrid                                    45
+1973    50       Florence                                  45
+1973    51       World Doubles WCT                         0
+1973    52       Kansas City                               11
+1973    53       Bournemouth                               63
+1973    54       Dallas WCT                                7
+1973    55       Las Vegas                                 31
+1973    56       Roland Garros                             127
+1973    57       Rome                                      95
+1973    58       Berlin                                    31
+1973    59       Berlin                                    31
+1973    60       Hamburg                                   61
+1973    61       Nottingham                                39
+1973    62       Eastbourne                                31
+1973    63       London / Queen's Club                     47
+1973    64       Wimbledon                                 127
+1973    65       Bastad                                    31
+1973    66       Gstaad                                    31
+1973    67       Newport                                   63
+1973    68       Dublin                                    31
+1973    69       Boston                                    31
+1973    70       Bretton Woods                             27
+1973    71       Hilversum                                 31
+1973    72       Washington                                63
+1973    73       Kitzbuhel                                 30
+1973    74       Munich                                    27
+1973    75       Louisville                                63
+1973    76       Columbus                                  31
+1973    77       Cincinnati                                31
+1973    78       Tanglewood                                31
+1973    79       Indianapolis                              49
+1973    80       Merion                                    63
+1973    81       Montreal / Toronto                        63
+1973    82       South Orange                              31
+1973    83       US Open                                   127
+1973    84       Aptos                                     31
+1973    85       Seattle                                   31
+1973    86       Los Angeles                               63
+1973    87       Columbia                                  15
+1973    88       Alamo                                     31
+1973    89       Chicago                                   31
+1973    90       Fort Worth                                31
+1973    91       Quebec                                    31
+1973    92       Osaka                                     31
+1973    93       Barcelona                                 57
+1973    94       Tokyo                                     47
+1973    95       Madrid                                    63
+1973    96       Manila                                    25
+1973    97       New Delhi                                 31
+1973    98       Tehran                                    47
+1973    99       Prague                                    31
+1973    100      Paris Indoor                              46
+1973    101      Hong Kong                                 31
+1973    102      Jakarta                                   31
+1973    103      Stockholm                                 47
+1973    104      Sydney Indoor                             31
+1973    105      London                                    32
+1973    106      Christchurch                              28
+1973    107      Johannesburg                              31
+1973    108      Buenos Aires                              31
+1973    109      Masters                                   15
+1973    110      Kingston                                  13
+
+Tournaments with missing match info...
+Year    Order    Tournament
+----    -----    ----------
+Adelaide
+1974    102      Adelaide
+
+Scraping match info for 105 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1974    1        Australian Open                           62
+1974    2        Sydney Outdoor                            47
+1974    3        Auckland                                  31
+1974    4        Lakeway                                   15
+1974    5        Roanoke                                   15
+1974    6        Philadelphia WCT                          83
+1974    7        Omaha                                     23
+1974    8        Richmond-WCT                              31
+1974    9        Baltimore                                 23
+1974    10       Dayton                                    15
+1974    11       St. Petersburg WCT                        31
+1974    12       Little Rock                               27
+1974    13       Bologna WCT                               31
+1974    14       Toronto WCT                               31
+1974    15       Birmingham                                16
+1974    16       Hempstead WCT                             31
+1974    17       London WCT                                31
+1974    18       Salisbury                                 57
+1974    19       Barcelona WCT                             31
+1974    20       Lacosta WCT                               31
+1974    21       Miami WCT                                 31
+1974    22       Paramus                                   15
+1974    23       Hampton                                   38
+1974    24       WCT Aetna World Cup                       5
+1974    25       Sao Paulo WCT                             31
+1974    26       Washington WCT                            31
+1974    27       Washington WCT                            0
+1974    28       Calgary                                   31
+1974    29       Tuscon                                    63
+1974    30       Jackson                                   23
+1974    31       Salt Lake City                            23
+1974    32       Atlanta WCT                               31
+1974    33       Palm Desert WCT                           31
+1974    34       Rotterdam WCT                             31
+1974    35       Tempe                                     31
+1974    36       Munich WCT                                31
+1974    37       New Orleans WCT                           31
+1974    38       Washington Indoor                         7
+1974    39       Monte Carlo WCT                           31
+1974    40       Orlando WCT                               31
+1974    41       Tokyo WCT                                 31
+1974    42       Charlotte WCT                             31
+1974    43       Houston                                   31
+1974    44       Houston                                   0
+1974    45       Johannesburg WCT                          31
+1974    46       Johannesburg WCT                          31
+1974    47       Denver WCT                                31
+1974    48       St. Louis WCT                             31
+1974    49       Acapulco                                  14
+1974    50       World Doubles WCT                         0
+1974    51       Florence                                  31
+1974    52       Dallas WCT                                7
+1974    53       Las Vegas                                 31
+1974    54       Munich                                    31
+1974    55       Bournemouth                               49
+1974    56       Hamburg                                   35
+1974    57       Rome                                      63
+1974    58       Roland Garros                             126
+1974    59       Manchester                                52
+1974    60       Nottingham                                61
+1974    61       Wimbledon                                 127
+1974    62       Bastad                                    31
+1974    63       Gstaad                                    31
+1974    64       Dublin                                    28
+1974    65       Chicago                                   31
+1974    66       Hilversum                                 31
+1974    67       Kitzbuhel                                 31
+1974    68       Washington                                63
+1974    69       Louisville                                63
+1974    70       Cincinnati                                31
+1974    71       Indianapolis                              63
+1974    72       Bretton Woods                             31
+1974    73       Montreal / Toronto                        63
+1974    74       Columbus                                  31
+1974    75       Boston                                    63
+1974    76       South Orange                              31
+1974    77       Merion                                    63
+1974    78       US Open                                   127
+1974    79       Cedar Grove                               31
+1974    80       Los Angeles                               63
+1974    81       San Francisco                             63
+1974    82       Maui                                      31
+1974    83       Madrid                                    67
+1974    84       Tokyo                                     47
+1974    85       Barcelona                                 63
+1974    86       Sydney Indoor                             31
+1974    87       Tehran                                    47
+1974    88       Christchurch                              31
+1974    89       Melbourne                                 31
+1974    90       Jakarta                                   31
+1974    91       Paris Indoor                              31
+1974    92       Vienna                                    31
+1974    93       Stockholm                                 63
+1974    94       Hong Kong                                 28
+1974    95       London                                    31
+1974    96       Bombay                                    31
+1974    97       Manila                                    31
+1974    98       Oslo                                      31
+1974    99       Johannesburg                              62
+1974    100      Buenos Aires                              31
+1974    101      Adelaide                                  0
+1974    103      Adelaide                                  31
+1974    104      Masters                                   15
+1974    105      Sydney Outdoor-2                          47
+
+Tournaments with missing match info...
+Year    Order    Tournament
+----    -----    ----------
+Nations Cup
+1975    89       Nations Cup
+
+Scraping match info for 109 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1975    1        Australian Open                           63
+1975    2        Auckland                                  30
+1975    3        San Juan WCT                              15
+1975    4        Bahamas                                   30
+1975    5        Baltimore                                 15
+1975    6        Philadelphia WCT                          83
+1975    7        Birmingham                                25
+1975    8        Richmond-WCT                              31
+1975    9        Dayton                                    15
+1975    10       Roanoke                                   23
+1975    11       St. Petersburg WCT                        31
+1975    12       Little Rock                               31
+1975    13       Basel                                     23
+1975    14       Bologna WCT                               31
+1975    15       Toronto WCT                               31
+1975    16       Salisbury                                 52
+1975    17       Barcelona WCT                             31
+1975    18       Fort Worth WCT                            31
+1975    19       La Costa WCT                              31
+1975    20       Boca Raton                                31
+1975    21       Algiers                                   31
+1975    22       Rotterdam WCT                             31
+1975    23       San Antonio WCT                           31
+1975    24       Fairfield                                 29
+1975    25       Cairo                                     31
+1975    26       London WCT                                15
+1975    27       Shreveport                                25
+1975    28       WCT Aetna World Cup                       5
+1975    29       Munich WCT                                31
+1975    30       Sao Paulo WCT                             31
+1975    31       Washington WCT                            0
+1975    32       Washington WCT                            31
+1975    33       Dusseldorf Indoor                         22
+1975    34       Hampton                                   31
+1975    35       Caracas WCT                               28
+1975    36       Memphis WCT                               31
+1975    37       New York                                  23
+1975    38       Atlanta WCT                               31
+1975    39       Monte Carlo WCT                           31
+1975    40       Orlando WCT                               31
+1975    41       Jackson                                   15
+1975    42       Tuscon                                    63
+1975    43       Washington Indoor                         11
+1975    44       St. Louis WCT                             31
+1975    45       Barcelona                                 47
+1975    46       Johannesburg - WCT                        42
+1975    47       Johannesburg - WCT                        31
+1975    48       Denver WCT                                31
+1975    49       Tokyo WCT                                 31
+1975    50       Valencia                                  46
+1975    51       Charlotte WCT                             31
+1975    52       Houston WCT                               31
+1975    53       Houston WCT                               0
+1975    54       Stockholm - WCT                           31
+1975    55       Madrid                                    47
+1975    56       Nice                                      47
+1975    57       World Doubles WCT                         0
+1975    58       Munich                                    31
+1975    59       Florence                                  31
+1975    60       Dallas WCT                                7
+1975    61       Las Vegas                                 31
+1975    62       Bournemouth                               47
+1975    63       Hamburg                                   63
+1975    64       Rome                                      63
+1975    65       Dusseldorf                                31
+1975    66       Roland Garros                             127
+1975    67       Nottingham                                63
+1975    68       Wimbledon                                 127
+1975    69       Bastad                                    31
+1975    70       Gstaad                                    31
+1975    71       Kitzbuhel                                 31
+1975    72       Chicago                                   31
+1975    73       Hilversum                                 31
+1975    74       Istanbul                                  31
+1975    75       Washington                                63
+1975    76       Louisville                                63
+1975    77       Cincinnati                                31
+1975    78       Indianapolis                              63
+1975    79       North Conway                              47
+1975    80       Montreal / Toronto                        63
+1975    81       Columbus                                  31
+1975    82       Boston                                    63
+1975    83       South Orange                              31
+1975    84       US Open                                   127
+1975    85       Los Angeles                               63
+1975    86       Bermuda                                   16
+1975    87       San Francisco                             63
+1975    88       Nations Cup                               14
+1975    90       Maui                                      31
+1975    91       Aviles                                    31
+1975    92       Madrid                                    63
+1975    93       Melbourne                                 31
+1975    94       Sydney Indoor                             47
+1975    95       Barcelona                                 63
+1975    96       Tehran                                    47
+1975    97       Perth                                     31
+1975    98       Manila                                    31
+1975    99       Paris Indoor                              31
+1975    100      Stockholm                                 63
+1975    101      Tokyo                                     47
+1975    102      London                                    47
+1975    103      Buenos Aires                              31
+1975    104      Hong Kong                                 31
+1975    105      Johannesburg                              73
+1975    106      Calcutta                                  31
+1975    107      Masters                                   15
+1975    108      Masters Doubles                           0
+1975    109      Sydney Outdoor                            47
+
+Scraping match info for 112 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1976    1        Australian Open                           63
+1976    2        Monterrey WCT                             15
+1976    3        Auckland                                  31
+1976    4        Columbus WCT                              15
+1976    5        Indianapolis WCT                          15
+1976    6        Copenhagen                                15
+1976    7        Atlanta WCT                               15
+1976    8        Baltimore                                 15
+1976    9        Birmingham                                23
+1976    10       Philadelphia WCT                          53
+1976    11       Cleveland                                 17
+1976    12       Barcelona WCT                             15
+1976    13       Boca Raton                                31
+1976    14       Richmond WCT                              15
+1976    15       Dayton                                    15
+1976    16       Lagos WCT                                 15
+1976    17       Toronto WCT                               15
+1976    18       Salisbury                                 52
+1976    19       Rome WCT                                  15
+1976    20       St. Louis WCT                             15
+1976    21       Rotterdam WCT                             15
+1976    22       Fort Worth WCT                            15
+1976    23       Khartoum                                  15
+1976    24       Little Rock                               31
+1976    25       Basel                                     15
+1976    26       WCT Aetna World Cup                       5
+1976    27       Nuremberg                                 23
+1976    28       Memphis WCT                               15
+1976    29       Mexico City WCT                           15
+1976    30       Hampton                                   15
+1976    31       Washington WCT                            0
+1976    32       Washington WCT                            15
+1976    33       La Costa                                  15
+1976    34       Jackson WCT                               15
+1976    35       Palm Springs                              63
+1976    36       Valencia                                  47
+1976    37       Barcelona                                 63
+1976    38       Caracas WCT                               15
+1976    39       Sao Paulo WCT                             15
+1976    40       Nice                                      50
+1976    41       Houston WCT                               0
+1976    42       Houston WCT                               15
+1976    43       Johannesburg WCT                          15
+1976    44       Johannesburg WCT                          15
+1976    45       Palma                                     47
+1976    46       Charlotte WCT                             15
+1976    47       Monte Carlo WCT                           15
+1976    48       Madrid                                    47
+1976    49       Denver WCT                                15
+1976    50       Stockholm - WCT                           15
+1976    51       Sacramento                                15
+1976    52       World Doubles WCT                         0
+1976    53       Florence                                  31
+1976    54       Dallas WCT                                7
+1976    55       Munich                                    31
+1976    56       Las Vegas                                 31
+1976    57       Bournemouth                               47
+1976    58       Hamburg                                   63
+1976    59       WCT Challenge Cup                         15
+1976    60       Rome                                      63
+1976    61       Dusseldorf                                47
+1976    62       Roland Garros                             127
+1976    63       Nottingham                                62
+1976    64       Berlin                                    31
+1976    65       Berlin                                    31
+1976    66       Wimbledon                                 127
+1976    67       Bastad                                    63
+1976    68       Gstaad                                    47
+1976    69       Pepsi Grand Slam                          4
+1976    70       Cincinnati                                63
+1976    71       Kitzbuhel                                 47
+1976    72       Hilversum                                 30
+1976    73       Washington                                63
+1976    74       Louisville                                63
+1976    75       North Conway                              63
+1976    76       Columbus                                  47
+1976    77       Indianapolis                              63
+1976    78       Montreal / Toronto                        63
+1976    79       Boston                                    63
+1976    80       South Orange                              31
+1976    81       US Open                                   127
+1976    82       Bermuda                                   31
+1976    83       Woodlands Doubles                         0
+1976    84       Newport                                   15
+1976    85       Los Angeles                               63
+1976    86       San Francisco                             63
+1976    87       Tehran                                    63
+1976    88       Maui                                      47
+1976    89       Aviles                                    31
+1976    90       Madrid                                    63
+1976    91       Brisbane                                  31
+1976    92       Sydney Indoor                             47
+1976    93       Barcelona                                 63
+1976    94       Paris Indoor                              31
+1976    95       Perth                                     31
+1976    96       Vienna                                    31
+1976    97       London                                    31
+1976    98       Tokyo Outdoor                             47
+1976    99       Cologne                                   31
+1976    100      Stockholm                                 63
+1976    101      Hong Kong                                 47
+1976    102      Wembley                                   31
+1976    103      Manila                                    46
+1976    104      Sao Paulo                                 31
+1976    105      Bangalore                                 31
+1976    106      Buenos Aires                              31
+1976    107      Johannesburg                              47
+1976    108      Santiago                                  15
+1976    109      WCT Challenge Cup                         14
+1976    110      Masters                                   15
+1976    111      Masters Doubles                           0
+1976    112      Sydney Outdoor                            47
+
+Scraping match info for 109 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1977    1        Zurich                                    31
+1977    2        Australian Open                           63
+1977    3        Adelaide                                  47
+1977    4        Auckland                                  31
+1977    5        Birmingham WCT                            15
+1977    6        Baltimore                                 31
+1977    7        Pepsi Grand Slam                          3
+1977    8        Philadelphia WCT                          49
+1977    9        Richmond WCT                              15
+1977    10       Little Rock                               31
+1977    11       Dayton                                    31
+1977    12       Mexico City WCT                           15
+1977    13       Miami                                     31
+1977    14       Springfield                               31
+1977    15       San Jose                                  31
+1977    16       Ocean City                                15
+1977    17       Toronto WCT                               15
+1977    18       Palm Springs                              63
+1977    19       Memphis                                   63
+1977    20       Monterrey WCT                             15
+1977    21       Johannesburg                              30
+1977    22       Johannesburg                              30
+1977    23       Hampton                                   31
+1977    24       WCT Aetna World Cup                       5
+1977    25       St. Louis WCT                             15
+1977    26       Washington Indoor                         31
+1977    27       Washington Indoor                         0
+1977    28       Helsinki                                  31
+1977    29       La Costa                                  63
+1977    30       Rotterdam WCT                             15
+1977    31       Cairo                                     15
+1977    32       Los Angeles PSW                           47
+1977    33       London WCT                                15
+1977    34       Nice                                      31
+1977    35       Monte Carlo WCT                           15
+1977    36       Jackson                                   15
+1977    37       WCT Challenge Cup                         1
+1977    38       Houston WCT                               15
+1977    39       Murcia                                    31
+1977    40       Buenos Aires                              15
+1977    41       Denver                                    31
+1977    42       Florence                                  31
+1977    43       Charlotte WCT                             15
+1977    44       Virginia Beach                            15
+1977    45       Las Vegas                                 31
+1977    46       Munich                                    31
+1977    47       Masters Doubles WCT                       0
+1977    48       Hamburg                                   63
+1977    49       Dallas WCT                                7
+1977    50       Rome                                      63
+1977    51       Dusseldorf                                31
+1977    52       Roland Garros                             127
+1977    53       Nottingham                                62
+1977    54       Brussels                                  47
+1977    55       London / Queen's Club                     63
+1977    56       Berlin                                    31
+1977    57       Berlin                                    31
+1977    58       Wimbledon                                 127
+1977    59       Bastad                                    31
+1977    60       Gstaad                                    31
+1977    61       Newport                                   31
+1977    62       Cincinnati                                63
+1977    63       Kitzbuhel                                 31
+1977    64       Hilversum                                 31
+1977    65       Washington                                63
+1977    66       Louisville                                63
+1977    67       North Conway                              63
+1977    68       South Orange                              31
+1977    69       Columbus                                  63
+1977    70       Indianapolis                              63
+1977    71       Montreal / Toronto                        63
+1977    72       Boston                                    63
+1977    73       US Open                                   127
+1977    74       Woodlands Doubles                         0
+1977    75       Laguna Niguel                             23
+1977    76       Tournament of Champions WCT               15
+1977    77       Los Angeles                               63
+1977    78       Paris                                     31
+1977    79       San Francisco                             63
+1977    80       Aix en Provence                           31
+1977    81       Tehran                                    63
+1977    82       Maui                                      31
+1977    83       Madrid                                    63
+1977    84       Brisbane                                  31
+1977    85       Sydney Indoor                             31
+1977    86       Barcelona                                 63
+1977    87       Perth                                     31
+1977    88       Vienna                                    31
+1977    89       Basel                                     31
+1977    90       Tokyo Outdoor                             47
+1977    91       Cologne                                   31
+1977    92       Paris Indoor                              31
+1977    93       Stockholm                                 63
+1977    94       Hong Kong                                 31
+1977    95       Bogota                                    31
+1977    96       WCT Challenge Cup                         15
+1977    97       Wembley                                   31
+1977    98       Manila                                    31
+1977    99       Santiago                                  31
+1977    100      Oviedo                                    47
+1977    101      Buenos Aires                              31
+1977    102      Taipei                                    31
+1977    103      Johannesburg                              31
+1977    104      Bombay                                    31
+1977    105      Adelaide-2                                63
+1977    106      Sydney Outdoor                            63
+1977    107      Australian Open-2                         63
+1977    108      Masters                                   15
+1977    109      Masters Doubles                           0
+
+Scraping match info for 101 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1978    1        Birmingham WCT                            31
+1978    2        Baltimore                                 31
+1978    3        Pepsi Grand Slam                          3
+1978    4        Philadelphia WCT                          47
+1978    5        Sarasota                                  31
+1978    6        Richmond WCT                              31
+1978    7        Little Rock                               31
+1978    8        Mexico City                               31
+1978    9        St. Louis WCT                             31
+1978    10       Springfield                               31
+1978    11       Palm Springs                              63
+1978    12       Denver                                    31
+1978    13       Memphis                                   31
+1978    14       Lagos                                     31
+1978    15       Miami                                     31
+1978    16       Cairo                                     15
+1978    17       WCT Aetna World Cup                       5
+1978    18       Washington Indoor                         31
+1978    19       Washington Indoor                         0
+1978    20       Las Vegas WCT                             15
+1978    21       Milan WCT                                 31
+1978    22       Dayton                                    31
+1978    23       Rotterdam WCT                             31
+1978    24       Johannesburg                              31
+1978    25       Johannesburg                              31
+1978    26       Monte Carlo WCT                           31
+1978    27       Guadalajara                               31
+1978    28       Houston WCT                               31
+1978    29       Nice                                      31
+1978    30       San Jose                                  31
+1978    31       Las Vegas                                 31
+1978    32       Tulsa                                     31
+1978    33       World Doubles WCT                         0
+1978    34       Nations Cup                               30
+1978    35       Dallas WCT                                7
+1978    36       Hamburg                                   63
+1978    37       Florence                                  31
+1978    38       Rome                                      63
+1978    39       Munich                                    31
+1978    40       Roland Garros                             127
+1978    41       Birmingham                                63
+1978    42       Brussels                                  31
+1978    43       London / Queen's Club                     63
+1978    44       Berlin                                    31
+1978    45       Berlin                                    31
+1978    46       Wimbledon                                 127
+1978    47       Forest Hills WCT                          21
+1978    48       Cincinnati                                63
+1978    49       Gstaad                                    31
+1978    50       Newport                                   31
+1978    51       Washington                                63
+1978    52       Bastad                                    31
+1978    53       Stuttgart Outdoor                         31
+1978    54       Louisville                                63
+1978    55       Kitzbuhel                                 31
+1978    56       Hilversum                                 31
+1978    57       North Conway                              47
+1978    58       New Orleans                               31
+1978    59       South Orange                              31
+1978    60       Indianapolis                              63
+1978    61       Columbus                                  31
+1978    62       Montreal / Toronto                        47
+1978    63       Stowe                                     31
+1978    64       Cleveland                                 31
+1978    65       Boston                                    63
+1978    66       Atlanta                                   31
+1978    67       US Open                                   127
+1978    68       Woodlands Doubles                         0
+1978    69       Los Angeles                               47
+1978    70       Hartford                                  31
+1978    71       Bournemouth                               31
+1978    72       San Francisco                             63
+1978    73       Aix-En-Provence                           31
+1978    74       Mexico City                               31
+1978    75       Madrid                                    63
+1978    76       Maui                                      31
+1978    77       Barcelona                                 63
+1978    78       Brisbane                                  31
+1978    79       Sydney Indoor                             31
+1978    80       Tokyo Outdoor                             47
+1978    81       Vienna                                    31
+1978    82       Basel                                     31
+1978    83       Cologne                                   31
+1978    84       Paris Indoor                              31
+1978    85       Tokyo Indoor                              31
+1978    86       Stockholm                                 63
+1978    87       Hong Kong                                 31
+1978    88       Bogota                                    31
+1978    89       Taipei                                    31
+1978    90       Wembley                                   31
+1978    91       Buenos Aires                              31
+1978    92       Manila                                    31
+1978    93       Bologna                                   31
+1978    94       Johannesburg                              31
+1978    95       Santiago                                  31
+1978    96       Calcutta                                  31
+1978    97       WCT Challenge Cup                         15
+1978    98       Sydney Outdoor                            63
+1978    99       Australian Open                           63
+1978    100      Masters                                   15
+1978    101      Masters Doubles                           0
+
+Scraping match info for 102 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1979    1        Hobart                                    31
+1979    2        Auckland                                  31
+1979    3        World Doubles WCT                         0
+1979    4        Birmingham WCT                            31
+1979    5        Baltimore                                 31
+1979    6        Philadelphia WCT                          47
+1979    7        Richmond WCT                              31
+1979    8        Little Rock                               31
+1979    9        Pepsi Grand Slam                          3
+1979    10       Rancho Mirage                             63
+1979    11       Sarasota                                  31
+1979    12       Denver                                    31
+1979    13       Dorado Beach WCT                          16
+1979    14       Memphis                                   47
+1979    15       Lagos                                     31
+1979    16       WCT Aetna World Cup                       4
+1979    17       Washington Indoor                         31
+1979    18       Washington Indoor                         0
+1979    19       New Orleans WCT                           31
+1979    20       Nancy                                     31
+1979    21       San Jose Costa Rica                       31
+1979    22       Milan WCT                                 31
+1979    23       Dayton                                    31
+1979    24       Stuttgart Indoor                          31
+1979    25       Rotterdam WCT                             31
+1979    26       Nice                                      31
+1979    27       Monte Carlo WCT                           31
+1979    28       Cairo                                     31
+1979    29       Tulsa                                     31
+1979    30       Houston WCT                               31
+1979    31       Johannesburg                              31
+1979    32       Johannesburg                              31
+1979    33       San Jose                                  31
+1979    34       Las Vegas                                 31
+1979    35       Dallas WCT                                7
+1979    36       Nations Cup                               30
+1979    37       Hamburg                                   63
+1979    38       Florence                                  31
+1979    39       Rome                                      63
+1979    40       Munich                                    31
+1979    41       Roland Garros                             127
+1979    42       London / Queen's Club                     63
+1979    43       Brussels                                  31
+1979    44       Berlin                                    31
+1979    45       Berlin                                    31
+1979    46       Surbiton                                  31
+1979    47       Wimbledon                                 127
+1979    48       Forest Hills WCT                          21
+1979    49       Newport                                   31
+1979    50       Gstaad                                    31
+1979    51       Washington                                63
+1979    52       Bastad                                    31
+1979    53       Stuttgart Outdoor                         31
+1979    54       Louisville                                63
+1979    55       Hilversum                                 31
+1979    56       Kitzbuhel                                 31
+1979    57       North Conway                              63
+1979    58       Lafayette                                 31
+1979    59       South Orange                              31
+1979    60       Indianapolis                              63
+1979    61       Columbus                                  31
+1979    62       Montreal / Toronto                        63
+1979    63       Stowe                                     31
+1979    64       Cleveland                                 31
+1979    65       Cincinnati                                63
+1979    66       Boston                                    63
+1979    67       US Open                                   127
+1979    68       Atlanta                                   31
+1979    69       Woodlands Doubles                         0
+1979    70       Los Angeles                               47
+1979    71       Palermo                                   31
+1979    72       San Francisco                             47
+1979    73       Madrid                                    63
+1979    74       Maui                                      47
+1979    75       Bordeaux                                  31
+1979    76       Barcelona                                 63
+1979    77       Tel Aviv                                  31
+1979    78       Brisbane                                  31
+1979    79       Sydney Indoor                             31
+1979    80       Basel                                     31
+1979    81       Tokyo Outdoor                             63
+1979    82       Vienna                                    47
+1979    83       Cologne                                   31
+1979    84       Paris Indoor                              31
+1979    85       Tokyo Indoor                              31
+1979    86       Stockholm                                 63
+1979    87       Hong Kong                                 31
+1979    88       Quito                                     31
+1979    89       Taipei                                    31
+1979    90       Bogota                                    31
+1979    91       Wembley                                   31
+1979    92       Buenos Aires                              31
+1979    93       Bologna                                   31
+1979    94       Bombay                                    31
+1979    95       Santiago                                  31
+1979    96       Johannesburg                              31
+1979    97       WCT Challenge Cup                         15
+1979    98       Adelaide                                  31
+1979    99       Sydney Outdoor                            63
+1979    100      Australian Open                           63
+1979    101      Masters                                   15
+1979    102      Masters Doubles                           0
+
+real    18m8.608s
+user    7m0.021s
+sys     0m12.359s

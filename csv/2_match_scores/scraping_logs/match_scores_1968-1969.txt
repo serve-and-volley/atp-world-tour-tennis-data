@@ -1,0 +1,65 @@
+$ time python3 match_scores.py 1968 1969
+
+Scraping match info for 15 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1968    1        Australian Chps.                          61
+1968    2        Bournemouth                               31
+1968    3        Rome                                      103
+1968    4        Roland Garros                             126
+1968    5        Barcelona                                 57
+1968    6        London / Queen's Club                     53
+1968    7        Wimbledon                                 127
+1968    8        Cincinnati                                11
+1968    9        Dublin                                    31
+1968    10       Gstaad                                    31
+1968    11       Hamburg                                   47
+1968    12       Montreal / Toronto                        0
+1968    13       US Open                                   95
+1968    14       Los Angeles                               68
+1968    15       Buenos Aires                              36
+
+Scraping match info for 37 tournaments...
+Year    Order    Tournament                                Matches
+----    -----    ----------                                -------
+1969    1        Hobart                                    23
+1969    2        Perth                                     28
+1969    3        Melbourne                                 23
+1969    4        Sydney                                    31
+1969    5        Australian Open                           47
+1969    6        Auckland                                  22
+1969    7        Philadelphia WCT                          31
+1969    8        New York                                  31
+1969    9        Johannesburg                              64
+1969    10       Johannesburg                              64
+1969    11       Durban                                    44
+1969    12       Monte Carlo                               62
+1969    13       Rome                                      80
+1969    14       Bournemouth                               30
+1969    15       Brussels                                  31
+1969    16       Barcelona                                 45
+1969    17       Roland Garros                             127
+1969    18       Bristol                                   7
+1969    19       London / Queen's Club                     79
+1969    20       Wimbledon                                 127
+1969    21       Washington                                63
+1969    22       Dublin                                    31
+1969    23       Cincinnati                                95
+1969    24       Gstaad                                    31
+1969    25       Indianapolis                              60
+1969    26       Hilversum                                 29
+1969    27       Hamburg                                   49
+1969    28       Montreal / Toronto                        47
+1969    29       Kitzbuhel                                 0
+1969    30       Boston                                    86
+1969    31       US Open                                   127
+1969    32       Los Angeles                               63
+1969    33       Las Vegas                                 31
+1969    34       Paris Indoor                              23
+1969    35       Buenos Aires                              31
+1969    36       Wembley                                   31
+1969    37       Stockholm                                 31
+
+real    0m49.906s
+user    0m19.698s
+sys     0m0.369s
