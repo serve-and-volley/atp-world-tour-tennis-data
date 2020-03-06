@@ -374,5 +374,5 @@ Index    Tourney slug           Matches
 
 real	36m11.241s
 user	2m13.432s
-sys	  0m4.073s
+sys     0m4.073s
 ```
