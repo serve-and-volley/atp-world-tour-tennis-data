@@ -111,8 +111,20 @@ scrapes the following data:
 ```
 tourney_year_id
 tourney_order
+tourney_name
 tourney_slug
 tourney_url_suffix
+start_date
+start_year
+start_month
+start_day
+end_date
+end_year
+end_month
+end_day
+currency
+prize_money
+match_index
 tourney_round_name
 round_order
 match_order
@@ -194,11 +206,13 @@ The following Python script:
 
 scrapes the following data:
 ```
-tourney_order
 match_id
+tourney_slug
 match_stats_url_suffix
 match_time
 match_duration
+winner_slug
+winner_serve_rating
 winner_aces
 winner_double_faults
 winner_first_serves_in
@@ -209,20 +223,23 @@ winner_second_serve_points_won
 winner_second_serve_points_total
 winner_break_points_saved
 winner_break_points_serve_total
-winner_service_points_won
-winner_service_points_total
+winner_service_games_played
+winner_return_rating
 winner_first_serve_return_won
 winner_first_serve_return_total
 winner_second_serve_return_won
 winner_second_serve_return_total
 winner_break_points_converted
 winner_break_points_return_total
-winner_service_games_played
 winner_return_games_played
+winner_service_points_won
+winner_service_points_total
 winner_return_points_won
 winner_return_points_total
 winner_total_points_won
 winner_total_points_total
+loser_slug
+loser_serve_rating
 loser_aces
 loser_double_faults
 loser_first_serves_in
@@ -233,16 +250,17 @@ loser_second_serve_points_won
 loser_second_serve_points_total
 loser_break_points_saved
 loser_break_points_serve_total
-loser_service_points_won
-loser_service_points_total
+loser_service_games_played
+loser_return_rating
 loser_first_serve_return_won
 loser_first_serve_return_total
 loser_second_serve_return_won
 loser_second_serve_return_total
 loser_break_points_converted
 loser_break_points_return_total
-loser_service_games_played
 loser_return_games_played
+loser_service_points_won
+loser_service_points_total
 loser_return_points_won
 loser_return_points_total
 loser_total_points_won
@@ -252,7 +270,7 @@ loser_total_points_total
 from pages like the following:
 * http://www.atpworldtour.com/en/scores/2017/580/MS001/match-stats
 
-![image](https://user-images.githubusercontent.com/532545/32137303-285141dc-bbd2-11e7-90c8-cc84f427a356.png)
+![image](https://user-images.githubusercontent.com/532545/76129824-8bb8b700-5fd6-11ea-9eea-ac60c5d5942d.png)
 
 The CSV files for all match stats data from 1991-2016 is found in:
 * https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/3_match_stats
@@ -262,114 +280,99 @@ The CSV files for all match stats data from 1991-2016 is found in:
 <div id="part-c2"></div>
 
 ### C2. Example usage [^](#contents)
-
-#### C2a. Example error 1: Connection error
-Example command line usage and output is as follows, with the resulting connection error:
+Example command line usage and output is as follows:
 ```
-$ time python match_stats.py 2012 31
+$ time python3 match_stats.py 1991
 
-Collecting match stats data for 66 tournaments:
+Collecting match stats data for 83 tournaments:
 
-Index    Tourney slug       Matches
------    ------------       -------
-31       roland-garros      239/239 (100%)
-32       halle              29/47 (62%)Traceback (most recent call last):
-  File "match_stats.py", line 51, in <module>
-    match_stats_data_scrape += asynchronous(match_stats_url_suffixes, scrape_match_stats, tourney_index, tourney_slug)
-  File "/Users/kevin/Desktop/atp_scrape/final/functions.py", line 567, in asynchronous
-    scrape_match_stats_output += future.result()
-  File "/Library/Python/2.7/site-packages/concurrent/futures/_base.py", line 422, in result
-    return self.__get_result()
-  File "/Library/Python/2.7/site-packages/concurrent/futures/_base.py", line 381, in __get_result
-    raise exception_type, self._exception, self._traceback
-requests.exceptions.ConnectionError: None: Max retries exceeded with url: /en/tournaments/gerry-weber-open/500/2012/match-stats/k776/bg52/match-stats (Caused by redirect)
+Index    Tourney slug           Matches
+-----    ------------           -------
+0        adelaide               30/30 (100%)
+1        wellington             30/30 (100%)
+2        sydney                 31/31 (100%)
+3        auckland               29/29 (100%)
+4        australian-open        127/127 (100%)
+5        milan                  29/31 (94%)
+6        san-francisco          30/31 (97%)
+7        guaruja                30/31 (97%)
+8        philadelphia           47/47 (100%)
+9        brussels               31/31 (100%)
+10       stuttgart              31/31 (100%)
+11       memphis                47/47 (100%)
+12       rotterdam              31/31 (100%)
+13       chicago                30/30 (100%)
+14       indian-wells           54/54 (100%)
+15       copenhagen             31/31 (100%)
+16       miami                  95/95 (100%)
+17       estoril                31/31 (100%)
+18       hong-kong              31/31 (100%)
+19       orlando                31/31 (100%)
+20       tokyo                  53/54 (98%)
+21       barcelona              54/54 (100%)
+22       nice                   31/31 (100%)
+23       seoul                  31/31 (100%)
+24       monte-carlo            54/54 (100%)
+25       singapore              31/31 (100%)
+26       madrid                 31/31 (100%)
+27       munich                 31/31 (100%)
+28       tampa                  29/30 (97%)
+29       hamburg                55/55 (100%)
+30       charlotte              1/30 (3%)
+31       rome                   59/59 (100%)
+32       umag                   29/31 (94%)
+33       dusseldorf             Match structure/stats URL problem
+34       bologna                30/30 (100%)
+35       roland-garros          47/47 (100%)
+36       london                 53/53 (100%)
+37       florence               30/31 (97%)
+38       rosmalen               31/31 (100%)
+39       genova                 31/31 (100%)
+40       manchester             31/31 (100%)
+41       wimbledon              121/121 (100%)
+42       gstaad                 30/30 (100%)
+43       bastad                 31/31 (100%)
+44       newport                29/31 (94%)
+45       stuttgart              47/47 (100%)
+46       washington             55/55 (100%)
+47       montreal               55/55 (100%)
+48       hilversum              30/30 (100%)
+49       kitzbuhel              47/47 (100%)
+50       los-angeles            31/31 (100%)
+51       san-marino             29/30 (97%)
+52       cincinnati             55/55 (100%)
+53       prague                 30/31 (97%)
+54       indianapolis           55/55 (100%)
+55       new-haven              54/54 (100%)
+56       long-island            31/31 (100%)
+57       schenectady            30/31 (97%)
+58       us-open                125/125 (100%)
+59       bordeaux               31/31 (100%)
+60       brasilia               46/47 (98%)
+61       geneva                 31/31 (100%)
+62       basel                  31/31 (100%)
+63       palermo                31/31 (100%)
+64       brisbane               30/31 (97%)
+65       sydney                 47/47 (100%)
+66       toulouse               31/31 (100%)
+67       athens                 30/31 (97%)
+68       tokyo                  45/47 (96%)
+69       berlin                 31/31 (100%)
+70       tel-aviv               30/31 (97%)
+71       lyon                   31/31 (100%)
+72       vienna                 31/31 (100%)
+73       stockholm              47/47 (100%)
+74       guaruja                31/31 (100%)
+75       paris                  46/46 (100%)
+76       buzios                 31/31 (100%)
+77       birmingham             31/31 (100%)
+78       moscow                 30/30 (100%)
+79       sao-paulo              29/29 (100%)
+80       atp-tour-world-championship    1/1 (100%)
+81       atp-tour-world-doubles-championship    Match structure/stats URL problem
+82       munich                 Match structure/stats URL problem
 
-real	0m25.230s
-user	0m3.706s
-sys	0m0.827s
-```
-When this happens, I recommend waiting for ~5 minutes before running the script starting on the index of the tournament that didn't reach 100% completion in scraping.
-
-#### C2b. Example error 2: Parsing error
-Example command line usage and output is as follows, with the resulting parsing error:
-```
-$ time python match_stats.py 2013 0
-
-Collecting match stats data for 64 tournaments:
-
-Index    Tourney slug       Matches
------    ------------       -------
-0        brisbane           55/55 (100%)
-1        chennai            55/55 (100%)
-2        doha               59/59 (100%)
-3        auckland           53/53 (100%)
-4        sydney             55/55 (100%)
-5        australian-open    239/239 (100%)
-6        montpellier        55/55 (100%)
-7        vina-del-mar       54/54 (100%)
-8        zagreb             55/55 (100%)
-9        rotterdam          43/43 (100%)
-10       san-jose           55/55 (100%)
-11       sao-paulo          55/55 (100%)
-12       buenos-aires       59/59 (100%)
-13       marseille          55/55 (100%)
-14       memphis            42/42 (100%)
-15       acapulco           43/43 (100%)
-16       delray-beach       28/59 (47%)Exception in thread Thread-17:
-Traceback (most recent call last):
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.py", line 808, in __bootstrap_inner
-    self.run()
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.py", line 761, in run
-    self.__target(*self.__args, **self.__kwargs)
-  File "/Library/Python/2.7/site-packages/concurrent/futures/process.py", line 208, in _queue_management_worker
-    result_item = result_queue.get(block=True)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/queues.py", line 117, in get
-    res = self._recv()
-  File "parser.pxi", line 18, in lxml.etree.ParseError.__init__ (src/lxml/lxml.etree.c:80812)
-TypeError: ('__init__() takes exactly 5 positional arguments (2 given)', <class 'lxml.etree.XMLSyntaxError'>, (u'line 1672: Element script embeds close tag',))
-
-^Z
-[1]+  Stopped                 python match_stats.py 2013 0
-
-real	2m46.015s
-user	0m0.000s
-sys	0m0.001s
-```
-
-<div id="part-c3"></div>
-
-For errors like this you will need to kill the process id's before resuming scraping on the index of the tournament that didn't reach 100% completion in scraping.
-
-### C3. Asynchronous scraping issues [^](#contents)
-
-Because this script scrapes asynchronously (you can adjust the max number of workers in the <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/functions.py#L560" target="_blank">functions.py</a> file), you will run into connection problems as the ATP servers are being hammered by the script. Always remember to kill the process id (PID) after you are forced to stop the script, for example:
-
-```
-$ ps
-  PID TTY           TIME CMD
-30062 ttys000    0:00.46 -bash
-34562 ttys000    0:01.59 python match_stats.py 2013 0
-34734 ttys000    0:00.09 python match_stats.py 2013 0
-34735 ttys000    0:00.07 python match_stats.py 2013 0
-34736 ttys000    0:00.09 python match_stats.py 2013 0
-34737 ttys000    0:00.09 python match_stats.py 2013 0
-34738 ttys000    0:00.09 python match_stats.py 2013 0
-34739 ttys000    0:00.07 python match_stats.py 2013 0
-34740 ttys000    0:00.09 python match_stats.py 2013 0
-34741 ttys000    0:00.09 python match_stats.py 2013 0
-34742 ttys000    0:00.09 python match_stats.py 2013 0
-34743 ttys000    0:00.09 python match_stats.py 2013 0
-30066 ttys001    0:00.03 -bash
-30140 ttys002    0:00.01 -bash
-30144 ttys002    0:00.05 /Applications/Postgres.app/Contents/Versions/9.3/bin/psql -p5432
-
-$ kill 34562
-[1]+  Terminated: 15          python match_stats.py 2013 0
-
-$ ps
-  PID TTY           TIME CMD
-30062 ttys000    0:00.46 -bash
-30066 ttys001    0:00.03 -bash
-30140 ttys002    0:00.01 -bash
-30144 ttys002    0:00.05 /Applications/Postgres.app/Contents/Versions/9.3/bin/psql -p5432
+real	36m11.241s
+user	2m13.432s
+sys	  0m4.073s
 ```
