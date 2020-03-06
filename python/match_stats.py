@@ -479,9 +479,6 @@ for i in range(int(start_index), int(end_index)):
                     loser_url = ''
                     loser_slug = ''
                     loser_player_id = ''
-
-                # Match id
-                match_id = tourney_year + "-" + tourney_id + "-" + round_match_id + "-" + winner_player_id + "-" + loser_player_id
                 
                 # Match stats URL
                 match_stats_url_xpath = "//table[contains(@class, 'day-table')]/tbody[" + str(j + 1) + "]/tr[" + str(k + 1) + "]/td[contains(@class, 'day-table-score')]/a/@href"
