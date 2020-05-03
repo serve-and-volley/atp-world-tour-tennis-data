@@ -48,13 +48,19 @@ def tournaments(year):
     tourney_titles_parsed = xpath_parse(year_tree, tourney_titles_xpath)
     tourney_titles_cleaned = regex_strip_array(tourney_titles_parsed)
 
+    # If no tournaments found in <span> tags try find in <a> tags
+    if len(tourney_titles_cleaned) == 0:
+        tourney_titles_xpath = "//a[contains(@class, 'tourney-title')]/text()"
+        tourney_titles_parsed = xpath_parse(year_tree, tourney_titles_xpath)
+        tourney_titles_cleaned = regex_strip_array(tourney_titles_parsed)
+
     tourney_count = len(tourney_titles_cleaned)
 
     # Iterate through each row in the tournaments table
     output = []
     for i in range(0, tourney_count):
         tourney_order = i + 1
-        
+
         # Tournament type
         tourney_type_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[2]/img[contains(@alt, 'tournament badge')]/@src"
         tourney_type_parsed = xpath_parse(year_tree, tourney_type_xpath)
@@ -77,6 +83,12 @@ def tournaments(year):
         tourney_info_parsed = xpath_parse(year_tree, tourney_info_xpath)
         tourney_info_cleaned = regex_strip_array(tourney_info_parsed)
 
+        # If tourney name not found in <span> tags try find in <a> tags
+        if len(tourney_info_cleaned) == 2:
+            tourney_info_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[3]/a/text()"
+            tourney_info_parsed = xpath_parse(year_tree, tourney_info_xpath)
+            tourney_info_cleaned = regex_strip_array(tourney_info_parsed) + tourney_info_cleaned
+
         #tourney_name = tourney_info_cleaned[0].encode('utf-8')
         tourney_name = tourney_info_cleaned[0]
         #tourney_location = tourney_info_cleaned[1].encode('utf-8')
@@ -97,13 +109,13 @@ def tournaments(year):
         tourney_singles_draw_parsed = xpath_parse(year_tree, tourney_singles_draw_xpath)
         tourney_singles_draw_cleaned = regex_strip_array(tourney_singles_draw_parsed)
         tourney_singles_draw = int(tourney_singles_draw_cleaned[0])
-        
+
         # Tournament doubles draw
         tourney_doubles_draw_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[4]/div/div[contains(., 'DBL')]/a[2]/span/text()"
         tourney_doubles_draw_parsed = xpath_parse(year_tree, tourney_doubles_draw_xpath)
         tourney_doubles_draw_cleaned = regex_strip_array(tourney_doubles_draw_parsed)
         tourney_doubles_draw = int(tourney_doubles_draw_cleaned[0])
-        
+
         # Tournament conditions
         tourney_conditions_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[5]/div/div[contains(., 'Outdoor') or contains(., 'Indoor')]/text()[normalize-space()]"
         tourney_conditions_parsed = xpath_parse(year_tree, tourney_conditions_xpath)
@@ -112,7 +124,7 @@ def tournaments(year):
             tourney_conditions = tourney_conditions_cleaned[0].strip()
         except Exception:
             tourney_conditions = ''
-        
+
         # Tourneament surface
         tourney_surface_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[5]/div/div[contains(., 'Outdoor') or contains(., 'Indoor')]/span/text()[normalize-space()]"
         tourney_surface_parsed = xpath_parse(year_tree, tourney_surface_xpath)
@@ -120,14 +132,14 @@ def tournaments(year):
         try:
             tourney_surface = tourney_surface_cleaned[0].strip()
         except Exception:
-            tourney_surface = ''                
+            tourney_surface = ''
 
         # Tournament total financial commitment
         tourney_fin_commit_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[6]/div/div/span/text()"
         tourney_fin_commit_parsed = xpath_parse(year_tree, tourney_fin_commit_xpath)
         tourney_fin_commit_cleaned = regex_strip_array(tourney_fin_commit_parsed)
-        
-        if len(tourney_fin_commit_cleaned) == 0: 
+
+        if len(tourney_fin_commit_cleaned) == 0:
             tourney_fin_commit_raw = ''
             tourney_fin_commit = ''
             currency = ''
@@ -148,14 +160,14 @@ def tournaments(year):
             tourney_fin_commit = tourney_fin_commit.replace('A','')
             tourney_fin_commit = int(tourney_fin_commit)
 
-        else: 
+        else:
             tourney_fin_commit_raw = 'PROBLEM'
             tourney_fin_commit = ''
             currency = ''
 
         # Tournament results
         tourney_details_url_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[8]/a/@href"
-        tourney_details_url_parsed = xpath_parse(year_tree, tourney_details_url_xpath)        
+        tourney_details_url_parsed = xpath_parse(year_tree, tourney_details_url_xpath)
 
         if len(tourney_details_url_parsed) > 0:
             tourney_url_suffix = tourney_details_url_parsed[0]
@@ -165,18 +177,18 @@ def tournaments(year):
         else:
             tourney_url_suffix = ''
             tourney_slug = ''
-            tourney_id = ''  
+            tourney_id = ''
 
         # Singles winner info
         singles_winner_name_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[7]/div[contains(., 'SGL:')]/a/text()"
         singles_winner_name_parsed = xpath_parse(year_tree, singles_winner_name_xpath)
         singles_winner_name_cleaned = regex_strip_array(singles_winner_name_parsed)
 
-        if len(singles_winner_name_cleaned) > 0: 
+        if len(singles_winner_name_cleaned) > 0:
             singles_winner_name = singles_winner_name_cleaned[0]
             singles_winner_url_xpath = "//tr[@class = 'tourney-result'][" + str(i + 1) + "]/td/div[contains(., 'SGL:')]/a/@href"
             singles_winner_url_parsed = xpath_parse(year_tree, singles_winner_url_xpath)
-            if len(singles_winner_url_parsed) > 0: 
+            if len(singles_winner_url_parsed) > 0:
                 singles_winner_url = singles_winner_url_parsed[0]
                 singles_winner_url_split = singles_winner_url.split('/')
                 singles_winner_player_slug = singles_winner_url_split[3]
@@ -184,7 +196,7 @@ def tournaments(year):
             else:
                 singles_winner_url = ''
                 singles_winner_player_slug = ''
-                singles_winner_player_id = ''            
+                singles_winner_player_id = ''
         else: # Case where tourney missing winner name but has a tourney URL
             if tourney_url_suffix != '':
                 # Check tourney URL for Finals match winner
@@ -200,23 +212,23 @@ def tournaments(year):
                     singles_winner_url = missing_winner_url_parsed[0]
                     singles_winner_url_split = singles_winner_url.split('/')
                     singles_winner_player_slug = singles_winner_url_split[3]
-                    singles_winner_player_id = singles_winner_url_split[4]                    
+                    singles_winner_player_id = singles_winner_url_split[4]
                 else:
                     singles_winner_url = ''
                     singles_winner_player_slug = ''
-                    singles_winner_player_id = ''          
+                    singles_winner_player_id = ''
             else: # Case where tourney is missing URL
                 singles_winner_name = ''
                 singles_winner_url = ''
                 singles_winner_player_slug = ''
-                singles_winner_player_id = '' 
+                singles_winner_player_id = ''
 
         # Doubles winners info
         doubles_winners_name_xpath = "//tr[contains(@class, 'tourney-result')][" + str(i + 1) + "]/td[7]/div[contains(., 'DBL:')]/a/text()"
         doubles_winners_name_parsed = xpath_parse(year_tree, doubles_winners_name_xpath)
         doubles_winners_name_cleaned = regex_strip_array(doubles_winners_name_parsed)
 
-        
+
         if len(doubles_winners_name_cleaned) == 2:
             doubles_winner_1_name = doubles_winners_name_cleaned[0]
             doubles_winner_2_name = doubles_winners_name_cleaned[1]
@@ -248,8 +260,8 @@ def tournaments(year):
 
             doubles_winner_2_url = ''
             doubles_winner_2_player_slug = ''
-            doubles_winner_2_player_id = ''   
-                                    
+            doubles_winner_2_player_id = ''
+
         else:
             doubles_winner_1_url = ''
             doubles_winner_1_player_slug = ''
@@ -257,15 +269,15 @@ def tournaments(year):
 
             doubles_winner_2_url = ''
             doubles_winner_2_player_slug = ''
-            doubles_winner_2_player_id = ''   
-        
+            doubles_winner_2_player_id = ''
+
         # Store data
         tourney_year_id = str(year) + '-' + tourney_id
         output.append([tourney_year_id, tourney_order, tourney_type, tourney_name, tourney_id, tourney_slug, tourney_location, tourney_date, year, tourney_month, tourney_day, tourney_singles_draw, tourney_doubles_draw, tourney_conditions, tourney_surface, tourney_fin_commit_raw, currency, tourney_fin_commit, tourney_url_suffix, singles_winner_name, singles_winner_url, singles_winner_player_slug, singles_winner_player_id, doubles_winner_1_name, doubles_winner_1_url, doubles_winner_1_player_slug, doubles_winner_1_player_id, doubles_winner_2_name, doubles_winner_2_url, doubles_winner_2_player_slug, doubles_winner_2_player_id])
-    
+
     # Output progress
     print(year + '    ' + str(tourney_count))
-    
+
     # Output data
     return output
 
