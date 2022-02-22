@@ -73,6 +73,7 @@ def tournaments(year):
             elif tourney_type_parsed[0] == '/assets/atpwt/images/tournament/badges/categorystamps_250.png': tourney_type = "ATP 250"
             elif tourney_type_parsed[0] == '/assets/atpwt/images/tournament/badges/categorystamps_lvr.png': tourney_type = "Laver Cup"
             elif tourney_type_parsed[0] == '/assets/atpwt/images/tournament/badges/categorystamps_nextgen.svg': tourney_type = "Next Gen Finals"
+            elif tourney_type_parsed[0] == '/assets/atpwt/images/tournament/badges/categorystamps_atpcup.svg': tourney_type = "ATP Cup"
             else:
                 tourney_type = 'undefined'
         else:
