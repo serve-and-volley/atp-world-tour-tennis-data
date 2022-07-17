@@ -34,7 +34,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: runPythonScript
       run: |
-        python python/match_stats.py
+        python python/match_stats.py 2020
+        python python/match_stats.py 2021
+        python python/match_stats.py 2022
     - name: commit files
       run: |
           git config --local user.email "action@github.com"
@@ -47,10 +49,10 @@ jobs:
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
-    - name: Update tournaments
-      uses: test-room-7/action-update-file@v1
-      with:
-        # Include all JS files from the `dist` directory
-        file-path: csv/3_match_stats/*.csv
-        commit-msg: Update resources
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Update tournaments
+    #  uses: test-room-7/action-update-file@v1
+    #  with:
+    #    # Include all JS files from the `dist` directory
+    #    file-path: csv/3_match_stats/*.csv
+    #    commit-msg: Update resources
+    #    github-token: ${{ secrets.GITHUB_TOKEN }}
