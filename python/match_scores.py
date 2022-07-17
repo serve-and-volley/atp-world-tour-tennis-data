@@ -3,6 +3,7 @@ from lxml import html
 import requests
 import re
 import csv
+from datetime import date
 
 # # # # # # # # #
 #               #
