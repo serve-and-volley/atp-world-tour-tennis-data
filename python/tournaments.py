@@ -3,7 +3,7 @@ from lxml import html
 import requests
 import re
 import csv
-
+from datetime import date
 # # # # # # # # #
 #               #
 #   FUNCTIONS   #
@@ -289,8 +289,8 @@ def tournaments(year):
 # # # # # # # # # # #
 
 # Command line input
-start_year = str(sys.argv[1])
-end_year = str(sys.argv[2])
+start_year = 2020
+end_year = date.today().year
 
 # Iterate through the years and scrape tourney data
 
