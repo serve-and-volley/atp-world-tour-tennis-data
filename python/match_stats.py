@@ -528,7 +528,8 @@ for i in range(int(start_index), int(end_index)):
     sys.stdout.write('\n')
 
     # Output to CSV
-    filename = "match_stats_" + year + "_" + start_index + ".csv"
+    #filename = "match_stats_" + year + "_" + start_index + ".csv"
+    filename = f'csv/3_match_stats/match_stats_{year}.csv'
     array2csv(match_stats_data_scrape, filename)
 
 
