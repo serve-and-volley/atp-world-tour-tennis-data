@@ -6,10 +6,10 @@ name: Update Match Stats
 on:
   schedule:
     - cron: "0 2 * * *" 
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  #push:
+  #  branches: [ master ]
+  #pull_request:
+  #  branches: [ master ]
 jobs:
   build:
 
