@@ -6,10 +6,10 @@ name: Update Match Scores
 on:
   schedule:
     - cron: "0 1 * * *" 
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  #push:
+  #  branches: [ master ]
+  #pull_request:
+  #  branches: [ master ]
 jobs:
   build:
 
