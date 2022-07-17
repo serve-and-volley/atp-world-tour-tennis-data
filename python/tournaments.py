@@ -305,5 +305,5 @@ for h in range(int(start_year), int(end_year) + 1):
 
 # Output to CSV
 #filename = 'tournaments_' + start_year + '-' + end_year + '.csv'
-filename = f'tournaments_{start_year}-{end_year}.csv'
+filename = f'csv/1_tournaments/tournaments_{start_year}-{end_year}.csv'
 array2csv(tourney_data, filename)
