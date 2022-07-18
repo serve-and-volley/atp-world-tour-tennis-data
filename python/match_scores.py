@@ -3,6 +3,7 @@ from lxml import html
 import requests
 import re
 import csv
+from datetime import date
 
 # # # # # # # # #
 #               #
@@ -406,8 +407,8 @@ def scrape_tourney(tourney_url_suffix):
 # # # # # # # # # # #
 
 # Command line input
-start_year = str(sys.argv[1])
-end_year = str(sys.argv[2])
+start_year = 2020
+end_year = date.today().year
 
 # STEP 1: Scrape year page
 tourney_match = []
@@ -450,5 +451,6 @@ for h in range(int(start_year), int(end_year) + 1):
             if len(match_data_scrape) == 0: print(year + '    ' + '\x1b[1;31m' + str(tourney_data_scrape[i][1]) + spacing1 + '    ' + tourney_data_scrape[i][2] + spacing2 + ' ' + str(len(match_data_scrape)) + '\x1b[0m')
             else: print(year + '    ' + str(tourney_data_scrape[i][1]) + spacing1 + '    ' + tourney_data_scrape[i][2] + spacing2 + ' ' + str(len(match_data_scrape)))
 
-        filename = "match_scores_" + start_year + "-" + end_year + '.csv'
+        #filename = "match_scores_" + start_year + "-" + end_year + '.csv'
+        filename = f'csv/2_match_scores/match_scores_{start_year}-{end_year}.csv'
         array2csv(tourney_match, filename)
