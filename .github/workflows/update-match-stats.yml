@@ -34,8 +34,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: runPythonScript
       run: |
-        python python/match_stats.py 2020
-        python python/match_stats.py 2021
+        #python python/match_stats.py 2020
+        #python python/match_stats.py 2021
         python python/match_stats.py 2022
     - name: commit files
       run: |
