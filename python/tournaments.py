@@ -3,7 +3,7 @@ from lxml import html
 import requests
 import re
 import csv
-from datetime import date
+
 # # # # # # # # #
 #               #
 #   FUNCTIONS   #
@@ -289,8 +289,8 @@ def tournaments(year):
 # # # # # # # # # # #
 
 # Command line input
-start_year = 2020
-end_year = date.today().year
+start_year = str(sys.argv[1])
+end_year = str(sys.argv[2])
 
 # Iterate through the years and scrape tourney data
 
@@ -304,6 +304,5 @@ for h in range(int(start_year), int(end_year) + 1):
     tourney_data += tournaments(year)
 
 # Output to CSV
-#filename = 'tournaments_' + start_year + '-' + end_year + '.csv'
-filename = f'csv/1_tournaments/tournaments_{start_year}-{end_year}.csv'
+filename = 'tournaments_' + start_year + '-' + end_year + '.csv'
 array2csv(tourney_data, filename)
