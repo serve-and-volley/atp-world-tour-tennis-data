@@ -2,7 +2,7 @@
 
 # ATP World Tour tennis data
 
-This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of October 2017. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
+This repository contains Python scripts that scrape tennis data from the <a href="http://www.atpworldtour.com/" target="_blank">ATP World Tour</a> website, as of August 2023. Note that if the site layout is subsequently redesigned, then these scripts will no longer work.
 
 ### License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
@@ -14,10 +14,9 @@ This repository contains Python scripts that scrape tennis data from the <a href
 - B. [Scraping match scores for each tournament](#part-b)
   - B1. [The `match_scores.py` script](#part-b1)
   - B2. [Example usage](#part-b2)
-- C. [Scraping match stats for each match](#part-c)
+- C. [Scraping match stats for matches on and after 2021-10-18 (Moscow ATP 250)](#part-c)
   - C1. [The `match_stats.py` script](#part-c1)
   - C2. [Example usage](#part-c2)
-  - C3. [Asynchronous scraping issues](#part-c3)
 
 <div id="part-a"></div>
 
@@ -196,9 +195,8 @@ sys     0m0.211s
 
 <div id="part-c"></div>
 
-## C. Scraping match stats for each match
-
-<div id="part-c1"></div>
+## C. Scraping match stats for all Grand Slam matches and ATP matches before 2021-10-18 (Moscow ATP 250)
+<div id="part-d1"></div>
 
 ### C1. The `match_stats.py` script [^](#contents)
 The following Python script:
@@ -266,113 +264,216 @@ loser_return_points_total
 loser_total_points_won
 loser_total_points_total
 ```
+as well as the following **extended data**:
+```
+match_id
+tourney_slug
+match_stats_url_suffix
+winner_player_id
+winner_net_points_won
+winner_net_points_total
+winner_winners
+winner_unforced_errors
+winner_max_service_speed_kmh
+winner_max_service_speed_mph
+winner_avg_1st_serve_speed_kmh
+winner_avg_1st_serve_speed_mph
+winner_avg_2nd_serve_speed_kmh
+winner_avg_2nd_serve_speed_mph
+loser_player_id
+loser_net_points_won
+loser_net_points_total
+loser_winners
+loser_unforced_errors
+loser_max_service_speed_kmh
+loser_max_service_speed_mph
+loser_avg_1st_serve_speed_kmh
+loser_avg_1st_serve_speed_mph
+loser_avg_2nd_serve_speed_kmh
+loser_avg_2nd_serve_speed_mph
+```
 
 from pages like the following:
-* http://www.atpworldtour.com/en/scores/2017/580/MS001/match-stats
+* [https://www.atptour.com/en/scores/stats-centre/archive/2023/2843/ms001](https://www.atptour.com/en/scores/stats-centre/archive/2023/2843/ms001)
 
-![image](https://user-images.githubusercontent.com/532545/76129824-8bb8b700-5fd6-11ea-9eea-ac60c5d5942d.png)
+![image](https://github.com/serve-and-volley/atp-world-tour-tennis-data/assets/532545/deda55d1-2f7e-4936-80f4-d321b0fa57da)
 
-The CSV files for all match stats data from 1991-2016 is found in:
+The CSV files for all match stats data from 1991-2022 is found in:
 * https://github.com/serve-and-volley/atp-world-tour-tennis-data/tree/master/csv/3_match_stats
 
 [Note: the ATP did not start keeping match stats data until 1991.]
 
 <div id="part-c2"></div>
 
-### C2. Example usage [^](#contents)
+### C1. Example usage [^](#contents)
 Example command line usage and output is as follows:
 ```
-$ time python3 match_stats.py 1991
+$ time python3 match_stats.py
 
-Collecting match stats data for 83 tournaments:
+Enter year: 2023
 
-Index    Tourney slug           Matches
------    ------------           -------
-0        adelaide               30/30 (100%)
-1        wellington             30/30 (100%)
-2        sydney                 31/31 (100%)
-3        auckland               29/29 (100%)
-4        australian-open        127/127 (100%)
-5        milan                  29/31 (94%)
-6        san-francisco          30/31 (97%)
-7        guaruja                30/31 (97%)
-8        philadelphia           47/47 (100%)
-9        brussels               31/31 (100%)
-10       stuttgart              31/31 (100%)
-11       memphis                47/47 (100%)
-12       rotterdam              31/31 (100%)
-13       chicago                30/30 (100%)
-14       indian-wells           54/54 (100%)
-15       copenhagen             31/31 (100%)
-16       miami                  95/95 (100%)
-17       estoril                31/31 (100%)
-18       hong-kong              31/31 (100%)
-19       orlando                31/31 (100%)
-20       tokyo                  53/54 (98%)
-21       barcelona              54/54 (100%)
-22       nice                   31/31 (100%)
-23       seoul                  31/31 (100%)
-24       monte-carlo            54/54 (100%)
-25       singapore              31/31 (100%)
-26       madrid                 31/31 (100%)
-27       munich                 31/31 (100%)
-28       tampa                  29/30 (97%)
-29       hamburg                55/55 (100%)
-30       charlotte              1/30 (3%)
-31       rome                   59/59 (100%)
-32       umag                   29/31 (94%)
-33       dusseldorf             Match structure/stats URL problem
-34       bologna                30/30 (100%)
-35       roland-garros          47/47 (100%)
-36       london                 53/53 (100%)
-37       florence               30/31 (97%)
-38       rosmalen               31/31 (100%)
-39       genova                 31/31 (100%)
-40       manchester             31/31 (100%)
-41       wimbledon              121/121 (100%)
-42       gstaad                 30/30 (100%)
-43       bastad                 31/31 (100%)
-44       newport                29/31 (94%)
-45       stuttgart              47/47 (100%)
-46       washington             55/55 (100%)
-47       montreal               55/55 (100%)
-48       hilversum              30/30 (100%)
-49       kitzbuhel              47/47 (100%)
-50       los-angeles            31/31 (100%)
-51       san-marino             29/30 (97%)
-52       cincinnati             55/55 (100%)
-53       prague                 30/31 (97%)
-54       indianapolis           55/55 (100%)
-55       new-haven              54/54 (100%)
-56       long-island            31/31 (100%)
-57       schenectady            30/31 (97%)
-58       us-open                125/125 (100%)
-59       bordeaux               31/31 (100%)
-60       brasilia               46/47 (98%)
-61       geneva                 31/31 (100%)
-62       basel                  31/31 (100%)
-63       palermo                31/31 (100%)
-64       brisbane               30/31 (97%)
-65       sydney                 47/47 (100%)
-66       toulouse               31/31 (100%)
-67       athens                 30/31 (97%)
-68       tokyo                  45/47 (96%)
-69       berlin                 31/31 (100%)
-70       tel-aviv               30/31 (97%)
-71       lyon                   31/31 (100%)
-72       vienna                 31/31 (100%)
-73       stockholm              47/47 (100%)
-74       guaruja                31/31 (100%)
-75       paris                  46/46 (100%)
-76       buzios                 31/31 (100%)
-77       birmingham             31/31 (100%)
-78       moscow                 30/30 (100%)
-79       sao-paulo              29/29 (100%)
-80       atp-tour-world-championship    1/1 (100%)
-81       atp-tour-world-doubles-championship    Match structure/stats URL problem
-82       munich                 Match structure/stats URL problem
+67/50 tournament stats available
 
-real	36m11.241s
-user	2m13.432s
-sys     0m4.073s
+ 1 - 2022.12.29 - United Cup
+ 2 - 2023.01.01 - Adelaide International 1
+ 3 - 2023.01.02 - Tata Open Maharashtra
+ 4 - 2023.01.09 - ASB Classic
+ 5 - 2023.01.09 - Adelaide International 2
+ 6 - 2023.01.16 - Australian Open
+ 7 - 2023.02.06 - Dallas Open
+ 8 - 2023.02.06 - Cordoba Open
+ 9 - 2023.02.06 - Open Sud de France – Montpellier
+10 - 2023.02.13 - ABN AMRO Open
+11 - 2023.02.13 - Delray Beach Open
+12 - 2023.02.13 - Argentina Open
+13 - 2023.02.20 - Rio Open presented by Claro
+14 - 2023.02.20 - Qatar ExxonMobil Open
+15 - 2023.02.20 - Open 13 Provence
+16 - 2023.02.27 - Dubai Duty Free Tennis Championships
+17 - 2023.02.27 - Abierto Mexicano Telcel presentado por HSBC
+18 - 2023.02.27 - Movistar Chile Open
+19 - 2023.03.08 - BNP Paribas Open
+20 - 2023.03.22 - Miami Open presented by Itau
+21 - 2023.04.03 - Fayez Sarofim & Co. U.S. Men's Clay Court Championship
+22 - 2023.04.03 - Grand Prix Hassan II
+23 - 2023.04.03 - Millennium Estoril Open
+24 - 2023.04.09 - Rolex Monte-Carlo Masters
+25 - 2023.04.17 - Barcelona Open Banc Sabadell
+26 - 2023.04.17 - BMW Open by American Express
+27 - 2023.04.17 - Srpska Open
+28 - 2023.04.26 - Mutua Madrid Open
+29 - 2023.05.10 - Internazionali BNL d'Italia
+30 - 2023.05.21 - Gonet Geneva Open
+31 - 2023.05.21 - Open Parc Auvergne-Rhone-Alpes Lyon
+32 - 2023.05.28 - Roland Garros
+33 - 2023.06.12 - BOSS OPEN
+34 - 2023.06.12 - Libema Open
+35 - 2023.06.19 - Cinch Championships
+36 - 2023.06.19 - Terra Wortmann Open
+37 - 2023.06.24 - Mallorca Championships
+38 - 2023.06.26 - Rothesay International
+39 - 2023.07.03 - Wimbledon
+40 - 2023.07.17 - Infosys Hall of Fame Open
+41 - 2023.07.17 - EFG Swiss Open Gstaad
+42 - 2023.07.17 - Nordea Open
+43 - 2023.07.24 - Hamburg European Open
+44 - 2023.07.24 - Atlanta Open
+45 - 2023.07.24 - Plava Laguna Croatia Open Umag
+46 - 2023.07.31 - Mubadala Citi DC Open
+47 - 2023.07.31 - Mifel Tennis Open by Telcel Oppo
+48 - 2023.07.31 - Generali Open
+49 - 2023.08.07 - National Bank Open Presented by Rogers
+50 - 2023.08.13 - Western & Southern Open
+51 - 2023.08.20 - Winston-Salem Open
+52 - 2023.08.28 - US Open
+53 - 2023.09.20 - Chengdu Open
+54 - 2023.09.20 - Zhuhai Championships
+55 - 2023.09.22 - Laver Cup
+56 - 2023.09.27 - Astana Open
+57 - 2023.09.28 - China Open
+58 - 2023.10.04 - Rolex Shanghai Masters
+59 - 2023.10.16 - Kinoshita Group Japan Open Tennis Championships
+60 - 2023.10.16 - BNP Paribas Nordic Open
+61 - 2023.10.16 - European Open
+62 - 2023.10.23 - Erste Bank Open
+63 - 2023.10.23 - Swiss Indoors Basel
+64 - 2023.10.30 - Rolex Paris Masters
+65 - 2023.11.05 - Moselle Open
+66 - 2023.11.05 - Tel Aviv Watergen Open
+67 - 2023.11.12 - Nitto ATP Finals
+
+Enter tourney number: 2
+
+1 - adelaide - 2023-2843-ms001-7-1-d643-k0ah - Final
+2 - adelaide - 2023-2843-ms002-6-2-d643-mm58 - Semifinals
+3 - adelaide - 2023-2843-ms003-6-1-k0ah-n732 - Semifinals
+4 - adelaide - 2023-2843-ms004-5-4-d643-su55 - Quarterfinals
+5 - adelaide - 2023-2843-ms005-5-3-mm58-ke29 - Quarterfinals
+6 - adelaide - 2023-2843-ms006-5-2-k0ah-s0ag - Quarterfinals
+7 - adelaide - 2023-2843-ms007-5-1-n732-p09z - Quarterfinals
+8 - adelaide - 2023-2843-ms008-4-8-d643-hb64 - Round of 16
+9 - adelaide - 2023-2843-ms010-4-7-mm58-ki95 - Round of 16
+10 - adelaide - 2023-2843-ms012-4-6-s0ag-kd46 - Round of 16
+11 - adelaide - 2023-2843-ms009-4-5-su55-sx50 - Round of 16
+12 - adelaide - 2023-2843-ms011-4-4-ke29-d0co - Round of 16
+13 - adelaide - 2023-2843-ms013-4-3-k0ah-bd06 - Round of 16
+14 - adelaide - 2023-2843-ms014-4-2-n732-mk66 - Round of 16
+15 - adelaide - 2023-2843-ms015-4-1-p09z-gc88 - Round of 16
+16 - adelaide - 2023-2843-ms016-3-16-d643-lb66 - Round of 32
+17 - adelaide - 2023-2843-ms031-3-15-p09z-ag37 - Round of 32
+18 - adelaide - 2023-2843-ms020-3-14-mm58-su87 - Round of 32
+19 - adelaide - 2023-2843-ms027-3-13-bd06-re44 - Round of 32
+20 - adelaide - 2023-2843-ms028-3-12-n732-r0dg - Round of 32
+21 - adelaide - 2023-2843-ms024-3-11-s0ag-e831 - Round of 32
+22 - adelaide - 2023-2843-ms019-3-10-su55-h0bh - Round of 32
+23 - adelaide - 2023-2843-ms023-3-9-ke29-cg04 - Round of 32
+24 - adelaide - 2023-2843-ms022-3-8-d0co-kf17 - Round of 32
+25 - adelaide - 2023-2843-ms030-3-7-gc88-g628 - Round of 32
+26 - adelaide - 2023-2843-ms017-3-6-hb64-tc61 - Round of 32
+27 - adelaide - 2023-2843-ms021-3-5-ki95-o483 - Round of 32
+28 - adelaide - 2023-2843-ms025-3-4-kd46-c0bc - Round of 32
+29 - adelaide - 2023-2843-ms026-3-3-k0ah-mc10 - Round of 32
+30 - adelaide - 2023-2843-ms029-3-2-mk66-ge33 - Round of 32
+31 - adelaide - 2023-2843-ms018-3-1-sx50-y268 - Round of 32
+32 - adelaide - 2023-2843-qs004-2-4-kf17-da81 - 2nd Round Qualifying
+33 - adelaide - 2023-2843-qs006-2-3-sx50-pd07 - 2nd Round Qualifying
+34 - adelaide - 2023-2843-qs007-2-2-h0bh-d994 - 2nd Round Qualifying
+35 - adelaide - 2023-2843-qs005-2-1-p09z-wb32 - 2nd Round Qualifying
+36 - adelaide - 2023-2843-qs008-1-8-kf17-tb69 - 1st Round Qualifying
+37 - adelaide - 2023-2843-qs010-1-7-wb32-hh26 - 1st Round Qualifying
+38 - adelaide - 2023-2843-qs012-1-6-sx50-h997 - 1st Round Qualifying
+39 - adelaide - 2023-2843-qs014-1-5-h0bh-bk24 - 1st Round Qualifying
+40 - adelaide - 2023-2843-qs009-1-4-da81-w0c4 - 1st Round Qualifying
+41 - adelaide - 2023-2843-qs015-1-3-d994-s0s1 - 1st Round Qualifying
+42 - adelaide - 2023-2843-qs013-1-2-pd07-mh30 - 1st Round Qualifying
+43 - adelaide - 2023-2843-qs011-1-1-p09z-z371 - 1st Round Qualifying
+
+Enter match to start scraping: 1
+
+WARNING:root:Can not find chromedriver for currently installed chrome version.
+1 - adelaide - 2023-2843-ms001-7-1-d643-k0ah - Final (plus extended data)
+2 - adelaide - 2023-2843-ms002-6-2-d643-mm58 - Semifinals
+3 - adelaide - 2023-2843-ms003-6-1-k0ah-n732 - Semifinals
+4 - adelaide - 2023-2843-ms004-5-4-d643-su55 - Quarterfinals
+5 - adelaide - 2023-2843-ms005-5-3-mm58-ke29 - Quarterfinals
+6 - adelaide - 2023-2843-ms006-5-2-k0ah-s0ag - Quarterfinals
+7 - adelaide - 2023-2843-ms007-5-1-n732-p09z - Quarterfinals
+8 - adelaide - 2023-2843-ms008-4-8-d643-hb64 - Round of 16
+9 - adelaide - 2023-2843-ms010-4-7-mm58-ki95 - Round of 16
+10 - adelaide - 2023-2843-ms012-4-6-s0ag-kd46 - Round of 16
+11 - adelaide - 2023-2843-ms009-4-5-su55-sx50 - Round of 16
+12 - adelaide - 2023-2843-ms011-4-4-ke29-d0co - Round of 16
+13 - adelaide - 2023-2843-ms013-4-3-k0ah-bd06 - Round of 16
+14 - adelaide - 2023-2843-ms014-4-2-n732-mk66 - Round of 16
+15 - adelaide - 2023-2843-ms015-4-1-p09z-gc88 - Round of 16
+16 - adelaide - 2023-2843-ms016-3-16-d643-lb66 - Round of 32
+17 - adelaide - 2023-2843-ms031-3-15-p09z-ag37 - Round of 32
+18 - adelaide - 2023-2843-ms020-3-14-mm58-su87 - Round of 32
+19 - adelaide - 2023-2843-ms027-3-13-bd06-re44 - Round of 32
+20 - adelaide - 2023-2843-ms028-3-12-n732-r0dg - Round of 32
+21 - adelaide - 2023-2843-ms024-3-11-s0ag-e831 - Round of 32
+22 - adelaide - 2023-2843-ms019-3-10-su55-h0bh - Round of 32
+23 - adelaide - 2023-2843-ms023-3-9-ke29-cg04 - Round of 32
+24 - adelaide - 2023-2843-ms022-3-8-d0co-kf17 - Round of 32
+25 - adelaide - 2023-2843-ms030-3-7-gc88-g628 - Round of 32
+26 - adelaide - 2023-2843-ms017-3-6-hb64-tc61 - Round of 32
+27 - adelaide - 2023-2843-ms021-3-5-ki95-o483 - Round of 32
+28 - adelaide - 2023-2843-ms025-3-4-kd46-c0bc - Round of 32
+29 - adelaide - 2023-2843-ms026-3-3-k0ah-mc10 - Round of 32
+30 - adelaide - 2023-2843-ms029-3-2-mk66-ge33 - Round of 32
+31 - adelaide - 2023-2843-ms018-3-1-sx50-y268 - Round of 32
+32 - adelaide - 2023-2843-qs004-2-4-kf17-da81 - 2nd Round Qualifying
+33 - adelaide - 2023-2843-qs006-2-3-sx50-pd07 - 2nd Round Qualifying
+34 - adelaide - 2023-2843-qs007-2-2-h0bh-d994 - 2nd Round Qualifying
+35 - adelaide - 2023-2843-qs005-2-1-p09z-wb32 - 2nd Round Qualifying
+36 - adelaide - 2023-2843-qs008-1-8-kf17-tb69 - 1st Round Qualifying
+37 - adelaide - 2023-2843-qs010-1-7-wb32-hh26 - 1st Round Qualifying
+38 - adelaide - 2023-2843-qs012-1-6-sx50-h997 - 1st Round Qualifying
+39 - adelaide - 2023-2843-qs014-1-5-h0bh-bk24 - 1st Round Qualifying
+40 - adelaide - 2023-2843-qs009-1-4-da81-w0c4 - 1st Round Qualifying
+41 - adelaide - 2023-2843-qs015-1-3-d994-s0s1 - 1st Round Qualifying
+42 - adelaide - 2023-2843-qs013-1-2-pd07-mh30 - 1st Round Qualifying
+43 - adelaide - 2023-2843-qs011-1-1-p09z-z371 - 1st Round Qualifying
+
+python3 match_stats.py  526.51s user 33.56s system 29% cpu 31:21.59 total
 ```
