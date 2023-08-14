@@ -14,7 +14,7 @@ This repository contains Python scripts that scrape tennis data from the <a href
 - B. [Scraping match scores for each tournament](#part-b)
   - B1. [The `match_scores.py` script](#part-b1)
   - B2. [Example usage](#part-b2)
-- C. [Scraping match stats for matches on and after 2021-10-18 (Moscow ATP 250)](#part-c)
+- C. [Scraping match stats for each match](#part-c)
   - C1. [The `match_stats.py` script](#part-c1)
   - C2. [Example usage](#part-c2)
 
@@ -195,8 +195,11 @@ sys     0m0.211s
 
 <div id="part-c"></div>
 
-## C. Scraping match stats for all Grand Slam matches and ATP matches before 2021-10-18 (Moscow ATP 250)
-<div id="part-d1"></div>
+## C. Scraping match stats for each match
+This is for scraping ATP matches on/after 2021-10-18 (Moscow ATP 250). For all Grand Slam matches as well as ATP matches before 2021-10-18, you will need to use the old script:
+* <a href="https://github.com/serve-and-volley/atp-world-tour-tennis-data/blob/master/python/match_stats_deprecated.py" target="_blank">match_stats_deprecated.py</a>
+
+<div id="part-c1"></div>
 
 ### C1. The `match_stats.py` script [^](#contents)
 The following Python script:
@@ -305,7 +308,7 @@ The CSV files for all match stats data from 1991-2022 is found in:
 
 <div id="part-c2"></div>
 
-### C1. Example usage [^](#contents)
+### C2. Example usage [^](#contents)
 Example command line usage and output is as follows:
 ```
 $ time python3 match_stats.py
@@ -430,7 +433,6 @@ Enter tourney number: 2
 
 Enter match to start scraping: 1
 
-WARNING:root:Can not find chromedriver for currently installed chrome version.
 1 - adelaide - 2023-2843-ms001-7-1-d643-k0ah - Final (plus extended data)
 2 - adelaide - 2023-2843-ms002-6-2-d643-mm58 - Semifinals
 3 - adelaide - 2023-2843-ms003-6-1-k0ah-n732 - Semifinals
