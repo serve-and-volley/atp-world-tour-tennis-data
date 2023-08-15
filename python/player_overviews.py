@@ -61,6 +61,6 @@ for player_url_suffix in player_url_suffixes:
         handedness = ''
         backhand = ''
 
-    data = [player_id, first_name, last_name, country_code, birthdate, birth_year, birth_day, turned_pro, weight_kg, weight_lbs, height_cm, height_in, birthplace]
+    data = [player_id, first_name, last_name, country_code, birthdate, birth_year, birth_month, birth_day, turned_pro, weight_kg, weight_lbs, height_cm, height_in, birthplace]
     
-    add2csv(data, 'player_overview.csv')
+    add2csv(data, 'player_overviews.csv')
