@@ -189,3 +189,23 @@ CREATE TABLE match_stats (
 \copy match_stats FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/3_match_stats/match_stats_2021.csv' DELIMITER ',' CSV;
 \copy match_stats FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/3_match_stats/match_stats_2022.csv' DELIMITER ',' CSV;
 
+/* PLAYER OVERVIEWS */
+CREATE TABLE player_overviews (
+player_id       varchar,
+first_name      varchar,
+last_name       varchar,
+country_code    varchar,
+birthdate       varchar,
+birth_year      integer,
+birth_month     integer,
+birth_day       integer,
+turned_pro      integer,
+weight_kg       integer,
+weight_lbs      integer,
+height_cm       integer,
+height_in       integer,
+birthplace      varchar
+);
+
+\copy player_overviews FROM '~/Documents/GitHub/atp-world-tour-tennis-data/csv/4_player_overviews/player_overviews_tournament_winners.csv' DELIMITER ',' CSV;
+
