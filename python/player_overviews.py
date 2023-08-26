@@ -10,7 +10,7 @@ url_prefix = 'https://www.atptour.com'
 for player_url_suffix in player_url_suffixes:
     player_url = url_prefix + player_url_suffix
     print(player_url)
-    player_id = player_url.split('/')[7]
+    player_id = player_url.split('/')[6]
     player_tree = html_parse_tree(player_url)
 
     first_name = regex_strip_array(xpath_parse(player_tree, '//*[@id="playerProfileHero"]/div[2]/div[1]/div/div[1]/div[1]/text()'))[0]
