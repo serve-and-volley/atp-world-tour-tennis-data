@@ -398,8 +398,7 @@ for h in range(int(start_year), int(end_year) + 1):
     print('Year    Order    Tournament                                Matches')
     print('----    -----    ----------                                -------')
 
-    #for i in range(0 , len(tourney_urls_scrape)):
-    for i in range(0 , 2):
+    for i in range(0 , len(tourney_urls_scrape)):
         if len(tourney_urls_scrape[i]) > 0:
             # STEP 2: Scrape tournament page
             match_data_scrape = []
